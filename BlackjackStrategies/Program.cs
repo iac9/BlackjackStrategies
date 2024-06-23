@@ -39,6 +39,6 @@ for (int i = 0; i < 200; i++)
     Console.WriteLine($"Player's Hand: {gameSimulator.GameOutcomes.Last().PlayerHand}");
     Console.WriteLine($"Dealer's Hand: {gameSimulator.GameOutcomes.Last().DealerHand}");
     Console.WriteLine($"EV: {ev}");
-    Console.WriteLine($"Profit/Loss ($): {betService.GetProfitLoss(1000, gameSimulator.GameOutcomes)})");
+    Console.WriteLine($"Profit/Loss: ${betService.GetProfitLoss(1000, gameSimulator.GameOutcomes)})");
     Console.WriteLine("");
 }

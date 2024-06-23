@@ -2,28 +2,27 @@
 {
     public class Deck(int deckSize = 1)
     {
-        private List<Card> cards = GenerateDeck(deckSize).ToList();
+        private List<Card> _cards = GenerateDeck(deckSize).ToList();
 
-        public int Count { get => cards.Count; }
+        public int Count { get => _cards.Count; }
 
         public Card Draw()
         {
-            if (cards.Count == 0)
+            if (_cards.Count == 0)
                 throw new InvalidOperationException("Deck is empty");
 
-            var topCardIndex = cards.Count - 1;
-            var topCard = cards[topCardIndex];
-            cards.RemoveAt(topCardIndex);
+            var topCardIndex = _cards.Count - 1;
+            var topCard = _cards[topCardIndex];
+            _cards.RemoveAt(topCardIndex);
 
             return topCard;
         }
 
-        public void Shuffle()
-        {
-             cards = [.. cards.OrderBy(c => Guid.NewGuid())];
-        }
+        public void Shuffle() => 
+            _cards = [.. _cards.OrderBy(c => Guid.NewGuid())];
 
-        public void ResetDeck(int deckSize) => cards = GenerateDeck(deckSize).ToList();
+        public void ResetDeck(int deckSize) => 
+            _cards = GenerateDeck(deckSize).ToList();
 
         private static IEnumerable<Card> GenerateDeck(int deckSize)
         {

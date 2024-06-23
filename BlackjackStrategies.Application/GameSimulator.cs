@@ -22,7 +22,7 @@ namespace BlackjackStrategies.Application
             Deck = new Deck(numberOfDecks);
             Deck.Shuffle();
 
-            for (int i = 0; i < numberOfGames; i++)
+            for (int _ = 0; _ < numberOfGames; _++)
             {
                 playerService.SplitHands = null;
 
@@ -63,17 +63,15 @@ namespace BlackjackStrategies.Application
                 }
                 else if (playerService.SplitHands == null && playerAction == HandAction.Split)
                 {
-                    var firstHand = new Hand(playerService.Hand.Cards.First());
-                    var secondHand = new Hand(playerService.Hand.Cards.Last());
-                    playerService.SplitHands = Tuple.Create(firstHand, secondHand);
 
-                    DrawCard(firstHand);
-                    playerService.Hand = firstHand;
-                    HandlePlayerTurn();
+                    playerService.SplitHands = playerService.Hand.Cards.Select(c => new Hand(c));
 
-                    DrawCard(secondHand);
-                    playerService.Hand = secondHand;
-                    HandlePlayerTurn();
+                    foreach (var hand in playerService.SplitHands)
+                    {
+                        DrawCard(hand);
+                        playerService.Hand = hand;
+                        HandlePlayerTurn();
+                    }
 
                     playerAction = HandAction.Stay;
                 }
@@ -93,16 +91,9 @@ namespace BlackjackStrategies.Application
         private void LogGameOutcome()
         {
             if (playerService.SplitHands == null)
-            {
                 _gameOutcomes.Add(GetGameOutcome(playerService.Hand));
-            }
             else
-            {
-                (Hand firstHand, Hand secondHand) = playerService.SplitHands;
-
-                _gameOutcomes.Add(GetGameOutcome(firstHand));
-                _gameOutcomes.Add(GetGameOutcome(secondHand));
-            }
+                _gameOutcomes.AddRange(playerService.SplitHands.Select(GetGameOutcome));
         }
 
         private GameOutcome GetGameOutcome(Hand hand)
@@ -112,7 +103,7 @@ namespace BlackjackStrategies.Application
                 GameResult = GetGameResult(hand),
                 PlayerHand = playerService.Hand,
                 DealerHand = DealerHand,
-                NumberOfCardsRemaining = Deck.Count
+                CardsRemaining = Deck.Count
             };
         }
 
@@ -146,7 +137,7 @@ namespace BlackjackStrategies.Application
         public GameResult GameResult { get; set; }
         public required Hand PlayerHand { get; set; }
         public required Hand DealerHand { get; set; }
-        public required int NumberOfCardsRemaining { get; set; }
+        public required int CardsRemaining { get; set; }
     }
 
     public enum GameResult

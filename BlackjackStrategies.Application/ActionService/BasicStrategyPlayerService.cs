@@ -6,11 +6,11 @@ namespace BlackjackStrategies.Application.Strategies
     public class BasicStrategyPlayerService() : IPlayerService
     {
         public Hand Hand { get; set; } = new();
-        public Tuple<Hand, Hand>? SplitHands { get; set; }
+        public IEnumerable<Hand>? SplitHands { get; set; }
 
         public HandAction GetAction(Hand playerHand, Card dealerUpCard)
         {
-            if (playerHand.Cards.Count == 2)
+            if (playerHand.Has2Cards)
             {
                 if (playerHand.Cards.First().Value == playerHand.Cards.Last().Value &&
                     ShouldSplit(playerHand, dealerUpCard))
@@ -29,37 +29,30 @@ namespace BlackjackStrategies.Application.Strategies
         {
             var playerHandValue = playerHand.GetValue();
 
+            if (playerHand.Has2Cards)
+            {
+                if (playerHandValue == 9)
+                    return CardValueExtensions.InRange(CardValue.Three, CardValue.Six, dealerUpCard.Value) ?
+                        HandAction.Double : HandAction.Hit;
+
+                if (playerHandValue == 10)
+                    return CardValueExtensions.InRange(CardValue.Two, CardValue.Nine, dealerUpCard.Value) ?
+                        HandAction.Double : HandAction.Hit;
+
+                if (playerHandValue == 11)
+                    return HandAction.Double;
+            }
+
             if (playerHandValue < 9)
                 return HandAction.Hit;
 
-            if (playerHandValue == 9)
-            {
-                return CardValueExtensions.InRange(CardValue.Three, CardValue.Six, dealerUpCard.Value) && 
-                    playerHand.Cards.Count == 2 ? HandAction.Double : HandAction.Hit;
-            }
-
-            if (playerHandValue == 10)
-            {
-                return CardValueExtensions.InRange(CardValue.Two, CardValue.Nine, dealerUpCard.Value) && 
-                    playerHand.Cards.Count == 2 ? HandAction.Double : HandAction.Hit;
-            }
-
-            if (playerHandValue == 11)
-            {
-                return playerHand.Cards.Count == 2 ? HandAction.Double : HandAction.Hit;
-            }
-
             if (playerHandValue == 12)
-            {
                 return CardValueExtensions.InRange(CardValue.Four, CardValue.Six, dealerUpCard.Value) ?
                     HandAction.Stay : HandAction.Hit;
-            }
 
             if (13 <= playerHandValue && playerHandValue <= 16)
-            {
                 return CardValueExtensions.InRange(CardValue.Two, CardValue.Six, dealerUpCard.Value) ?
                     HandAction.Stay : HandAction.Hit;
-            }
 
             return HandAction.Stay;
         }
@@ -89,7 +82,7 @@ namespace BlackjackStrategies.Application.Strategies
 
         private bool ShouldSplit(Hand hand, Card dealerUpCard)
         {
-            if (hand.Cards.Count != 2)
+            if (!hand.Has2Cards)
                 throw new ArgumentException("Invalid number of cards to split");
 
             if (hand.Cards.First().Value != hand.Cards.Last().Value)
@@ -104,7 +97,8 @@ namespace BlackjackStrategies.Application.Strategies
                 CardValue.Eight or CardValue.Ace => true,
                 CardValue.Four => dealerUpCard.Value is CardValue.Five or CardValue.Six,
                 CardValue.Nine => dealerUpCard.Value != CardValue.Seven,
-                CardValue.Two or CardValue.Three or CardValue.Seven => CardValueExtensions.InRange(CardValue.Two, CardValue.Seven, dealerUpCard.Value),
+                CardValue.Two or CardValue.Three or CardValue.Seven => 
+                    CardValueExtensions.InRange(CardValue.Two, CardValue.Seven, dealerUpCard.Value),
                 CardValue.Six => CardValueExtensions.InRange(CardValue.Three, CardValue.Six, dealerUpCard.Value),
                 _ => throw new NotImplementedException(),
             };

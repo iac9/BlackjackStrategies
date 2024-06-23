@@ -9,6 +9,7 @@
         public List<Card> Cards { get; } 
         public void AddCard(Card card) => Cards.Add(card);
         public void Clear() => Cards.Clear();
+        public bool Has2Cards => Cards.Count == 2;
         public int GetValue()
         {
             var total = 0;
@@ -45,9 +46,7 @@
             return total;
         }
 
-        public override string ToString()
-        {
-            return string.Join(" ", Cards.Select(c => c.ToString()));
-        }
+        public override string ToString() => 
+            string.Join(" ", Cards.Select(c => c.ToString()));
     }
 }

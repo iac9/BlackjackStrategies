@@ -32,10 +32,5 @@
 
             return Math.Round(profitLoss, 2);
         }
-
-        public decimal GetBetAmount(IEnumerable<GameOutcome> gameOutcomes)
-        {
-
-        }
     }
 }
