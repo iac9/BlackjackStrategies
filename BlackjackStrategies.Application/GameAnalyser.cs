@@ -7,7 +7,6 @@ namespace BlackjackStrategies.Application
     {
         decimal GetExpectedValue(IEnumerable<GameOutcome> gameOutcomes);
         Dictionary<GameResult, int> GetGameResultCount(IEnumerable<GameOutcome> gameOutcomes);
-        decimal GetProfitLoss(decimal startingAmount, decimal bettingAmount, IEnumerable<GameOutcome> gameOutcomes);
     }
 
     public class GameAnalyser(IBetService betService) : IGameAnalyser
@@ -37,10 +36,5 @@ namespace BlackjackStrategies.Application
 
         public Dictionary<GameResult, int> GetGameResultCount(IEnumerable<GameOutcome> gameOutcomes) =>
             gameOutcomes.GroupBy(o => o.GameResult).ToDictionary(g => g.Key, g => g.Count());
-
-        public decimal GetProfitLoss(decimal startingAmount, decimal bettingAmount, IEnumerable<GameOutcome> gameOutcomes)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

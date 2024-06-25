@@ -3,8 +3,8 @@
     public class Deck(int deckSize = 1)
     {
         private List<Card> _cards = GenerateDeck(deckSize).ToList();
-
-        public int Count { get => _cards.Count; }
+        public int Size => deckSize;
+        public int Count => _cards.Count;
 
         public Card Draw()
         {

@@ -10,7 +10,7 @@ namespace BlackjackStrategies.Application.BetService
         {
             var gameOutcomeArray = gameOutcomes.ToArray();
             var profitLossOverTime = new List<decimal>();
-            var profitLoss = startingAmount;
+            var currentAmount = startingAmount;
 
             for (int i = 0; i < gameOutcomeArray.Length; i++)
             {
@@ -19,9 +19,9 @@ namespace BlackjackStrategies.Application.BetService
                 UpdateRunningCount(gameOutcome.DealerHand);
 
                 var trueCount = i == 0 ? GetTrueCount() : GetTrueCount(gameOutcomeArray[i - 1].CardsRemaining);
-                var bet = Math.Min(profitLoss, bettingAmount * (gameOutcome.Doubled ? 2 : 1) * trueCount);
+                var bet = Math.Min(currentAmount, bettingAmount * (gameOutcome.Doubled ? 2 : 1) * trueCount);
 
-                profitLoss += gameOutcome.GameResult switch
+                currentAmount += gameOutcome.GameResult switch
                 {
                     GameResult.Win => bet,
                     GameResult.Lose => -bet,
@@ -29,7 +29,7 @@ namespace BlackjackStrategies.Application.BetService
                     _ => 0,
                 };
 
-                profitLossOverTime.Add(profitLoss - startingAmount);
+                profitLossOverTime.Add(currentAmount - startingAmount);
             }
 
             return profitLossOverTime;
@@ -38,7 +38,7 @@ namespace BlackjackStrategies.Application.BetService
         private int GetTrueCount(int? cardsRemaining = null)
         {
             if (cardsRemaining == null)
-                return runningCount;
+                return Math.Max(runningCount, 1);
             else
                 return Math.Max((int)Math.Round(runningCount / (decimal)cardsRemaining / 52), 1);
 
