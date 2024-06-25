@@ -6,8 +6,9 @@ namespace BlackjackStrategies.Application.Strategies
     {
         public Hand Hand { get; set; }
         public IEnumerable<Hand>? SplitHands { get; set; }
-
-        HandAction GetAction(Hand playerHand, Card dealerUpCard);
+        public bool Doubled { get; set; }
+        public void ResetState();
+        HandAction GetAction(Card dealerUpCard);
     }
 
     public enum HandAction

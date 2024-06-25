@@ -11,10 +11,9 @@ namespace BlackjackStrategies.Application
 
     public class GameSimulator(IPlayerService playerService) : IGameSimulator
     {
-        private Hand DealerHand = new();
+        private readonly Hand DealerHand = new();
         private Deck Deck = new();
         private readonly List<GameOutcome> _gameOutcomes = [];
-
         public IEnumerable<GameOutcome> GameOutcomes => _gameOutcomes;
 
         public IEnumerable<GameOutcome> Simulate(int numberOfDecks, int numberOfGames)
@@ -24,16 +23,17 @@ namespace BlackjackStrategies.Application
 
             for (int _ = 0; _ < numberOfGames; _++)
             {
-                playerService.SplitHands = null;
+                playerService.ResetState();
+                DealerHand.Clear();
 
                 if (Deck.Count < 16)
                 {
-                    Deck.ResetDeck(numberOfDecks);
+                    Deck.ResetDeck();
                     Deck.Shuffle();
                 }
 
-                playerService.Hand = new Hand(Deck.Draw(), Deck.Draw());
-                DealerHand = new Hand(Deck.Draw(), Deck.Draw());
+                DrawCard(playerService.Hand, 2);
+                DrawCard(DealerHand, 2);
 
                 HandlePlayerTurn();
                 HandleDealerTurn();
@@ -47,28 +47,28 @@ namespace BlackjackStrategies.Application
         private void HandlePlayerTurn()
         {
             var dealerUpCard = DealerHand.Cards.First();
-            var playerAction = playerService.GetAction(playerService.Hand, dealerUpCard);
+            var playerAction = playerService.GetAction(dealerUpCard);
 
             while (playerService.Hand.GetValue() < 22 && playerAction != HandAction.Stay)
             {
                 if (playerAction == HandAction.Hit)
                 {
-                    DrawCard(playerService.Hand);
-                    playerAction = playerService.GetAction(playerService.Hand, dealerUpCard);
+                    DrawCard(playerService.Hand, 1);
+                    playerAction = playerService.GetAction(dealerUpCard);
                 }
                 else if (playerAction == HandAction.Double)
                 {
-                    DrawCard(playerService.Hand);
+                    DrawCard(playerService.Hand, 1);
+                    playerService.Doubled = true;
                     playerAction = HandAction.Stay;
                 }
                 else if (playerService.SplitHands == null && playerAction == HandAction.Split)
                 {
-
                     playerService.SplitHands = playerService.Hand.Cards.Select(c => new Hand(c));
 
                     foreach (var hand in playerService.SplitHands)
                     {
-                        DrawCard(hand);
+                        DrawCard(hand, 1);
                         playerService.Hand = hand;
                         HandlePlayerTurn();
                     }
@@ -82,11 +82,17 @@ namespace BlackjackStrategies.Application
         {
             while (DealerHand.GetValue() < 17)
             {
-                DrawCard(DealerHand);
+                DrawCard(DealerHand, 1);
             }
         }
 
-        private void DrawCard(Hand hand) => hand.AddCard(Deck.Draw());
+        private void DrawCard(Hand hand, int numberOfCards)
+        {
+            for (int i = 0; i < numberOfCards; i++)
+            {
+                hand.AddCard(Deck.Draw());
+            }
+        }
 
         private void LogGameOutcome()
         {
@@ -101,9 +107,10 @@ namespace BlackjackStrategies.Application
             return new GameOutcome
             {
                 GameResult = GetGameResult(hand),
-                PlayerHand = playerService.Hand,
-                DealerHand = DealerHand,
-                CardsRemaining = Deck.Count
+                PlayerHand = new Hand([.. hand.Cards]),
+                DealerHand = new Hand([.. DealerHand.Cards]),
+                Doubled = playerService.Doubled,
+                CardsRemaining = Deck.Count,
             };
         }
 
@@ -130,21 +137,5 @@ namespace BlackjackStrategies.Application
                     return GameResult.Win;
             }
         }
-    }
-
-    public class GameOutcome
-    {
-        public GameResult GameResult { get; set; }
-        public required Hand PlayerHand { get; set; }
-        public required Hand DealerHand { get; set; }
-        public required int CardsRemaining { get; set; }
-    }
-
-    public enum GameResult
-    {
-        Win, 
-        Lose, 
-        Push,
-        Blackjack
     }
 }

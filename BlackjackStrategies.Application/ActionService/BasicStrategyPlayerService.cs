@@ -7,50 +7,57 @@ namespace BlackjackStrategies.Application.Strategies
     {
         public Hand Hand { get; set; } = new();
         public IEnumerable<Hand>? SplitHands { get; set; }
-
-        public HandAction GetAction(Hand playerHand, Card dealerUpCard)
+        public bool Doubled { get; set; }
+        public void ResetState()
         {
-            if (playerHand.Has2Cards)
+            Hand.Clear();
+            SplitHands = null;
+            Doubled = false;
+        }
+
+        public HandAction GetAction(Card dealerUpCard)
+        {
+            if (Hand.Has2Cards)
             {
-                if (playerHand.Cards.First().Value == playerHand.Cards.Last().Value &&
-                    ShouldSplit(playerHand, dealerUpCard))
+                if (Hand.Cards.First().Value == Hand.Cards.Last().Value &&
+                    ShouldSplit(dealerUpCard))
                 {
                     return HandAction.Split;
                 }
-                else if (playerHand.Cards.Any(c => c.Value == CardValue.Ace))
+                else if (Hand.Cards.Any(c => c.Value == CardValue.Ace))
                 {
-                    return HandHasAce(playerHand, dealerUpCard);
+                    return HandHasAce(dealerUpCard);
                 }
             }
-            return HandHasNoAce(playerHand, dealerUpCard);
+            return HandHasNoAce(dealerUpCard);
         }
 
-        private static HandAction HandHasNoAce(Hand playerHand, Card dealerUpCard)
+        private HandAction HandHasNoAce(Card dealerUpCard)
         {
-            var playerHandValue = playerHand.GetValue();
+            var HandValue = Hand.GetValue();
 
-            if (playerHand.Has2Cards)
+            if (Hand.Has2Cards)
             {
-                if (playerHandValue == 9)
+                if (HandValue == 9)
                     return CardValueExtensions.InRange(CardValue.Three, CardValue.Six, dealerUpCard.Value) ?
                         HandAction.Double : HandAction.Hit;
 
-                if (playerHandValue == 10)
+                if (HandValue == 10)
                     return CardValueExtensions.InRange(CardValue.Two, CardValue.Nine, dealerUpCard.Value) ?
                         HandAction.Double : HandAction.Hit;
 
-                if (playerHandValue == 11)
+                if (HandValue == 11)
                     return HandAction.Double;
             }
 
-            if (playerHandValue < 9)
+            if (HandValue < 9)
                 return HandAction.Hit;
 
-            if (playerHandValue == 12)
+            if (HandValue == 12)
                 return CardValueExtensions.InRange(CardValue.Four, CardValue.Six, dealerUpCard.Value) ?
                     HandAction.Stay : HandAction.Hit;
 
-            if (13 <= playerHandValue && playerHandValue <= 16)
+            if (13 <= HandValue && HandValue <= 16)
                 return CardValueExtensions.InRange(CardValue.Two, CardValue.Six, dealerUpCard.Value) ?
                     HandAction.Stay : HandAction.Hit;
 
@@ -59,9 +66,9 @@ namespace BlackjackStrategies.Application.Strategies
 
 
 
-        private static HandAction HandHasAce(Hand playerHand, Card dealerUpCard)
+        private HandAction HandHasAce(Card dealerUpCard)
         {
-            var playerOtherCard = playerHand.Cards.FirstOrDefault(c => c.Value != CardValue.Ace) ?? playerHand.Cards.First();
+            var playerOtherCard = Hand.Cards.FirstOrDefault(c => c.Value != CardValue.Ace) ?? Hand.Cards.First();
 
             return playerOtherCard.Value switch
             {
@@ -80,18 +87,18 @@ namespace BlackjackStrategies.Application.Strategies
             };
         }
 
-        private bool ShouldSplit(Hand hand, Card dealerUpCard)
+        private bool ShouldSplit(Card dealerUpCard)
         {
-            if (!hand.Has2Cards)
+            if (!Hand.Has2Cards)
                 throw new ArgumentException("Invalid number of cards to split");
 
-            if (hand.Cards.First().Value != hand.Cards.Last().Value)
+            if (Hand.Cards.First().Value != Hand.Cards.Last().Value)
                 throw new ArgumentException("Hand value is not duplicate");
 
             if (SplitHands != null)
                 return false;
 
-            return hand.Cards.First().Value switch
+            return Hand.Cards.First().Value switch
             {
                 CardValue.Five or CardValue.Ten or CardValue.Jack or CardValue.Queen or CardValue.King => false,
                 CardValue.Eight or CardValue.Ace => true,

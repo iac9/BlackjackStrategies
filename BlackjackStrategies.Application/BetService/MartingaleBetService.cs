@@ -1,15 +1,18 @@
-﻿namespace BlackjackStrategies.Application.BetService
+﻿using BlackjackStrategies.Domain;
+
+namespace BlackjackStrategies.Application.BetService
 {
     public class MartingaleBetService(decimal portionToWager) : IBetService
     {
-        public decimal GetProfitLoss(decimal startingAmount, IEnumerable<GameOutcome> gameOutcomes)
+        public decimal GetAmountToBet(decimal startingAmount, IEnumerable<GameOutcome> gameOutcomes)
         {
             var profitLoss = startingAmount;
             var consecutiveLosses = 0;
 
+            Console.WriteLine(profitLoss);
             foreach (GameOutcome outcome in gameOutcomes)
             {
-                var betSize = Math.Min(profitLoss, startingAmount * portionToWager * (decimal)Math.Pow(2, consecutiveLosses));
+                var betSize = Math.Min(profitLoss, startingAmount * (outcome.Doubled ? 2 : 1) * portionToWager * (decimal)Math.Pow(2, consecutiveLosses));
 
                 switch (outcome.GameResult)
                 {
@@ -28,6 +31,8 @@
                     default:
                         break;
                 }
+
+                Console.WriteLine(profitLoss);
             }
 
             return Math.Round(profitLoss, 2);

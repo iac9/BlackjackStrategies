@@ -21,7 +21,7 @@
         public void Shuffle() => 
             _cards = [.. _cards.OrderBy(c => Guid.NewGuid())];
 
-        public void ResetDeck(int deckSize) => 
+        public void ResetDeck() => 
             _cards = GenerateDeck(deckSize).ToList();
 
         private static IEnumerable<Card> GenerateDeck(int deckSize)

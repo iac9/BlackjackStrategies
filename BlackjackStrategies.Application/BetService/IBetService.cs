@@ -1,7 +1,9 @@
-﻿namespace BlackjackStrategies.Application.BetService
+﻿using BlackjackStrategies.Domain;
+
+namespace BlackjackStrategies.Application.BetService
 {
     public interface IBetService
     {
-        public decimal GetProfitLoss(decimal startingAmount, IEnumerable<GameOutcome> gameOutcomes);
+        public decimal GetAmountToBet(decimal startingAmount, IEnumerable<GameOutcome> previousGameOutcomes);
     }
 }
