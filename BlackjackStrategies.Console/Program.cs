@@ -7,7 +7,6 @@ var playerService = new BasicStrategyPlayerService();
 var betService = new MartingaleBetService();
 var gameSimulator = new GameSimulator(playerService);
 
-
 var numberOfDecks = 6;
 var gameOutcomes = gameSimulator.Simulate(numberOfDecks, 1000).ToArray();
 
@@ -25,14 +24,14 @@ for (var i = 0; i < gameOutcomes.Length; i++)
     Console.WriteLine($"Cards: {outcome.CardsRemaining}/{numberOfDecks * 52}");
     Console.WriteLine($"Player's Hand ({outcome.PlayerHand.GetValue()}): {outcome.PlayerHand}");
     Console.WriteLine($"Dealer's Hand ({outcome.DealerHand.GetValue()}): {outcome.DealerHand}");
-    Console.WriteLine($"Profit/Loss: ${profitLoss[i]})");
+    Console.WriteLine($"Profit/Loss: ${Math.Round(profitLoss[i], 2)}");
     Console.WriteLine("");
 }
 
 foreach (var gameResult in gameResultsCount.Keys)
 {
     var count = gameResultsCount[gameResult];
-    var probability = count / (decimal)gameOutcomes.Count();
+    var probability = count / (decimal)gameOutcomes.Length;
     var percentage = Math.Round(probability * 100, 2);
 
     ev += gameResult switch
@@ -43,9 +42,8 @@ foreach (var gameResult in gameResultsCount.Keys)
         _ => 0,
     };
 
-    Console.WriteLine($"{gameResult}: {count}/{gameOutcomes.Count()} = {percentage}%");
+    Console.WriteLine($"{gameResult}: {count}/{gameOutcomes.Length} = {percentage}%");
 }
-
 
 Console.WriteLine($"EV: {ev}");
 Console.WriteLine("");

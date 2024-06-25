@@ -53,12 +53,12 @@ namespace BlackjackStrategies.Application
             {
                 if (playerAction == HandAction.Hit)
                 {
-                    DrawCard(playerService.Hand, 1);
+                    DrawCard(playerService.Hand);
                     playerAction = playerService.GetAction(dealerUpCard);
                 }
                 else if (playerAction == HandAction.Double)
                 {
-                    DrawCard(playerService.Hand, 1);
+                    DrawCard(playerService.Hand);
                     playerService.Doubled = true;
                     playerAction = HandAction.Stay;
                 }
@@ -68,11 +68,11 @@ namespace BlackjackStrategies.Application
                     var secondHand = new Hand(playerService.Hand.Cards.Last());
                     playerService.SplitHands = [firstHand, secondHand];
 
-                    DrawCard(firstHand, 1);
+                    DrawCard(firstHand);
                     playerService.Hand = firstHand;
                     HandlePlayerTurn();
 
-                    DrawCard(secondHand, 1);
+                    DrawCard(secondHand);
                     playerService.Hand = secondHand;
                     HandlePlayerTurn();
 
@@ -89,7 +89,7 @@ namespace BlackjackStrategies.Application
             }
         }
 
-        private void DrawCard(Hand hand, int numberOfCards)
+        private void DrawCard(Hand hand, int numberOfCards=1)
         {
             for (int i = 0; i < numberOfCards; i++)
             {

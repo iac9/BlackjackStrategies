@@ -10,30 +10,29 @@ namespace BlackjackStrategies.Application.BetService
             var profitLoss = startingAmount;
             var consecutiveLosses = 0;
 
-            Console.WriteLine(profitLoss);
             foreach (GameOutcome outcome in gameOutcomes)
             {
-                var betSize = Math.Min(profitLoss, bettingAmount * (outcome.Doubled ? 2 : 1) * (decimal)Math.Pow(2, consecutiveLosses));
+                var bet = Math.Min(profitLoss, bettingAmount * (outcome.Doubled ? 2 : 1) * (decimal)Math.Pow(2, consecutiveLosses));
 
                 switch (outcome.GameResult)
                 {
                     case GameResult.Win:
-                        profitLoss += betSize;
+                        profitLoss += bet;
                         consecutiveLosses = 0;
                         break;
                     case GameResult.Blackjack:
-                        profitLoss += betSize * 1.5M;
+                        profitLoss += bet * 1.5M;
                         consecutiveLosses = 0;
                         break;
                     case GameResult.Lose:
-                        profitLoss -= betSize;
+                        profitLoss -= bet;
                         consecutiveLosses++;
                         break;
                     default:
                         break;
                 }
 
-                profitLossOverTime.Add(profitLoss);
+                profitLossOverTime.Add(profitLoss - startingAmount                  );
             }
 
             return profitLossOverTime;
