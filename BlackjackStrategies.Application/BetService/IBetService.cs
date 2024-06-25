@@ -4,6 +4,6 @@ namespace BlackjackStrategies.Application.BetService
 {
     public interface IBetService
     {
-        public decimal GetAmountToBet(decimal startingAmount, IEnumerable<GameOutcome> previousGameOutcomes);
+        public IEnumerable<decimal> GetAmountOverTime(decimal startingAmount, decimal bettingAmount, IEnumerable<GameOutcome> gameOutcomes);
     }
 }

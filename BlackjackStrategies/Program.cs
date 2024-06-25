@@ -4,23 +4,28 @@ using BlackjackStrategies.Application.Strategies;
 using BlackjackStrategies.Domain;
 
 var playerService = new BasicStrategyPlayerService();
-var betService = new MartingaleBetService(0.05M);
+var betService = new MartingaleBetService();
 var gameSimulator = new GameSimulator(playerService);
 
 
 var numberOfDecks = 6;
-var gameOutcomes = gameSimulator.Simulate(numberOfDecks, 1000);
+var gameOutcomes = gameSimulator.Simulate(numberOfDecks, 1000).ToArray();
 
 var gameResultsCount = gameOutcomes.GroupBy(o => o.GameResult).ToDictionary(g => g.Key, g => g.Count());
 var ev = 0M;
+var profitLoss = betService.GetAmountOverTime(1000, 15, gameSimulator.GameOutcomes).ToArray();
 
-foreach (var outcome in gameOutcomes)
+for (var i = 0; i < gameOutcomes.Length; i++)
 {
+    var outcome = gameOutcomes[i];
     Console.WriteLine($"Game outcome: {outcome.GameResult}");
     Console.WriteLine($"Doubled: {outcome.Doubled}");
+    Console.WriteLine($"Split: {outcome.Split}");
+
     Console.WriteLine($"Cards: {outcome.CardsRemaining}/{numberOfDecks * 52}");
-    Console.WriteLine($"Player's Hand: {outcome.PlayerHand}");
-    Console.WriteLine($"Dealer's Hand: {outcome.DealerHand}");
+    Console.WriteLine($"Player's Hand ({outcome.PlayerHand.GetValue()}): {outcome.PlayerHand}");
+    Console.WriteLine($"Dealer's Hand ({outcome.DealerHand.GetValue()}): {outcome.DealerHand}");
+    Console.WriteLine($"Profit/Loss: ${profitLoss[i]})");
     Console.WriteLine("");
 }
 
@@ -41,8 +46,6 @@ foreach (var gameResult in gameResultsCount.Keys)
     Console.WriteLine($"{gameResult}: {count}/{gameOutcomes.Count()} = {percentage}%");
 }
 
-var profitLoss = betService.GetAmountToBet(1000, gameSimulator.GameOutcomes);
 
 Console.WriteLine($"EV: {ev}");
-Console.WriteLine($"Profit/Loss: ${profitLoss})");
 Console.WriteLine("");

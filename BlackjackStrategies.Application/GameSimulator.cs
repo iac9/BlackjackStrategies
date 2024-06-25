@@ -64,14 +64,17 @@ namespace BlackjackStrategies.Application
                 }
                 else if (playerService.SplitHands == null && playerAction == HandAction.Split)
                 {
-                    playerService.SplitHands = playerService.Hand.Cards.Select(c => new Hand(c));
+                    var firstHand = new Hand(playerService.Hand.Cards.First());
+                    var secondHand = new Hand(playerService.Hand.Cards.Last());
+                    playerService.SplitHands = [firstHand, secondHand];
 
-                    foreach (var hand in playerService.SplitHands)
-                    {
-                        DrawCard(hand, 1);
-                        playerService.Hand = hand;
-                        HandlePlayerTurn();
-                    }
+                    DrawCard(firstHand, 1);
+                    playerService.Hand = firstHand;
+                    HandlePlayerTurn();
+
+                    DrawCard(secondHand, 1);
+                    playerService.Hand = secondHand;
+                    HandlePlayerTurn();
 
                     playerAction = HandAction.Stay;
                 }
@@ -110,6 +113,7 @@ namespace BlackjackStrategies.Application
                 PlayerHand = new Hand([.. hand.Cards]),
                 DealerHand = new Hand([.. DealerHand.Cards]),
                 Doubled = playerService.Doubled,
+                Split = playerService.SplitHands != null,
                 CardsRemaining = Deck.Count,
             };
         }
