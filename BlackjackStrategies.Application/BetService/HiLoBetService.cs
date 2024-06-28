@@ -2,46 +2,42 @@ using BlackjackStrategies.Domain;
 
 namespace BlackjackStrategies.Application.BetService
 {
-    public class HiLoBetService : IBetService
+    public class HiLoBetService(decimal startingAmount, decimal bettingSize) : IBetSerivce
     {
         private int runningCount = 0;
+        private GameOutcome? lastGameOutcome = null;
+        private decimal currentAmount = startingAmount;
+        private readonly decimal startingAmount = startingAmount;
 
-        public IEnumerable<decimal> GetAmountOverTime(decimal startingAmount, decimal bettingAmount, IEnumerable<GameOutcome> gameOutcomes)
+        public void MakeBet(GameOutcome gameOutcome)
         {
-            var gameOutcomeArray = gameOutcomes.ToArray();
-            var profitLossOverTime = new List<decimal>();
-            var currentAmount = startingAmount;
 
-            for (int i = 0; i < gameOutcomeArray.Length; i++)
+            UpdateRunningCount(gameOutcome.PlayerHand);
+            UpdateRunningCount(gameOutcome.DealerHand);
+
+            var trueCount = GetTrueCount();
+            var bet = Math.Min(currentAmount, bettingSize * (gameOutcome.Doubled ? 2 : 1) * trueCount);
+
+            currentAmount += gameOutcome.GameResult switch
             {
-                var gameOutcome = gameOutcomeArray[i];
-                UpdateRunningCount(gameOutcome.PlayerHand);
-                UpdateRunningCount(gameOutcome.DealerHand);
+                GameResult.Win => bet,
+                GameResult.Lose => -bet,
+                GameResult.Blackjack => bet * 1.5M,
+                _ => 0,
+            };
 
-                var trueCount = i == 0 ? GetTrueCount() : GetTrueCount(gameOutcomeArray[i - 1].CardsRemaining);
-                var bet = Math.Min(currentAmount, bettingAmount * (gameOutcome.Doubled ? 2 : 1) * trueCount);
 
-                currentAmount += gameOutcome.GameResult switch
-                {
-                    GameResult.Win => bet,
-                    GameResult.Lose => -bet,
-                    GameResult.Blackjack => bet * 1.5M,
-                    _ => 0,
-                };
-
-                profitLossOverTime.Add(currentAmount - startingAmount);
-            }
-
-            return profitLossOverTime;
+            lastGameOutcome = gameOutcome;
+            gameOutcome.Money = currentAmount - startingAmount;
         }
 
-        private int GetTrueCount(int? cardsRemaining = null)
+        private int GetTrueCount()  
         {
-            if (cardsRemaining == null)
-                return Math.Max(runningCount, 1);
-            else
-                return Math.Max((int)Math.Round(runningCount / (decimal)cardsRemaining / 52), 1);
+            var trueCount = lastGameOutcome == null ? 
+                runningCount : 
+                (int)Math.Round(runningCount / (decimal)lastGameOutcome.CardsRemaining / 52);
 
+            return Math.Max(trueCount, 1);
         }
 
         private void UpdateRunningCount(Hand hand)

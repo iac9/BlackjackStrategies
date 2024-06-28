@@ -1,4 +1,5 @@
-﻿using BlackjackStrategies.Application.Strategies;
+﻿using BlackjackStrategies.Application.BetService;
+using BlackjackStrategies.Application.Strategies;
 using BlackjackStrategies.Domain;
 
 namespace BlackjackStrategies.Application
@@ -9,7 +10,7 @@ namespace BlackjackStrategies.Application
         IEnumerable<GameOutcome> Simulate(int numberOfDecks, int numberOfGames);
     }
 
-    public class GameSimulator(IPlayerService playerService) : IGameSimulator
+    public class GameSimulator(IPlayerService playerService, IBetSerivce betSerivce) : IGameSimulator
     {
         private readonly Hand DealerHand = new();
         private Deck Deck = new();
@@ -100,46 +101,32 @@ namespace BlackjackStrategies.Application
         private void LogGameOutcome()
         {
             if (playerService.SplitHands == null)
-                _gameOutcomes.Add(GetGameOutcome(playerService.Hand));
+            {
+                var gameOutcome = GetGameOutcome(playerService.Hand);
+                betSerivce.MakeBet(gameOutcome);
+                _gameOutcomes.Add(gameOutcome);
+            }
             else
-                _gameOutcomes.AddRange(playerService.SplitHands.Select(GetGameOutcome));
+            {
+                foreach (var gameOutcome in playerService.SplitHands.Select(GetGameOutcome))
+                {
+                    betSerivce.MakeBet(gameOutcome);
+                    _gameOutcomes.Add(gameOutcome);
+                }
+            }
         }
 
         private GameOutcome GetGameOutcome(Hand hand)
         {
             return new GameOutcome
             {
-                GameResult = GetGameResult(hand),
+                GameResult = hand.GetGameResult(DealerHand),
                 PlayerHand = new Hand([.. hand.Cards]),
                 DealerHand = new Hand([.. DealerHand.Cards]),
                 Doubled = playerService.Doubled,
                 Split = playerService.SplitHands != null,
                 CardsRemaining = Deck.Count,
             };
-        }
-
-        private GameResult GetGameResult(Hand hand)
-        {
-            var playerHandValue = hand.GetValue();
-            var dealerHandValue = DealerHand.GetValue();
-
-            if (playerHandValue > 21)
-                return GameResult.Lose;
-            else
-            {
-                if (playerHandValue == 21)
-                    return GameResult.Blackjack;
-
-                if (dealerHandValue > 21)
-                    return GameResult.Win;
-
-                if (playerHandValue == dealerHandValue)
-                    return GameResult.Push;
-                else if (playerHandValue < dealerHandValue)
-                    return GameResult.Lose;
-                else
-                    return GameResult.Win;
-            }
         }
     }
 }

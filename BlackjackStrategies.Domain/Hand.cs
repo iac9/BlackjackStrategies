@@ -49,4 +49,31 @@
         public override string ToString() => 
             string.Join(" ", Cards.Select(c => c.ToString()));
     }
+
+    public static class HandExtensions
+    {
+        public static GameResult GetGameResult(this Hand hand, Hand otherHand)
+        {
+            var playerHandValue = hand.GetValue();
+            var otherHandValue = otherHand.GetValue();
+
+            if (playerHandValue > 21)
+                return GameResult.Lose;
+            else
+            {
+                if (playerHandValue == 21)
+                    return GameResult.Blackjack;
+
+                if (otherHandValue > 21)
+                    return GameResult.Win;
+
+                if (playerHandValue == otherHandValue)
+                    return GameResult.Push;
+                else if (playerHandValue < otherHandValue)
+                    return GameResult.Lose;
+                else
+                    return GameResult.Win;
+            }
+        }
+    }
 }

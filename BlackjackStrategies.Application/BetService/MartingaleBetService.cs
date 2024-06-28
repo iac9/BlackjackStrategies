@@ -2,40 +2,37 @@
 
 namespace BlackjackStrategies.Application.BetService
 {
-    public class MartingaleBetService() : IBetService
+    public class MartingaleBetService(decimal startingAmount, decimal bettingSize) : IBetSerivce
     {
-        public IEnumerable<decimal> GetAmountOverTime(decimal startingAmount, decimal bettingAmount, IEnumerable<GameOutcome> gameOutcomes)
+        private readonly decimal startingAmount = startingAmount;
+        private int consecutiveLosses = 0;
+        private decimal currentAmount = startingAmount;
+
+        public void MakeBet(GameOutcome gameOutcome)
         {
-            var profitLossOverTime = new List<decimal>();
-            var currentAmount = startingAmount;
-            var consecutiveLosses = 0;
+            var doubledFactor = gameOutcome.Doubled ? 2 : 1;
+            var consecutiveLossesFactor = (decimal)Math.Pow(2, consecutiveLosses);
+            var bettingAmount = Math.Min(currentAmount, bettingSize * consecutiveLossesFactor * doubledFactor);
 
-            foreach (GameOutcome outcome in gameOutcomes)
+            switch (gameOutcome.GameResult)
             {
-                var bet = Math.Min(currentAmount, bettingAmount * (outcome.Doubled ? 2 : 1) * (decimal)Math.Pow(2, consecutiveLosses));
-
-                switch (outcome.GameResult)
-                {
-                    case GameResult.Win:
-                        currentAmount += bet;
-                        consecutiveLosses = 0;
-                        break;
-                    case GameResult.Blackjack:
-                        currentAmount += bet * 1.5M;
-                        consecutiveLosses = 0;
-                        break;
-                    case GameResult.Lose:
-                        currentAmount -= bet;
-                        consecutiveLosses++;
-                        break;
-                    default:
-                        break;
-                }
-
-                profitLossOverTime.Add(currentAmount - startingAmount                  );
+                case GameResult.Win:
+                    currentAmount += bettingAmount;
+                    consecutiveLosses = 0;
+                    break;
+                case GameResult.Blackjack:
+                    currentAmount += bettingAmount * 1.5M;
+                    consecutiveLosses = 0;
+                    break;
+                case GameResult.Lose:
+                    currentAmount -= bettingAmount;
+                    consecutiveLosses++;
+                    break;
+                default:
+                    break;
             }
 
-            return profitLossOverTime;
+            gameOutcome.Money = currentAmount - startingAmount;
         }
     }
 }
