@@ -1,5 +1,4 @@
-﻿using BlackjackStrategies.Application.BetService;
-using BlackjackStrategies.Domain;
+﻿using BlackjackStrategies.Domain;
 
 namespace BlackjackStrategies.Application
 {
@@ -9,7 +8,7 @@ namespace BlackjackStrategies.Application
         Dictionary<GameResult, int> GetGameResultCount(IEnumerable<GameOutcome> gameOutcomes);
     }
 
-    public class GameAnalyser(IBetService betService) : IGameAnalyser
+    public class GameAnalyser : IGameAnalyser
     {
         public decimal GetExpectedValue(IEnumerable<GameOutcome> gameOutcomes)
         {
