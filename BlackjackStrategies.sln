@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackjackStrategies.Domain"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackjackStrategies.Application", "BlackjackStrategies.Application\BlackjackStrategies.Application.csproj", "{C7E91185-A0FF-4EFA-A7ED-BA3BFC67778E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackStrategies.Console", "BlackjackStrategies.Console\BlackjackStrategies.Console.csproj", "{F9C9FA47-18E0-4CC2-A0D5-C2B926D753B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackjackStrategies.Infrastructure", "BlackjackStrategies.Infrastructure\BlackjackStrategies.Infrastructure.csproj", "{091BB029-2898-49D7-A695-B3786A54586B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackStrategies.Infrastructure", "BlackjackStrategies.Infrastructure\BlackjackStrategies.Infrastructure.csproj", "{091BB029-2898-49D7-A695-B3786A54586B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackStrategies.UI", "BlackjackStrategies.UI\BlackjackStrategies.UI.csproj", "{13D39E83-3C63-455A-BBA0-678B2A372116}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{C7E91185-A0FF-4EFA-A7ED-BA3BFC67778E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E91185-A0FF-4EFA-A7ED-BA3BFC67778E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7E91185-A0FF-4EFA-A7ED-BA3BFC67778E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9C9FA47-18E0-4CC2-A0D5-C2B926D753B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9C9FA47-18E0-4CC2-A0D5-C2B926D753B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9C9FA47-18E0-4CC2-A0D5-C2B926D753B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9C9FA47-18E0-4CC2-A0D5-C2B926D753B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{091BB029-2898-49D7-A695-B3786A54586B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{091BB029-2898-49D7-A695-B3786A54586B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{091BB029-2898-49D7-A695-B3786A54586B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{091BB029-2898-49D7-A695-B3786A54586B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D39E83-3C63-455A-BBA0-678B2A372116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D39E83-3C63-455A-BBA0-678B2A372116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D39E83-3C63-455A-BBA0-678B2A372116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D39E83-3C63-455A-BBA0-678B2A372116}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
