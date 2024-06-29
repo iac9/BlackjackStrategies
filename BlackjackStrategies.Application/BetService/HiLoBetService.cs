@@ -11,9 +11,7 @@ namespace BlackjackStrategies.Application.BetService
 
         public void MakeBet(GameOutcome gameOutcome)
         {
-
-            UpdateRunningCount(gameOutcome.PlayerHand);
-            UpdateRunningCount(gameOutcome.DealerHand);
+            UpdateRunningCount(gameOutcome);
 
             var trueCount = GetTrueCount();
             var bet = Math.Min(currentAmount, bettingSize * (gameOutcome.Doubled ? 2 : 1) * trueCount);
@@ -26,9 +24,8 @@ namespace BlackjackStrategies.Application.BetService
                 _ => 0,
             };
 
-
-            lastGameOutcome = gameOutcome;
             gameOutcome.Money = currentAmount - startingAmount;
+            lastGameOutcome = gameOutcome;
         }
 
         private int GetTrueCount()  
@@ -40,9 +37,16 @@ namespace BlackjackStrategies.Application.BetService
             return Math.Max(trueCount, 1);
         }
 
-        private void UpdateRunningCount(Hand hand)
+        private void UpdateRunningCount(GameOutcome gameOutcome)
         {
-            foreach (var card in hand.Cards)
+            if (lastGameOutcome?.CardsRemaining < gameOutcome.CardsRemaining)
+            {
+                runningCount = 0;
+            }
+
+            var cards = gameOutcome.PlayerHand.Cards.Concat(gameOutcome.DealerHand.Cards);
+
+            foreach (var card in cards)
             {
                 runningCount += card.Value switch
                 {
