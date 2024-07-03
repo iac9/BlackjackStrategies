@@ -2,29 +2,19 @@ using BlackjackStrategies.Domain;
 
 namespace BlackjackStrategies.Application.BetService
 {
-    public class HiLoBetService(decimal startingAmount, decimal bettingSize) : IBetSerivce
+    public class HiLoBetService : BaseBetService
     {
         private int runningCount = 0;
         private GameOutcome? lastGameOutcome = null;
-        private decimal currentAmount = startingAmount;
-        private readonly decimal startingAmount = startingAmount;
-
-        public void MakeBet(GameOutcome gameOutcome)
+        public override void MakeBet(GameOutcome gameOutcome)
         {
             UpdateRunningCount(gameOutcome);
 
             var trueCount = GetTrueCount();
-            var bet = Math.Min(currentAmount, bettingSize * (gameOutcome.Doubled ? 2 : 1) * trueCount);
+            var bet = Math.Min(Amount, SingleBetSize * (gameOutcome.Doubled ? 2 : 1) * trueCount);
 
-            currentAmount += gameOutcome.GameResult switch
-            {
-                GameResult.Win => bet,
-                GameResult.Lose => -bet,
-                GameResult.Blackjack => bet * 1.5M,
-                _ => 0,
-            };
+            UpdateAmount(gameOutcome, bet);
 
-            gameOutcome.Money = currentAmount - startingAmount;
             lastGameOutcome = gameOutcome;
         }
 

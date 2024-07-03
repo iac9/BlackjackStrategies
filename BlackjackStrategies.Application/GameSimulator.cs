@@ -7,18 +7,31 @@ namespace BlackjackStrategies.Application
     public interface IGameSimulator
     {
         public IEnumerable<GameOutcome> GameOutcomes { get; }
-        IEnumerable<GameOutcome> Simulate(int numberOfDecks, int numberOfGames);
+        IEnumerable<GameOutcome> Simulate(
+            int numberOfDecks,
+            int numberOfGames,
+            decimal startingAmount,
+            decimal bettingSize,
+            StrategyType strateg
+        );
     }
 
-    public class GameSimulator(IPlayerService playerService, IBetSerivce betSerivce) : IGameSimulator
+    public class GameSimulator(IPlayerService playerService, IBetServiceFactory betServiceFactory) : IGameSimulator
     {
         private readonly Hand DealerHand = new();
         private Deck Deck = new();
         private readonly List<GameOutcome> _gameOutcomes = [];
         public IEnumerable<GameOutcome> GameOutcomes => _gameOutcomes;
 
-        public IEnumerable<GameOutcome> Simulate(int numberOfDecks, int numberOfGames)
+        public IEnumerable<GameOutcome> Simulate(
+            int numberOfDecks,
+            int numberOfGames,
+            decimal startingAmount,
+            decimal bettingSize,
+            StrategyType strategy
+        )
         {
+            var betService = betServiceFactory.GetBetSerivce(strategy, startingAmount, bettingSize);
             Deck = new Deck(numberOfDecks);
             Deck.Shuffle();
 
@@ -39,7 +52,7 @@ namespace BlackjackStrategies.Application
                 HandlePlayerTurn();
                 HandleDealerTurn();
 
-                LogGameOutcome();
+                LogGameOutcome(betService);
             }
 
             return _gameOutcomes;
@@ -98,19 +111,19 @@ namespace BlackjackStrategies.Application
             }
         }
 
-        private void LogGameOutcome()
+        private void LogGameOutcome(IBetSerivce betService)
         {
             if (playerService.SplitHands == null)
             {
                 var gameOutcome = GetGameOutcome(playerService.Hand);
-                betSerivce.MakeBet(gameOutcome);
+                betService.MakeBet(gameOutcome);
                 _gameOutcomes.Add(gameOutcome);
             }
             else
             {
                 foreach (var gameOutcome in playerService.SplitHands.Select(GetGameOutcome))
                 {
-                    betSerivce.MakeBet(gameOutcome);
+                    betService.MakeBet(gameOutcome);
                     _gameOutcomes.Add(gameOutcome);
                 }
             }
