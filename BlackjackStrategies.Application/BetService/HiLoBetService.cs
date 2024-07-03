@@ -6,8 +6,12 @@ namespace BlackjackStrategies.Application.BetService
     {
         private int runningCount = 0;
         private GameOutcome? lastGameOutcome = null;
+
         public override void MakeBet(GameOutcome gameOutcome)
         {
+            if (gameOutcome.Money == 0)
+                return;
+
             UpdateRunningCount(gameOutcome);
 
             var trueCount = GetTrueCount();

@@ -1,6 +1,6 @@
 ﻿using BlackjackStrategies.Application.BetService;
 
-namespace BlackjackStrategies.API
+namespace BlackjackStrategies.API.Models
 {
     public class SimulateGameRequest
     {

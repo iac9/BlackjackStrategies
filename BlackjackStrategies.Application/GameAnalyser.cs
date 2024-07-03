@@ -4,13 +4,29 @@ namespace BlackjackStrategies.Application
 {
     public interface IGameAnalyser
     {
-        decimal GetExpectedValue(IEnumerable<GameOutcome> gameOutcomes);
-        Dictionary<GameResult, int> GetGameResultCount(IEnumerable<GameOutcome> gameOutcomes);
+        public GameStatistic GetGameStatistics(IEnumerable<GameOutcome> gameOutcomes);
+    }
+
+    public class GameStatistic
+    {
+        public required int NumberOfGamesPlayed { get; set; }
+        public required decimal ExpectedValue { get; set; }
+        public required Dictionary<GameResult, int> GameResultCount { get; set; }
     }
 
     public class GameAnalyser : IGameAnalyser
     {
-        public decimal GetExpectedValue(IEnumerable<GameOutcome> gameOutcomes)
+        public GameStatistic GetGameStatistics(IEnumerable<GameOutcome> gameOutcomes)
+        {
+            return new GameStatistic
+            {
+                NumberOfGamesPlayed = gameOutcomes.Where(o => o.Money > 0).Count() + 1,
+                ExpectedValue = GetExpectedValue(gameOutcomes),
+                GameResultCount = GetGameResultCount(gameOutcomes)
+            };
+        }
+
+        private static decimal GetExpectedValue(IEnumerable<GameOutcome> gameOutcomes)
         {
             var gameResultCount = GetGameResultCount(gameOutcomes);
 
@@ -33,7 +49,7 @@ namespace BlackjackStrategies.Application
             return expectedValue;
         }
 
-        public Dictionary<GameResult, int> GetGameResultCount(IEnumerable<GameOutcome> gameOutcomes) =>
+        private static Dictionary<GameResult, int> GetGameResultCount(IEnumerable<GameOutcome> gameOutcomes) =>
             gameOutcomes.GroupBy(o => o.GameResult).ToDictionary(g => g.Key, g => g.Count());
     }
 }

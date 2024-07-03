@@ -5,20 +5,20 @@ namespace BlackjackStrategies.UI
 {
     public interface IGamePrinter
     {
-        void Print(GameOutcome[] gameOutcome, int numberOfDecks, decimal startingAmount);
+        void Print(GameOutcome[] gameOutcomes, int numberOfDecks);
     }
 
     public class GamePrinter(IGameAnalyser gameAnalyser) : IGamePrinter
     {
-        public void Print(GameOutcome[] gameOutcomes, int numberOfDecks, decimal startingAmount)
+        public void Print(GameOutcome[] gameOutcomes, int numberOfDecks)
         {
-            var roundsUntilBankrupt = gameOutcomes.Where(o => o.Money == -startingAmount).Count();
+            var roundsUntilBankrupt = Array.IndexOf(gameOutcomes.Select(o => o.Money).ToArray(), 0);
 
             for (var i = 0; i < gameOutcomes.Length; i++)
             {
                 var outcome = gameOutcomes[i];
 
-                if (outcome.Money <= -startingAmount)
+                if (i == roundsUntilBankrupt)
                     break;
 
                 Console.WriteLine($"Game: {i + 1}");
@@ -32,22 +32,21 @@ namespace BlackjackStrategies.UI
                 Console.WriteLine("");
             }
 
-            var gameResultCount = gameAnalyser.GetGameResultCount(gameOutcomes);
+            var gameStatistics = gameAnalyser.GetGameStatistics(gameOutcomes);
 
-            foreach (var gameResult in gameResultCount.Keys)
+            foreach (var gameResult in gameStatistics.GameResultCount.Keys)
             {
-                var count = gameResultCount[gameResult];
+                var count = gameStatistics.GameResultCount[gameResult];
                 var probability = count / (decimal)gameOutcomes.Length;
                 var percentage = Math.Round(probability * 100, 2);
 
                 Console.WriteLine($"{gameResult}: {count}/{gameOutcomes.Length} = {percentage}%");
             }
 
-            Console.WriteLine($"EV: {gameAnalyser.GetExpectedValue(gameOutcomes)}");
+            Console.WriteLine($"EV: {gameStatistics.ExpectedValue}");
             Console.WriteLine($"Rounds until bankrupt: {roundsUntilBankrupt}");
             Console.WriteLine($"Highest winnings: ${gameOutcomes.Max(o => o.Money)}");
             Console.WriteLine("");
-
         }
     };
 }

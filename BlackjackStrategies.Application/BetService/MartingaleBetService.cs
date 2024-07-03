@@ -8,6 +8,9 @@ namespace BlackjackStrategies.Application.BetService
 
         public override void MakeBet(GameOutcome gameOutcome)
         {
+            if (Amount == 0)
+                return;
+
             UpdateAmount(gameOutcome, GetAmountToBet(gameOutcome.Doubled));
 
             consecutiveLosses = gameOutcome.GameResult switch

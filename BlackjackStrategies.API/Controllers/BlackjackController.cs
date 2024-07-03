@@ -1,3 +1,4 @@
+using BlackjackStrategies.API.Models;
 using BlackjackStrategies.Application;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,7 +9,7 @@ namespace BlackjackStrategies.API.Controllers
     public class BlackjackController(IGameSimulator simulator, IGameAnalyser analyser) : ControllerBase
     {
         [HttpPost("simulate")]
-        public ActionResult<GameStatistic> SimulateGame([FromBody] SimulateGameRequest request)
+        public ActionResult<GameReportResponse> SimulateGame([FromBody] SimulateGameRequest request)
         {
             var gameOutcomes = simulator.Simulate(
                 request.NumberOfDecks, 
@@ -17,15 +18,19 @@ namespace BlackjackStrategies.API.Controllers
                 request.BettingSize, 
                 request.StrategyType
             );
+            
+            var gameStatistics = analyser.GetGameStatistics(gameOutcomes);
 
-            var gameStatistic = new GameStatistic
+            var gameReport = new GameReportResponse
             {
-                GameOutcomes = gameOutcomes,
-                ExpectedValue = analyser.GetExpectedValue(gameOutcomes),
-                GameResultCount = analyser.GetGameResultCount(gameOutcomes)
+                MoneyOverTime = gameOutcomes.Select(o => o.Money).Where(m => m > 0),
+                NumberOfGamesSimulated = gameOutcomes.Count(),
+                NumberOfGamesPlayed = gameStatistics.NumberOfGamesPlayed,
+                ExpectedValue = gameStatistics.ExpectedValue,
+                GameResultCount = gameStatistics.GameResultCount
             };
 
-            return Ok(gameStatistic);
+            return Ok(gameReport);
         }
     }
 }

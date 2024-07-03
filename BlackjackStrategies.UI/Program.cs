@@ -6,7 +6,7 @@ using BlackjackStrategies.UI;
 
 var startingAmount = 200M;
 var bettingSize = 15M;
-var numberOfGames = 100;
+var numberOfGames = 10;
 var numberOfDecks = 6;
 
 var gameAnalyser = new GameAnalyser();
@@ -16,7 +16,7 @@ var gameSimulator = new GameSimulator(new BasicStrategyPlayerService(), betServi
 var csvWriter = new CsvWriter();
 
 var gameOutcomes = gameSimulator.Simulate(numberOfDecks, numberOfGames, startingAmount, bettingSize, StrategyType.Martingale);
-gamePrinter.Print(gameOutcomes.ToArray(), numberOfGames, startingAmount);
+gamePrinter.Print(gameOutcomes.ToArray(), numberOfGames);
 
 csvWriter.WriteToCsv(gameOutcomes, "../../../gameOutcomes.csv");
 
