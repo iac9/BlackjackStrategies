@@ -4,11 +4,11 @@
     {
         private List<Card> _cards = [];
         public int Count => _cards.Count;
-        public int DeckSize { get; }
+        public int NumberOfDecks { get; }
 
-        public Deck(int deckSize = 1)
+        public Deck(int numberOfDecks = 1)
         {
-            DeckSize = deckSize;
+            NumberOfDecks = numberOfDecks;
             ResetDeck();
         }
 
@@ -32,7 +32,7 @@
         {
             _cards.Clear();
 
-            for (int _ = 0; _ < DeckSize; _++)
+            for (int _ = 0; _ < NumberOfDecks; _++)
             {
                 foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit)))
                 {

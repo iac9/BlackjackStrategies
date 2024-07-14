@@ -2,7 +2,7 @@
 
 namespace BlackjackStrategies.Application.Strategies
 {
-    public class BasicStrategyPlayerService() : IPlayerService
+    public class BasicStrategyPlayerService : IPlayerService
     {
         public Hand Hand { get; set; } = new();
         public IEnumerable<Hand>? SplitHands { get; set; }

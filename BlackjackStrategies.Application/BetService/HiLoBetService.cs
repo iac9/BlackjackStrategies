@@ -9,7 +9,7 @@ namespace BlackjackStrategies.Application.BetService
 
         public override void MakeBet(GameOutcome gameOutcome)
         {
-            if (gameOutcome.Money == 0)
+            if (lastGameOutcome?.Money == 0)
                 return;
 
             var trueCount = GetTrueCount();
@@ -26,7 +26,7 @@ namespace BlackjackStrategies.Application.BetService
         {
             var trueCount = lastGameOutcome == null ? 
                 runningCount : 
-                (int)Math.Round(runningCount / (decimal)lastGameOutcome.CardsRemaining / 52);
+                (int)Math.Round(runningCount / ((decimal)lastGameOutcome.CardsRemaining / Constants.StandardDeckSize));
 
             return Math.Max(trueCount, 1);
         }

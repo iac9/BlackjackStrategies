@@ -5,12 +5,12 @@ namespace BlackjackStrategies.UI
 {
     public interface IGamePrinter
     {
-        void Print(GameOutcome[] gameOutcomes, int numberOfDecks);
+        void Print(GameOutcome[] gameOutcomes, int numberOfDecks, decimal startingAmount);
     }
 
     public class GamePrinter(IGameAnalyser gameAnalyser) : IGamePrinter
     {
-        public void Print(GameOutcome[] gameOutcomes, int numberOfDecks)
+        public void Print(GameOutcome[] gameOutcomes, int numberOfDecks, decimal startingAmount)
         {
             var roundsUntilBankrupt = Array.IndexOf(gameOutcomes.Select(o => o.Money).ToArray(), 0);
 
@@ -28,7 +28,7 @@ namespace BlackjackStrategies.UI
                 Console.WriteLine($"Cards: {outcome.CardsRemaining}/{numberOfDecks * 52}");
                 Console.WriteLine($"Player's Hand ({outcome.PlayerHand.GetValue()}): {outcome.PlayerHand}");
                 Console.WriteLine($"Dealer's Hand ({outcome.DealerHand.GetValue()}): {outcome.DealerHand}");
-                Console.WriteLine($"Profit/Loss: ${outcome.Money}");
+                Console.WriteLine($"Profit/Loss: ${outcome.Money - startingAmount}");
                 Console.WriteLine("");
             }
 
@@ -45,7 +45,7 @@ namespace BlackjackStrategies.UI
 
             Console.WriteLine($"EV: {gameStatistics.ExpectedValue}");
             Console.WriteLine($"Rounds until bankrupt: {roundsUntilBankrupt}");
-            Console.WriteLine($"Highest winnings: ${gameOutcomes.Max(o => o.Money)}");
+            Console.WriteLine($"Highest winnings: ${gameOutcomes.Max(o => o.Money) - startingAmount}");
             Console.WriteLine("");
         }
     };

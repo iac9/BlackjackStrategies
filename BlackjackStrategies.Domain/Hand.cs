@@ -57,14 +57,14 @@
             var playerHandValue = hand.GetValue();
             var otherHandValue = otherHand.GetValue();
 
-            if (playerHandValue > 21)
+            if (playerHandValue > Constants.Blackjack)
                 return GameResult.Lose;
             else
             {
-                if (playerHandValue == 21)
+                if (playerHandValue == Constants.Blackjack)
                     return GameResult.Blackjack;
 
-                if (otherHandValue > 21)
+                if (otherHandValue > Constants.Blackjack)
                     return GameResult.Win;
 
                 if (playerHandValue == otherHandValue)

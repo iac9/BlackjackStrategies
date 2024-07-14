@@ -61,7 +61,7 @@ namespace BlackjackStrategies.Application
             var dealerUpCard = DealerHand.Cards.First();
             var playerAction = playerService.GetAction(dealerUpCard);
 
-            while (playerService.Hand.GetValue() < 22 && playerAction != HandAction.Stay)
+            while (playerService.Hand.GetValue() < Constants.Blackjack && playerAction != HandAction.Stay)
             {
                 if (playerAction == HandAction.Hit)
                 {
@@ -95,7 +95,7 @@ namespace BlackjackStrategies.Application
 
         private void HandleDealerTurn()
         {
-            while (DealerHand.GetValue() < 17)
+            while (DealerHand.GetValue() < Constants.DealerStayThreshold)
             {
                 DrawCard(DealerHand, 1);
             }
