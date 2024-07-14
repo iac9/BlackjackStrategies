@@ -12,12 +12,12 @@ namespace BlackjackStrategies.Application.BetService
             if (gameOutcome.Money == 0)
                 return;
 
-            UpdateRunningCount(gameOutcome);
-
             var trueCount = GetTrueCount();
             var bet = Math.Min(Amount, SingleBetSize * (gameOutcome.Doubled ? 2 : 1) * trueCount);
 
             UpdateAmount(gameOutcome, bet);
+
+            UpdateRunningCount(gameOutcome);
 
             lastGameOutcome = gameOutcome;
         }

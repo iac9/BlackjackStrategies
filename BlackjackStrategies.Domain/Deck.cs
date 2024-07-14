@@ -1,10 +1,16 @@
 ﻿namespace BlackjackStrategies.Domain
 {
-    public class Deck(int deckSize = 1)
+    public class Deck
     {
-        private List<Card> _cards = GenerateDeck(deckSize).ToList();
-        public int Size => deckSize;
+        private List<Card> _cards = [];
         public int Count => _cards.Count;
+        public int DeckSize { get; }
+
+        public Deck(int deckSize = 1)
+        {
+            DeckSize = deckSize;
+            ResetDeck();
+        }
 
         public Card Draw()
         {
@@ -21,22 +27,22 @@
         public void Shuffle() => 
             _cards = [.. _cards.OrderBy(c => Guid.NewGuid())];
 
-        public void ResetDeck() => 
-            _cards = GenerateDeck(deckSize).ToList();
 
-        private static IEnumerable<Card> GenerateDeck(int deckSize)
+        public void ResetDeck()
         {
-            for (int _ = 0; _ < deckSize; _++)
+            _cards.Clear();
+
+            for (int _ = 0; _ < DeckSize; _++)
             {
                 foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit)))
                 {
                     foreach (CardValue value in Enum.GetValues(typeof(CardValue)))
                     {
-                        yield return new Card
+                        _cards.Add(new Card
                         {
                             Suit = suit,
                             Value = value
-                        };
+                        });
                     }
                 }
             }
