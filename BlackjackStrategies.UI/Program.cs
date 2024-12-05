@@ -19,4 +19,4 @@ var csvWriter = new CsvWriter();
 var gameOutcomes = gameSimulator.Simulate(numberOfDecks, numberOfGames, startingAmount, bettingSize, strategyType);
 gamePrinter.Print(gameOutcomes.ToArray(), numberOfDecks, startingAmount);
 
-//csvWriter.WriteToCsv(gameOutcomes, "../../../gameOutcomes.csv");
+csvWriter.WriteToCsv(gameOutcomes, "../../../gameOutcomes.csv");

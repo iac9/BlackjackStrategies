@@ -11,7 +11,8 @@ namespace BlackjackStrategies.Application
             int numberOfGames,
             decimal startingAmount,
             decimal bettingSize,
-            StrategyType strateg
+            StrategyType strategy,
+            bool automaticShuffler = false
         );
     }
 
@@ -25,7 +26,8 @@ namespace BlackjackStrategies.Application
             int numberOfGames,
             decimal startingAmount,
             decimal bettingSize,
-            StrategyType strategy
+            StrategyType strategy,
+            bool automaticShuffler = false
         )
         {
             var betService = betServiceFactory.GetBetSerivce(strategy, startingAmount, bettingSize);
@@ -38,7 +40,7 @@ namespace BlackjackStrategies.Application
                 playerService.ResetState();
                 DealerHand.Clear();
 
-                if (Deck.Count < 16)
+                if (automaticShuffler || Deck.Count < 16)
                 {
                     Deck.ResetDeck();
                     Deck.Shuffle();
