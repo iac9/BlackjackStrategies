@@ -1,32 +1,31 @@
 ﻿using BlackjackStrategies.Domain;
 
-namespace BlackjackStrategies.Application.BetService
+namespace BlackjackStrategies.Application.BetService;
+
+public class MartingaleBetService : BaseBetService
 {
-    public class MartingaleBetService : BaseBetService
+    private int _consecutiveLosses = 0;
+
+    public override void MakeBet(GameOutcome gameOutcome)
     {
-        private int consecutiveLosses = 0;
+        if (Amount == 0)
+            return;
 
-        public override void MakeBet(GameOutcome gameOutcome)
+        UpdateAmount(gameOutcome, GetAmountToBet(gameOutcome.Doubled));
+
+        _consecutiveLosses = gameOutcome.GameResult switch
         {
-            if (Amount == 0)
-                return;
+            GameResult.Win or GameResult.Blackjack => 0,
+            GameResult.Lose => _consecutiveLosses + 1,
+            _ => _consecutiveLosses,
+        };
+    }
 
-            UpdateAmount(gameOutcome, GetAmountToBet(gameOutcome.Doubled));
+    private decimal GetAmountToBet(bool doubled)
+    {
+        var doubledFactor = doubled ? 2 : 1;
+        var desiredAmountToBet = SingleBetSize * doubledFactor * (decimal)Math.Pow(2, _consecutiveLosses);
 
-            consecutiveLosses = gameOutcome.GameResult switch
-            {
-                GameResult.Win or GameResult.Blackjack => 0,
-                GameResult.Lose => consecutiveLosses + 1,
-                _ => consecutiveLosses,
-            };
-        }
-
-        private decimal GetAmountToBet(bool doubled)
-        {
-            var doubledFactor = doubled ? 2 : 1;
-            var desiredAmountToBet = SingleBetSize * doubledFactor * (decimal)Math.Pow(2, consecutiveLosses);
-
-            return Math.Min(Amount, desiredAmountToBet);
-        }
+        return Math.Min(Amount, desiredAmountToBet);
     }
 }

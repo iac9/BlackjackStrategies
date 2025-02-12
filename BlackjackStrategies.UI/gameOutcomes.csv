@@ -1,11 +1,1033 @@
-GameResult,PlayerHand,DealerHand,Money,Doubled,Split,CardsRemaining
-Win,[Clubs Eight] [Clubs Queen],[Clubs Seven] [Clubs Ten],215,False,False,308
-Lose,[Clubs Seven] [Spades Two] [Diamonds Five] [Hearts Eight],[Hearts Ace] [Clubs Seven],200,False,False,302
-Win,[Spades Six] [Clubs Ten],[Spades Four] [Clubs King] [Hearts Queen],230,False,False,297
-Lose,[Diamonds Two] [Spades Ten] [Diamonds King],[Diamonds Nine] [Clubs Two] [Hearts Jack],215,False,False,291
-Win,[Hearts King] [Clubs Five],[Spades Six] [Hearts Two] [Spades Four] [Diamonds Four] [Clubs Six],245,False,False,284
-Lose,[Hearts Two] [Diamonds Jack],[Spades Four] [Clubs King] [Diamonds Ace] [Clubs Five],230,False,False,278
-Lose,[Clubs Three] [Spades King],[Clubs Six] [Spades Six] [Hearts Nine],200,False,False,273
-Lose,[Diamonds Two] [Clubs Queen] [Diamonds Six],[Hearts Two] [Spades Seven] [Spades Queen],140,False,False,267
-Lose,[Spades Seven] [Spades Five] [Spades King],[Hearts Ace] [Spades Ace] [Clubs Three] [Spades Two],20,False,False,260
-Lose,[Clubs Two] [Hearts Ace] [Clubs Nine],[Diamonds Four] [Diamonds King] [Clubs Four],0,False,False,254
+GameResult,PlayerHand,DealerHand,PlayerHandValue,DealerHandValue,Money,Doubled,Split,CardsRemaining
+Lose,[Diamonds Five] [Diamonds Two] [Spades Nine] [Clubs Nine],[Diamonds Ten] [Spades Eight],25,18,185,False,False,306
+Lose,[Spades Three] [Diamonds Three] [Diamonds Six] [Hearts Ace] [Diamonds Queen],[Diamonds King] [Spades Four] [Clubs King],23,24,155,False,False,298
+Push,[Diamonds Ace] [Spades Six] [Spades Ace],[Hearts Six] [Spades King] [Hearts Two],18,18,155,True,False,292
+Win,[Clubs Ace] [Hearts Seven],[Diamonds Seven] [Clubs Nine] [Spades Seven],18,23,215,False,False,287
+Win,[Spades Seven] [Spades Three] [Spades Nine],[Diamonds Two] [Hearts Four] [Hearts Seven] [Spades Five],19,18,245,True,False,280
+Lose,[Clubs Four] [Clubs Queen] [Spades Two] [Clubs King],[Diamonds Ace] [Spades Jack],26,21,230,False,False,274
+Lose,[Clubs Seven] [Hearts Jack],[Clubs Two] [Diamonds Ace] [Spades Seven],17,20,200,False,False,269
+Lose,[Spades Eight] [Spades Four] [Spades Queen],[Hearts Queen] [Spades Nine],22,19,140,False,False,264
+Lose,[Hearts Eight] [Clubs Nine],[Clubs Six] [Clubs Six] [Hearts Eight],17,20,20,False,False,259
+Win,[Spades Ace] [Clubs Four] [Diamonds Four],[Diamonds Eight] [Hearts Nine],19,17,40,False,True,252
+Win,[Clubs Ace] [Diamonds Seven],[Diamonds Eight] [Hearts Nine],18,17,55,False,True,252
+Lose,[Spades Six] [Spades Ten],[Clubs Six] [Diamonds Ten] [Diamonds Two],16,18,40,False,False,247
+Lose,[Clubs Two] [Clubs Ace] [Clubs Four],[Spades Two] [Hearts Three] [Clubs Nine] [Diamonds Ace] [Diamonds Four],17,19,10,False,False,239
+Lose,[Hearts Ace] [Clubs Three] [Spades Ace] [Clubs Jack] [Spades Ten],[Clubs Seven] [Diamonds Nine] [Spades Eight],25,24,0,False,False,231
+Win,[Spades Three] [Spades King] [Hearts Seven],[Spades Nine] [Diamonds Queen],20,19,0,False,False,226
+Lose,[Hearts Two] [Clubs Ace] [Hearts Two],[Spades Two] [Spades Seven] [Diamonds Five] [Diamonds Seven],15,21,0,False,False,219
+Lose,[Clubs Two] [Clubs Four] [Hearts Three],[Spades King] [Diamonds Jack],9,20,0,False,False,214
+Win,[Diamonds Seven] [Diamonds Queen],[Diamonds Three] [Spades Two] [Clubs Five] [Clubs Six] [Spades Seven],17,23,0,False,False,207
+Win,[Hearts Nine] [Clubs Ace],[Diamonds Eight] [Diamonds Eight] [Clubs Three],20,19,0,False,True,200
+Win,[Spades Nine] [Diamonds Ace],[Diamonds Eight] [Diamonds Eight] [Clubs Three],20,19,0,False,True,200
+Win,[Hearts Queen] [Clubs Five],[Hearts Four] [Spades Nine] [Clubs Jack],15,23,0,False,False,195
+Lose,[Clubs Two] [Hearts King] [Hearts Six],[Hearts Ace] [Clubs Eight],18,19,0,False,False,190
+Lose,[Diamonds Four] [Hearts Eight] [Diamonds Eight],[Spades Ace] [Hearts Four] [Hearts Six],20,21,0,False,False,184
+Win,[Clubs Seven] [Clubs Three] [Diamonds Nine],[Hearts Five] [Diamonds Three] [Clubs Ten],19,18,0,True,False,178
+Lose,[Diamonds Jack] [Spades Seven],[Diamonds Nine] [Diamonds Nine],17,18,0,False,False,174
+Blackjack,[Hearts Eight] [Hearts Three] [Diamonds Queen],[Diamonds Seven] [Hearts Seven] [Clubs Seven],21,21,0,True,False,168
+Lose,[Clubs King] [Diamonds Five] [Hearts Jack],[Hearts Queen] [Spades Five] [Spades Queen],25,25,0,False,False,162
+Win,[Spades Ten] [Hearts Ten],[Diamonds Three] [Spades Jack] [Hearts Nine],20,22,0,False,False,157
+Win,[Clubs Ten] [Diamonds Queen],[Hearts Eight] [Spades Five] [Diamonds Six],20,19,0,False,False,152
+Lose,[Hearts Five] [Diamonds Nine] [Hearts Nine],[Clubs Seven] [Spades Two] [Spades Eight],23,17,0,False,False,146
+Lose,[Diamonds Ten] [Hearts Six] [Hearts Ten],[Diamonds Ten] [Diamonds Six] [Diamonds Ten],26,26,0,False,False,140
+Lose,[Clubs Three] [Clubs Two] [Hearts Jack] [Diamonds King],[Diamonds Queen] [Hearts Two] [Spades Four] [Spades Eight],25,24,0,False,False,132
+Win,[Spades Three] [Hearts Nine] [Spades Three] [Spades Five],[Clubs Eight] [Hearts Four] [Diamonds Two] [Spades Jack],20,24,0,False,False,124
+Win,[Clubs Ten] [Spades Three],[Hearts Five] [Clubs Nine] [Clubs Ten],13,24,0,False,False,119
+Push,[Spades Queen] [Spades Queen],[Spades Queen] [Hearts Queen],20,20,0,False,False,115
+Win,[Hearts King] [Clubs Two] [Spades Five],[Clubs Ten] [Spades Four] [Spades Jack],17,24,0,False,False,109
+Lose,[Clubs King] [Hearts Two] [Spades Two] [Hearts Four],[Clubs Ace] [Hearts Ten],18,21,0,False,False,103
+Win,[Hearts Ten] [Hearts Nine],[Hearts Jack] [Diamonds Five] [Hearts Ten],19,25,0,False,False,98
+Lose,[Spades Jack] [Diamonds Jack],[Diamonds Six] [Clubs Five] [Hearts Ten],20,21,0,False,False,93
+Lose,[Clubs Three] [Spades Eight] [Hearts Ace],[Clubs Six] [Diamonds Ace],12,17,0,True,False,88
+Lose,[Hearts Jack] [Clubs Nine],[Hearts Seven] [Clubs Seven] [Diamonds Six],19,20,0,False,False,83
+Win,[Hearts Five] [Clubs Queen] [Clubs Five],[Diamonds Ten] [Diamonds Eight],20,18,0,False,False,78
+Lose,[Diamonds Jack] [Diamonds Three],[Hearts Two] [Clubs Six] [Spades Ace],13,19,0,False,False,73
+Lose,[Spades Six] [Spades Six] [Diamonds Jack],[Spades Ace] [Spades Jack],22,21,0,False,False,68
+Win,[Spades Five] [Hearts Queen],[Hearts Three] [Clubs Ten] [Clubs Queen],15,23,0,False,False,63
+Lose,[Clubs Four] [Diamonds Six] [Hearts Six] [Hearts King],[Spades Ten] [Spades Four] [Spades King],26,24,0,False,False,56
+Lose,[Diamonds Nine] [Spades Six] [Clubs Eight],[Hearts Seven] [Diamonds King],23,17,0,False,False,51
+Lose,[Clubs Queen] [Hearts Three] [Diamonds Four],[Clubs Queen] [Clubs Three] [Hearts Three] [Clubs Four],17,20,0,False,False,44
+Blackjack,[Hearts Ace] [Spades Ten],[Clubs Five] [Clubs King] [Diamonds King],21,25,0,False,False,39
+Lose,[Clubs Jack] [Spades Four] [Hearts Four],[Diamonds Seven] [Clubs Eight] [Diamonds Five],18,20,0,False,False,33
+Win,[Diamonds Eight] [Clubs Jack],[Diamonds Two] [Diamonds Five] [Hearts King],18,17,0,False,False,28
+Win,[Hearts Eight] [Clubs Five],[Hearts Five] [Spades King] [Hearts Jack],13,25,0,False,False,23
+Push,[Clubs King] [Hearts Queen],[Diamonds King] [Diamonds Jack],20,20,0,False,False,19
+Lose,[Hearts Five] [Spades Ten] [Clubs Queen],[Spades King] [Diamonds Four] [Clubs Jack],25,24,0,False,False,13
+Lose,[Diamonds Three] [Clubs King] [Spades Ten],[Spades Seven] [Spades Four] [Clubs Jack],23,21,0,False,False,306
+Lose,[Diamonds Ten] [Diamonds Five] [Diamonds Ten],[Diamonds King] [Clubs Four] [Hearts Eight],25,22,0,False,False,300
+Blackjack,[Diamonds Queen] [Diamonds Five] [Spades Six],[Clubs Queen] [Hearts Eight],21,18,0,False,False,295
+Blackjack,[Hearts Eight] [Hearts Three] [Diamonds Queen],[Hearts Two] [Clubs Seven] [Diamonds Nine],21,18,0,True,True,287
+Push,[Diamonds Eight] [Clubs Jack],[Hearts Two] [Clubs Seven] [Diamonds Nine],18,18,0,True,True,287
+Win,[Hearts Seven] [Clubs Six],[Hearts Six] [Clubs King] [Clubs Ten],13,26,0,False,False,282
+Win,[Spades Eight] [Clubs King],[Diamonds Two] [Diamonds Two] [Hearts Queen] [Clubs Two] [Diamonds Eight],18,24,0,False,False,275
+Lose,[Diamonds Two] [Hearts Nine] [Hearts Ace],[Hearts Ace] [Clubs Four] [Clubs Three],12,18,0,True,False,269
+Win,[Spades Queen] [Diamonds Ten],[Hearts Two] [Clubs Two] [Clubs Five] [Hearts Nine],20,18,0,False,False,263
+Win,[Hearts Two] [Diamonds King] [Diamonds Six],[Clubs Eight] [Spades Seven] [Hearts Nine],18,24,0,False,False,257
+Lose,[Clubs Seven] [Clubs Jack],[Spades Ace] [Spades Ace] [Diamonds Ace] [Clubs Five],17,18,0,False,False,251
+Win,[Hearts Seven] [Hearts Jack],[Diamonds Five] [Spades Jack] [Spades King],17,25,0,False,False,246
+Win,[Spades Jack] [Clubs Eight],[Hearts Eight] [Clubs Three] [Clubs Four] [Spades Queen],18,25,0,False,False,240
+Lose,[Clubs Jack] [Diamonds Three] [Spades Queen],[Clubs Ten] [Spades King],23,20,0,False,False,235
+Lose,[Hearts Seven] [Spades Three] [Hearts Three],[Hearts Nine] [Clubs King],13,19,0,True,False,230
+Win,[Hearts King] [Diamonds Seven],[Diamonds Four] [Spades Nine] [Diamonds Three] [Spades Eight],17,24,0,False,False,224
+Win,[Clubs Two] [Spades Queen],[Diamonds Four] [Clubs Eight] [Clubs Jack],12,22,0,False,False,219
+Lose,[Spades Five] [Diamonds King] [Clubs Three],[Hearts Ace] [Clubs Queen],18,21,0,False,False,214
+Lose,[Spades Four] [Clubs Eight] [Spades King],[Spades King] [Spades King],22,20,0,False,False,209
+Push,[Hearts King] [Hearts Four] [Clubs Five],[Hearts Ace] [Diamonds Eight],19,19,0,False,False,204
+Lose,[Diamonds Queen] [Hearts Five],[Spades Two] [Diamonds Ace] [Clubs Four],15,17,0,False,False,199
+Win,[Clubs Queen] [Clubs Three] [Spades Seven],[Spades Ten] [Diamonds Two] [Hearts Four] [Hearts Queen],20,26,0,False,False,192
+Lose,[Clubs Six] [Clubs Eight],[Spades Five] [Clubs Two] [Spades Two] [Spades Nine],14,18,0,False,False,186
+Blackjack,[Hearts Ten] [Spades Ace],[Hearts Ten] [Clubs Two] [Clubs Five],21,17,0,False,False,181
+Lose,[Clubs Six] [Hearts Jack],[Hearts Five] [Diamonds Five] [Spades Eight],16,18,0,False,False,176
+Lose,[Hearts Four] [Hearts Ace] [Clubs Four],[Hearts Four] [Clubs Ace] [Clubs Ten] [Diamonds Five],19,20,0,True,False,169
+Lose,[Diamonds Five] [Hearts Ten],[Spades Six] [Diamonds Ace],15,17,0,False,False,165
+Win,[Spades Two] [Hearts Six] [Spades Jack],[Hearts Seven] [Spades Jack],18,17,0,False,False,160
+Lose,[Clubs Four] [Spades Three] [Diamonds Queen],[Diamonds Six] [Spades Nine] [Hearts Five],17,20,0,False,False,154
+Lose,[Hearts Four] [Diamonds Ten] [Clubs Ace] [Spades Ace] [Hearts Seven],[Spades Ace] [Diamonds Ace] [Spades Two] [Diamonds Three],23,17,0,False,False,145
+Win,[Diamonds Four] [Spades Five] [Hearts Ten],[Hearts Three] [Clubs Ace] [Hearts Queen] [Hearts Jack],19,24,0,True,False,138
+Lose,[Spades Ten] [Hearts Three],[Clubs Six] [Hearts Two] [Clubs Three] [Spades Ten],13,21,0,False,False,132
+Lose,[Hearts Nine] [Spades Seven] [Diamonds Eight],[Hearts King] [Clubs Seven],24,17,0,False,False,127
+Lose,[Clubs Queen] [Hearts Two] [Spades Two] [Hearts Jack],[Diamonds Nine] [Diamonds Six] [Clubs Six],24,21,0,False,False,120
+Win,[Spades Four] [Diamonds Four] [Clubs Ace],[Hearts Eight] [Hearts Three] [Spades Six],19,17,0,False,False,114
+Lose,[Hearts King] [Diamonds Six] [Clubs King],[Diamonds Jack] [Spades Queen],26,20,0,False,False,109
+Lose,[Clubs Five] [Diamonds Seven] [Hearts Queen],[Clubs Jack] [Spades Queen],22,20,0,False,False,104
+Lose,[Clubs Seven] [Diamonds Nine] [Diamonds Queen],[Clubs Ace] [Hearts Six],26,17,0,False,False,99
+Push,[Spades Three] [Diamonds Seven] [Spades Seven],[Clubs Seven] [Hearts Queen],17,17,0,True,False,94
+Win,[Diamonds Jack] [Spades Ten],[Diamonds Four] [Clubs King] [Diamonds Queen],20,24,0,False,False,89
+Win,[Hearts Ten] [Diamonds Ten],[Clubs Five] [Spades Six] [Spades Five] [Diamonds Jack],20,26,0,False,False,83
+Lose,[Spades Eight] [Clubs Nine],[Hearts Two] [Hearts Nine] [Clubs Nine],17,20,0,False,False,78
+Win,[Hearts Three] [Spades Four] [Diamonds Four],[Spades Three] [Spades Jack] [Hearts Ace] [Diamonds Jack],11,24,0,False,False,71
+Win,[Clubs Eight] [Spades Four] [Diamonds Ace] [Hearts Six],[Spades Ace] [Diamonds Seven],19,18,0,False,False,65
+Lose,[Diamonds King] [Spades Eight],[Hearts King] [Diamonds Nine],18,19,0,False,False,61
+Lose,[Hearts Four] [Diamonds Two] [Spades Six] [Clubs Ten],[Hearts Eight] [Clubs Nine],22,17,0,False,False,55
+Lose,[Clubs Queen] [Clubs Six] [Clubs Ten],[Hearts Queen] [Hearts Six] [Spades Nine],26,25,0,False,False,49
+Push,[Diamonds Nine] [Spades Ten],[Hearts Seven] [Spades Two] [Diamonds Jack],19,19,0,False,False,44
+Push,[Clubs Ace] [Diamonds Nine],[Spades Jack] [Hearts Ten],20,20,0,False,False,40
+Lose,[Diamonds Jack] [Diamonds Six],[Spades Three] [Diamonds Seven] [Spades Nine],16,19,0,False,False,35
+Lose,[Clubs Nine] [Spades Five],[Hearts Five] [Diamonds King] [Diamonds Three],14,18,0,False,False,30
+Win,[Diamonds Ace] [Spades Three] [Spades Eight] [Diamonds Three] [Hearts Five],[Clubs Ten] [Spades Nine],20,19,0,False,False,23
+Lose,[Spades Seven] [Spades Five] [Clubs Queen],[Clubs Three] [Diamonds King] [Diamonds Ten],22,23,0,False,False,17
+Blackjack,[Spades Six] [Diamonds Seven] [Diamonds Eight],[Diamonds Eight] [Hearts King],21,18,0,False,False,12
+Lose,[Clubs Eight] [Diamonds Four] [Hearts Ace] [Spades Jack],[Clubs Ace] [Hearts Four] [Hearts Ten] [Diamonds Five],23,20,0,False,False,304
+Lose,[Clubs Nine] [Spades Four] [Clubs Five],[Clubs Nine] [Hearts Two] [Diamonds Three] [Diamonds Seven],18,21,0,False,False,297
+Blackjack,[Diamonds Ace] [Clubs Six] [Clubs Four],[Hearts Six] [Hearts King] [Clubs Eight],21,24,0,True,False,291
+Lose,[Spades Two] [Spades Ace] [Spades Three],[Hearts Two] [Spades Ace] [Spades Eight],16,21,0,False,False,285
+Win,[Spades Jack] [Spades Four],[Hearts Three] [Clubs Nine] [Spades King],14,22,0,False,False,280
+Lose,[Spades Ten] [Spades Six],[Clubs Six] [Hearts Eight] [Clubs Seven],16,21,0,False,False,275
+Win,[Spades King] [Hearts Queen],[Clubs Three] [Clubs Queen] [Spades King],20,23,0,False,False,270
+Lose,[Hearts Eight] [Spades Six] [Clubs Queen],[Clubs Jack] [Hearts Five] [Diamonds Five],24,20,0,False,False,264
+Lose,[Diamonds Four] [Hearts Jack] [Diamonds Ten],[Diamonds Nine] [Diamonds Nine],24,18,0,False,False,259
+Lose,[Hearts Four] [Hearts Nine] [Clubs Ten],[Spades Nine] [Diamonds Jack],23,19,0,False,False,254
+Lose,[Clubs King] [Diamonds Five] [Hearts Jack],[Clubs Seven] [Hearts Three] [Diamonds Five] [Spades Jack],25,25,0,False,False,247
+Win,[Spades Seven] [Clubs Three] [Hearts Queen],[Spades Two] [Diamonds Ten] [Diamonds Queen],20,22,0,True,False,241
+Lose,[Spades Two] [Diamonds Ten] [Hearts Ace] [Diamonds Ten],[Hearts Queen] [Diamonds Jack],23,20,0,False,False,235
+Lose,[Clubs Six] [Spades Nine] [Clubs Three],[Clubs Queen] [Spades Queen],18,20,0,False,False,230
+Lose,[Hearts Two] [Clubs Three] [Hearts Seven] [Clubs Four] [Clubs Seven],[Hearts Ten] [Diamonds King],23,20,0,False,False,223
+Win,[Spades Five] [Diamonds Two] [Hearts Six],[Hearts Four] [Hearts Four] [Spades Eight] [Diamonds Six],13,22,0,False,False,216
+Lose,[Diamonds King] [Clubs Four] [Diamonds Two] [Diamonds Seven],[Spades Seven] [Clubs Two] [Diamonds Eight],23,17,0,False,False,209
+Win,[Hearts Nine] [Diamonds Queen],[Diamonds Jack] [Diamonds Eight],19,18,0,False,False,205
+Lose,[Clubs Jack] [Diamonds Queen],[Hearts Jack] [Diamonds Ace],20,21,0,False,False,201
+Push,[Clubs Eight] [Spades Ace],[Spades Jack] [Hearts Nine],19,19,0,False,False,197
+Lose,[Spades Ace] [Spades Seven] [Spades Seven] [Clubs Two],[Diamonds Nine] [Spades Ace],17,20,0,False,False,191
+Win,[Clubs Queen] [Spades Eight],[Diamonds King] [Diamonds Two] [Clubs Three] [Spades Nine],18,24,0,False,False,185
+Lose,[Spades Ten] [Diamonds Eight],[Diamonds Seven] [Spades Four] [Hearts King],18,21,0,False,False,180
+Lose,[Clubs Four] [Clubs Ten] [Clubs Two] [Clubs Seven],[Diamonds King] [Clubs King],23,20,0,False,False,174
+Blackjack,[Hearts Ace] [Clubs King],[Spades King] [Hearts Queen],21,20,0,False,True,168
+Lose,[Diamonds Ace] [Hearts Eight],[Spades King] [Hearts Queen],19,20,0,False,True,168
+Lose,[Spades Nine] [Hearts Six],[Hearts Six] [Hearts Eight] [Spades Six],15,20,0,False,False,163
+Win,[Diamonds Eight] [Clubs Seven] [Clubs Ace] [Spades Four],[Hearts Ace] [Hearts Seven],20,18,0,False,False,157
+Lose,[Diamonds Five] [Clubs King] [Clubs Seven],[Spades Nine] [Hearts Five] [Hearts Seven],22,21,0,False,False,151
+Lose,[Spades Six] [Spades Jack],[Spades Five] [Hearts Nine] [Spades Three],16,17,0,False,False,146
+Lose,[Clubs Five] [Clubs Ten] [Clubs Ten],[Hearts King] [Hearts Ace],25,21,0,False,False,141
+Lose,[Clubs Six] [Hearts Three] [Clubs Four] [Hearts Four],[Clubs Jack] [Clubs Nine],17,19,0,False,False,135
+Lose,[Hearts Ten] [Spades Six],[Diamonds Six] [Hearts Ten] [Diamonds Three],16,19,0,False,False,130
+Lose,[Clubs Two] [Diamonds Ten],[Diamonds Six] [Diamonds Nine] [Hearts Five],12,20,0,False,False,125
+Win,[Diamonds Four] [Hearts Seven] [Spades Three],[Clubs Five] [Hearts King] [Hearts Eight],14,23,0,True,True,116
+Win,[Diamonds Four] [Hearts Three] [Clubs Jack],[Clubs Five] [Hearts King] [Hearts Eight],17,23,0,True,True,116
+Blackjack,[Clubs Ace] [Clubs Three] [Diamonds Seven],[Diamonds Jack] [Spades Seven],21,17,0,False,False,111
+Lose,[Hearts Seven] [Hearts King],[Diamonds Queen] [Spades Eight],17,18,0,False,False,107
+Lose,[Diamonds Three] [Spades Three] [Diamonds Three],[Hearts Jack] [Clubs Six] [Spades Ace],9,17,0,False,False,101
+Blackjack,[Diamonds Jack] [Clubs Ace],[Hearts Jack] [Clubs Eight],21,18,0,False,False,97
+Win,[Hearts Five] [Diamonds Five] [Hearts Queen],[Spades Five] [Spades Ten] [Spades Eight],20,23,0,True,False,91
+Lose,[Hearts Nine] [Spades Five] [Spades Nine],[Spades Seven] [Spades Queen],23,17,0,False,False,86
+Blackjack,[Hearts Ace] [Diamonds Queen],[Diamonds Two] [Diamonds Six] [Hearts Seven] [Diamonds Ten],21,25,0,False,False,80
+Win,[Hearts Queen] [Spades Four] [Hearts Five],[Clubs Ten] [Diamonds Seven],19,17,0,False,False,75
+Blackjack,[Diamonds King] [Clubs Ace],[Hearts Two] [Hearts Two] [Clubs Five] [Spades Two] [Hearts Ten],21,21,0,False,False,68
+Win,[Spades King] [Diamonds Seven],[Diamonds Nine] [Spades Five] [Clubs Ten],17,24,0,False,False,63
+Lose,[Clubs Four] [Spades Three] [Diamonds Jack],[Diamonds Queen] [Diamonds Eight],17,18,0,False,False,58
+Lose,[Hearts Four] [Diamonds Three] [Spades Eight] [Spades Three],[Hearts Eight] [Diamonds Ace],18,19,0,False,False,52
+Lose,[Diamonds Two] [Diamonds Six] [Diamonds Ace],[Diamonds King] [Clubs Ace],19,21,0,False,False,47
+Lose,[Spades Four] [Hearts Five] [Hearts Six] [Clubs King],[Spades Ten] [Clubs Nine],25,19,0,False,False,41
+Win,[Clubs Nine] [Hearts King],[Clubs Five] [Spades Queen] [Diamonds Three],19,18,0,False,False,36
+Lose,[Clubs Two] [Hearts Jack] [Diamonds Ace] [Spades Queen],[Spades Ten] [Diamonds Six] [Clubs Five],23,21,0,False,False,29
+Lose,[Diamonds Eight] [Hearts Six],[Spades Two] [Clubs Eight] [Spades Queen],14,20,0,False,False,24
+Lose,[Clubs Jack] [Clubs Eight],[Hearts Two] [Diamonds Nine] [Spades Five] [Hearts Three],18,19,0,False,False,18
+Win,[Diamonds Four] [Clubs Queen],[Diamonds Four] [Hearts Nine] [Clubs Queen],14,23,0,False,False,13
+Blackjack,[Clubs Queen] [Diamonds Ace],[Clubs Ace] [Spades Ten],21,21,0,False,False,308
+Lose,[Spades Ace] [Spades Five] [Clubs Six] [Hearts Six],[Spades Jack] [Spades Nine],18,19,0,False,False,302
+Lose,[Hearts Five] [Clubs Queen],[Diamonds Six] [Clubs Eight] [Hearts Four],15,18,0,False,False,297
+Lose,[Hearts Queen] [Diamonds Three],[Hearts Two] [Hearts Three] [Spades Five] [Clubs Seven],13,17,0,False,False,291
+Win,[Clubs Seven] [Hearts Four] [Hearts Three],[Clubs Two] [Diamonds Queen] [Spades Ten],14,22,0,True,False,285
+Win,[Spades Eight] [Diamonds Five],[Clubs Three] [Spades Three] [Diamonds Nine] [Clubs Eight],13,23,0,False,False,279
+Lose,[Spades Four] [Spades Queen] [Hearts Three],[Clubs Ace] [Spades Five] [Hearts Seven] [Hearts Seven],17,20,0,False,False,272
+Win,[Diamonds Ten] [Spades King],[Diamonds Ace] [Clubs Four] [Spades King] [Hearts Queen],20,25,0,False,False,266
+Lose,[Hearts Seven] [Hearts Nine] [Spades Nine],[Clubs Queen] [Diamonds Five] [Spades Three],25,18,0,False,False,260
+Lose,[Diamonds King] [Diamonds Five] [Hearts Ten],[Clubs Queen] [Spades Queen],25,20,0,False,False,255
+Blackjack,[Clubs Ace] [Hearts Jack],[Hearts Eight] [Clubs Three] [Spades Six],21,17,0,False,False,250
+Push,[Hearts Two] [Hearts Ace] [Hearts Four],[Diamonds Seven] [Diamonds King],17,17,0,False,False,245
+Win,[Diamonds King] [Spades Ten],[Diamonds Eight] [Diamonds Queen],20,18,0,False,False,241
+Lose,[Diamonds Six] [Hearts Ace] [Clubs Nine],[Hearts Six] [Diamonds Two] [Clubs Ten],16,18,0,True,False,235
+Lose,[Hearts Two] [Spades Four] [Clubs Six] [Spades Jack],[Clubs Seven] [Spades Ace],22,18,0,False,False,229
+Lose,[Clubs Two] [Diamonds Three] [Diamonds King] [Hearts Nine],[Clubs Ten] [Spades Ten],24,20,0,False,False,223
+Lose,[Hearts Nine] [Hearts Eight],[Spades Five] [Diamonds Six] [Diamonds Two] [Diamonds Eight],17,21,0,False,False,217
+Win,[Hearts Ace] [Clubs Seven] [Clubs Six],[Spades Six] [Diamonds Jack] [Diamonds Six],14,22,0,True,False,211
+Win,[Spades Three] [Spades King],[Clubs Two] [Spades Two] [Diamonds Two] [Spades Six] [Spades Ten],13,22,0,False,False,204
+Win,[Clubs Ace] [Hearts Eight],[Hearts Jack] [Hearts Eight],19,18,0,False,False,200
+Blackjack,[Diamonds Jack] [Spades Ace],[Clubs Nine] [Clubs Four] [Spades Ten],21,23,0,False,False,195
+Push,[Spades Two] [Clubs Eight] [Hearts Ten],[Clubs Jack] [Spades King],20,20,0,False,False,190
+Push,[Diamonds Nine] [Hearts Ten],[Clubs Queen] [Diamonds Three] [Clubs Six],19,19,0,False,False,185
+Push,[Spades Five] [Hearts Nine] [Diamonds Two] [Spades Two],[Spades Eight] [Hearts Jack],18,18,0,False,False,179
+Lose,[Diamonds Eight] [Spades Ace],[Diamonds Ten] [Spades Four] [Clubs Six],19,20,0,False,False,174
+Lose,[Hearts Nine] [Clubs Six] [Diamonds Ace] [Hearts Ace],[Hearts Queen] [Hearts Three] [Diamonds Five],17,18,0,False,False,167
+Push,[Clubs Three] [Spades Five] [Diamonds Ten],[Clubs Eight] [Hearts Three] [Spades Seven],18,18,0,False,False,161
+Blackjack,[Spades King] [Hearts Two] [Diamonds Nine],[Diamonds Three] [Clubs Four] [Diamonds Four] [Spades Jack],21,21,0,False,False,154
+Lose,[Diamonds Five] [Spades Two] [Clubs Ace],[Spades Seven] [Clubs Two] [Clubs King],18,19,0,False,False,148
+Lose,[Hearts Six] [Spades Jack] [Diamonds Queen],[Clubs Ten] [Diamonds Jack],26,20,0,False,False,143
+Blackjack,[Clubs Four] [Diamonds Ten] [Hearts Seven],[Spades Eight] [Hearts Queen],21,18,0,False,False,138
+Lose,[Spades King] [Hearts Three] [Spades Three] [Spades Six],[Spades Seven] [Hearts King],22,17,0,False,False,132
+Win,[Hearts Five] [Spades Eight],[Diamonds Four] [Spades Eight] [Hearts Ten],13,22,0,False,False,127
+Win,[Diamonds Eight] [Diamonds Jack],[Diamonds Seven] [Spades Two] [Diamonds Three] [Spades Four] [Diamonds Ace],18,17,0,False,False,120
+Win,[Hearts Six] [Spades Queen],[Diamonds Two] [Spades Three] [Hearts Five] [Clubs Three] [Spades Queen],16,23,0,False,False,113
+Win,[Spades Queen] [Diamonds Six],[Hearts Four] [Hearts Four] [Clubs Five] [Diamonds King],16,23,0,False,False,107
+Win,[Spades Queen] [Hearts King],[Clubs Seven] [Clubs Five] [Clubs Jack],20,22,0,False,False,102
+Win,[Spades Nine] [Hearts Nine],[Clubs Queen] [Diamonds Six] [Diamonds Seven],18,23,0,False,True,95
+Win,[Diamonds Nine] [Clubs King],[Clubs Queen] [Diamonds Six] [Diamonds Seven],19,23,0,False,True,95
+Win,[Clubs King] [Spades Six] [Hearts Two],[Diamonds Ten] [Spades Four] [Hearts King],18,24,0,False,False,89
+Win,[Clubs Four] [Clubs Jack],[Clubs Two] [Diamonds Four] [Diamonds Queen] [Spades Seven],14,23,0,False,False,83
+Lose,[Diamonds Two] [Clubs King],[Clubs Five] [Clubs Five] [Clubs Ten],12,20,0,False,False,78
+Win,[Hearts Two] [Clubs Nine] [Diamonds Nine],[Clubs Nine] [Clubs Three] [Hearts Queen],20,22,0,True,False,72
+Win,[Spades Jack] [Diamonds Queen],[Clubs Eight] [Hearts Ten],20,18,0,False,False,68
+Lose,[Hearts Queen] [Spades Four] [Clubs King],[Clubs Ace] [Hearts King],24,21,0,False,False,63
+Win,[Spades Nine] [Clubs Jack],[Hearts Five] [Diamonds Ace] [Clubs Jack] [Hearts Eight],19,24,0,False,False,57
+Win,[Spades Ace] [Diamonds Seven] [Spades Jack],[Diamonds Jack] [Spades Seven],18,17,0,False,False,52
+Blackjack,[Hearts Ace] [Hearts Ten],[Clubs Three] [Diamonds Five] [Clubs Jack],21,18,0,False,False,47
+Blackjack,[Diamonds King] [Hearts Ace],[Spades Eight] [Diamonds Ace],21,19,0,False,False,43
+Lose,[Hearts Four] [Spades Seven] [Hearts Eight],[Spades Ace] [Diamonds Queen],19,21,0,True,False,38
+Lose,[Hearts Jack] [Spades Three] [Diamonds Four],[Spades Nine] [Clubs Nine],17,18,0,False,False,33
+Blackjack,[Hearts Five] [Spades Six] [Clubs King],[Clubs Eight] [Diamonds Jack],21,18,0,True,False,28
+Blackjack,[Diamonds Four] [Diamonds Eight] [Spades Nine],[Diamonds Seven] [Hearts Jack],21,17,0,False,False,23
+Lose,[Clubs Ten] [Hearts Five] [Diamonds Ten],[Hearts King] [Hearts Seven],25,17,0,False,False,18
+Lose,[Hearts Six] [Spades Two] [Diamonds Nine],[Hearts King] [Clubs Ten],17,20,0,False,False,13
+Lose,[Diamonds Three] [Clubs Ace] [Diamonds Ten],[Hearts Six] [Hearts Five] [Spades Jack],14,21,0,True,False,306
+Win,[Spades Queen] [Clubs Jack],[Diamonds Four] [Clubs King] [Hearts Three],20,17,0,False,False,301
+Lose,[Clubs Eight] [Diamonds Four],[Spades Six] [Clubs Six] [Clubs Eight],12,20,0,False,False,296
+Lose,[Clubs Two] [Spades Seven] [Hearts Four] [Hearts Three] [Hearts King],[Hearts Ten] [Spades Ten],26,20,0,False,False,289
+Win,[Clubs Four] [Spades Six] [Hearts King],[Spades Six] [Diamonds Jack] [Diamonds Jack],20,26,0,True,False,283
+Lose,[Diamonds Five] [Spades Queen],[Diamonds Two] [Hearts Eight] [Spades King],15,20,0,False,False,278
+Lose,[Clubs Five] [Hearts Eight],[Clubs Five] [Diamonds Ace] [Hearts Ace],13,17,0,False,False,273
+Lose,[Diamonds Nine] [Diamonds Seven] [Diamonds King],[Diamonds Seven] [Spades Five] [Clubs Nine],26,21,0,False,False,267
+Win,[Spades Four] [Diamonds King],[Clubs Five] [Spades Jack] [Hearts Nine],14,24,0,False,False,262
+Lose,[Hearts Two] [Spades Nine] [Clubs Three],[Clubs Six] [Diamonds Seven] [Clubs Five],14,18,0,True,False,256
+Blackjack,[Clubs Jack] [Spades Ace],[Diamonds Queen] [Hearts Queen],21,20,0,False,False,252
+Blackjack,[Spades Jack] [Spades Two] [Spades Nine],[Hearts Eight] [Hearts Jack],21,18,0,False,False,247
+Blackjack,[Clubs Ace] [Hearts Ten],[Spades Seven] [Diamonds Jack],21,17,0,False,False,243
+Push,[Diamonds Jack] [Clubs Eight],[Clubs Eight] [Diamonds Queen],18,18,0,False,False,239
+Win,[Diamonds Six] [Hearts Ace] [Diamonds Jack],[Diamonds Eight] [Spades Seven] [Diamonds Nine],17,24,0,False,False,233
+Win,[Hearts Eight] [Diamonds Queen],[Hearts Four] [Clubs Six] [Spades Five] [Diamonds King],18,25,0,False,False,227
+Win,[Clubs Nine] [Hearts Four],[Hearts Five] [Spades Ace] [Clubs Nine] [Hearts King],13,25,0,False,False,221
+Win,[Spades Ace] [Clubs Eight],[Diamonds Three] [Hearts Four] [Spades Six] [Spades Ten],19,23,0,False,False,215
+Lose,[Spades King] [Spades Three],[Spades Four] [Diamonds Two] [Clubs Seven] [Spades Seven],13,20,0,False,False,209
+Win,[Diamonds Ace] [Clubs Five] [Clubs Ace],[Diamonds Queen] [Spades Four] [Spades Eight],17,22,0,False,False,203
+Win,[Hearts Queen] [Hearts Seven],[Diamonds Two] [Spades Three] [Spades Jack] [Spades Seven],17,22,0,False,False,197
+Win,[Spades Eight] [Spades Queen],[Diamonds Ten] [Hearts Seven],18,17,0,False,False,193
+Lose,[Spades Jack] [Clubs Four] [Hearts Ten],[Clubs Eight] [Hearts King],24,18,0,False,False,188
+Push,[Diamonds Ace] [Hearts Two] [Diamonds Ace] [Hearts Three],[Spades King] [Clubs Seven],17,17,0,False,False,182
+Lose,[Clubs Two] [Diamonds Four] [Diamonds Queen],[Hearts Five] [Spades Two] [Clubs Ten],16,17,0,False,False,176
+Win,[Diamonds Eight] [Spades Ace],[Clubs Seven] [Clubs Queen],19,17,0,False,False,172
+Lose,[Clubs Five] [Hearts Six] [Hearts Five],[Diamonds Two] [Diamonds Ten] [Spades Ace] [Clubs Seven],16,20,0,True,False,165
+Lose,[Diamonds Two] [Spades Queen] [Diamonds Jack],[Diamonds Eight] [Diamonds Eight] [Hearts Seven],22,23,0,False,False,159
+Lose,[Diamonds Five] [Clubs Ace] [Spades Nine],[Clubs Six] [Spades Three] [Diamonds Three] [Hearts Two] [Spades Six],15,20,0,True,False,151
+Lose,[Spades Two] [Clubs Four] [Clubs Three],[Diamonds Seven] [Clubs Two] [Hearts King],9,19,0,True,True,142
+Win,[Diamonds Two] [Diamonds Eight] [Clubs King],[Diamonds Seven] [Clubs Two] [Hearts King],20,19,0,True,True,142
+Win,[Hearts Jack] [Diamonds Ten],[Clubs Three] [Clubs Ace] [Hearts Nine] [Spades Three] [Diamonds Six],20,22,0,False,False,135
+Blackjack,[Hearts Jack] [Hearts Ace],[Spades Queen] [Clubs Six] [Hearts Two],21,18,0,False,False,130
+Win,[Spades Nine] [Clubs Queen],[Diamonds Six] [Clubs King] [Clubs Ten],19,26,0,False,False,125
+Push,[Clubs Queen] [Hearts King],[Spades Ten] [Spades Ten],20,20,0,False,False,121
+Win,[Diamonds Nine] [Clubs Four] [Clubs Six],[Spades Ace] [Clubs Two] [Hearts Nine] [Hearts Ace] [Clubs Ten],19,23,0,False,False,113
+Push,[Diamonds Five] [Clubs Four] [Hearts Ten],[Diamonds Five] [Hearts Ten] [Diamonds Four],19,19,0,True,False,107
+Lose,[Diamonds Nine] [Clubs Three] [Spades Two],[Hearts Three] [Hearts Ten] [Diamonds Ace] [Clubs Seven],14,21,0,False,False,100
+Lose,[Spades Eight] [Spades Six] [Spades Ten],[Spades Eight] [Clubs Ace],24,19,0,False,False,95
+Push,[Diamonds Nine] [Hearts Four] [Hearts Six],[Diamonds Queen] [Hearts Six] [Diamonds Three],19,19,0,False,True,87
+Push,[Clubs Nine] [Clubs Jack],[Diamonds Queen] [Hearts Six] [Diamonds Three],19,19,0,False,True,87
+Win,[Spades Nine] [Spades King],[Spades Three] [Hearts Ace] [Hearts Queen] [Clubs Queen],19,24,0,False,False,81
+Blackjack,[Diamonds Ace] [Clubs Queen],[Diamonds Four] [Diamonds Seven] [Diamonds Five] [Hearts Jack],21,26,0,False,False,75
+Win,[Spades Three] [Hearts Two] [Clubs Four],[Clubs Nine] [Clubs Three] [Spades King],9,22,0,False,False,69
+Lose,[Diamonds King] [Diamonds Three] [Clubs Two] [Diamonds Nine],[Clubs Queen] [Hearts Seven],24,17,0,False,False,63
+Lose,[Spades Eight] [Hearts Queen],[Hearts Jack] [Hearts Nine],18,19,0,False,False,59
+Lose,[Spades Five] [Spades Queen] [Diamonds Ten],[Spades Jack] [Spades Four] [Spades Four],25,18,0,False,False,53
+Lose,[Clubs Seven] [Spades Nine],[Diamonds Six] [Hearts Five] [Hearts Jack],16,21,0,False,False,48
+Win,[Clubs King] [Hearts Eight],[Diamonds Three] [Diamonds King] [Clubs Nine],18,22,0,False,False,43
+Win,[Hearts Six] [Spades Eight],[Diamonds Four] [Hearts Nine] [Clubs Jack],14,23,0,False,False,38
+Win,[Spades Two] [Clubs Ten] [Diamonds Eight],[Spades Ten] [Hearts Six] [Clubs Three],20,19,0,False,False,32
+Lose,[Hearts Two] [Spades Five] [Spades Four],[Clubs King] [Hearts Three] [Hearts Five],11,18,0,False,False,26
+Win,[Spades King] [Hearts Nine],[Hearts Three] [Clubs Jack] [Diamonds King],19,23,0,False,False,21
+Lose,[Hearts Queen] [Spades Five] [Spades Seven],[Clubs Ten] [Diamonds Seven],22,17,0,False,False,16
+Win,[Hearts Seven] [Diamonds Ten],[Diamonds Six] [Hearts Queen] [Clubs Ten],17,26,0,False,False,11
+Win,[Diamonds Eight] [Hearts Queen],[Spades Seven] [Clubs Jack],18,17,0,False,False,308
+Lose,[Hearts Queen] [Spades Three],[Diamonds Six] [Clubs Two] [Diamonds Eight] [Clubs Two],13,18,0,False,False,302
+Lose,[Hearts Six] [Clubs Eight],[Hearts Five] [Clubs Five] [Diamonds King],14,20,0,False,False,297
+Push,[Hearts Eight] [Spades Two] [Diamonds Queen],[Spades Nine] [Diamonds Ace],20,20,0,True,True,289
+Lose,[Hearts Eight] [Hearts Three] [Hearts Four],[Spades Nine] [Diamonds Ace],15,20,0,True,True,289
+Win,[Hearts Ten] [Diamonds Ten],[Clubs Ace] [Diamonds Seven],20,18,0,False,False,285
+Win,[Spades Ten] [Hearts Eight],[Clubs Three] [Diamonds Three] [Diamonds Seven] [Spades Queen],18,23,0,False,False,279
+Push,[Spades Jack] [Clubs King],[Spades Five] [Spades Five] [Hearts Jack],20,20,0,False,False,274
+Win,[Spades Queen] [Clubs Nine],[Spades Ten] [Hearts Five] [Spades Queen],19,25,0,False,False,269
+Win,[Hearts Queen] [Clubs Nine],[Clubs Eight] [Spades Two] [Hearts Two] [Hearts Six],19,18,0,False,False,263
+Lose,[Clubs Seven] [Hearts Two] [Spades Four] [Diamonds Six],[Clubs Eight] [Spades Three] [Hearts King],19,21,0,False,False,256
+Win,[Hearts Queen] [Hearts Ten],[Hearts Eight] [Hearts Ace],20,19,0,False,False,252
+Push,[Spades Eight] [Clubs Five] [Clubs Six],[Spades Queen] [Clubs Nine],19,19,0,False,False,247
+Lose,[Diamonds Jack] [Spades Eight],[Diamonds Nine] [Clubs Five] [Spades Five],18,19,0,False,False,242
+Push,[Clubs King] [Clubs Seven],[Diamonds Eight] [Spades Nine],17,17,0,False,False,238
+Win,[Spades Nine] [Spades Jack],[Diamonds Two] [Diamonds Jack] [Spades Two] [Hearts Four],19,18,0,False,False,232
+Lose,[Diamonds Queen] [Spades Nine],[Diamonds Five] [Hearts Five] [Clubs Four] [Hearts Seven],19,21,0,False,False,226
+Lose,[Hearts Nine] [Clubs Four] [Diamonds Two] [Spades Two],[Diamonds Nine] [Clubs Three] [Hearts Three] [Diamonds Five],17,20,0,False,False,218
+Blackjack,[Spades King] [Clubs Ace],[Hearts Four] [Hearts Seven] [Hearts Five] [Diamonds Five],21,21,0,False,False,212
+Lose,[Hearts Jack] [Clubs Four],[Spades Six] [Hearts Ace],14,17,0,False,False,208
+Lose,[Spades Jack] [Clubs Two] [Hearts Six],[Diamonds Ten] [Diamonds Three] [Hearts Ace] [Hearts Six],18,20,0,False,False,201
+Lose,[Diamonds Two] [Spades Four] [Spades Eight] [Hearts Eight],[Clubs Jack] [Clubs Queen],22,20,0,False,False,195
+Lose,[Spades Four] [Hearts Jack] [Diamonds Five],[Clubs Ten] [Clubs Ace],19,21,0,False,False,190
+Lose,[Spades Six] [Hearts Jack] [Spades Jack],[Clubs Queen] [Hearts Ace],26,21,0,False,False,185
+Lose,[Hearts Three] [Diamonds Four] [Diamonds Seven],[Spades Two] [Spades Six] [Diamonds Ace],14,19,0,False,True,175
+Lose,[Hearts Three] [Hearts Two] [Clubs Seven] [Clubs Jack],[Spades Two] [Spades Six] [Diamonds Ace],22,19,0,False,True,175
+Lose,[Hearts Seven] [Spades Three] [Spades Four],[Spades Three] [Spades Seven] [Spades Eight],14,18,0,True,False,169
+Lose,[Diamonds Ace] [Diamonds Three] [Diamonds King] [Clubs Ace] [Clubs Two],[Diamonds Queen] [Spades Ace],17,21,0,False,False,162
+Lose,[Diamonds Four] [Diamonds Four] [Clubs Eight] [Diamonds Nine],[Diamonds Jack] [Hearts Seven],25,17,0,False,False,156
+Lose,[Clubs Six] [Diamonds Jack],[Clubs Four] [Diamonds Eight] [Diamonds Nine],16,21,0,False,False,151
+Lose,[Clubs Eight] [Spades Nine],[Clubs Nine] [Diamonds Three] [Hearts Seven],17,19,0,False,False,146
+Lose,[Diamonds Six] [Diamonds Queen] [Diamonds Queen],[Spades Seven] [Diamonds King],26,17,0,False,False,141
+Win,[Hearts Six] [Spades King],[Diamonds Six] [Clubs King] [Hearts Queen],16,26,0,False,False,136
+Lose,[Spades Four] [Spades Two] [Diamonds Ten] [Clubs Two],[Clubs Queen] [Hearts Four] [Clubs Ace] [Clubs Six],18,21,0,False,False,128
+Lose,[Diamonds Two] [Spades Seven] [Clubs Six],[Spades Six] [Spades King] [Clubs Four],15,20,0,True,False,122
+Lose,[Spades Five] [Spades Queen],[Clubs Three] [Clubs Ten] [Diamonds Ace] [Clubs Seven],15,21,0,False,False,116
+Win,[Hearts Two] [Diamonds Three] [Spades Ace],[Diamonds Five] [Clubs Three] [Spades Seven] [Spades Ten],16,25,0,False,False,109
+Lose,[Spades Jack] [Diamonds Two] [Diamonds King],[Diamonds Seven] [Hearts Six] [Clubs Nine],22,22,0,False,False,103
+Lose,[Diamonds Four] [Clubs King] [Hearts Ten],[Diamonds Queen] [Hearts King],24,20,0,False,False,98
+Win,[Clubs Three] [Diamonds Two] [Hearts Jack] [Clubs Five],[Diamonds Nine] [Spades Ten],20,19,0,False,False,92
+Blackjack,[Diamonds Ace] [Hearts Ten],[Diamonds King] [Hearts Nine],21,19,0,False,False,88
+Lose,[Hearts Nine] [Diamonds Four],[Clubs Two] [Hearts Five] [Clubs Queen],13,17,0,False,False,83
+Lose,[Clubs Ten] [Hearts Ten],[Diamonds Jack] [Spades Ace],20,21,0,False,False,79
+Win,[Hearts Two] [Clubs Eight] [Clubs Six] [Diamonds Three],[Hearts Jack] [Hearts Three] [Clubs King],19,23,0,False,False,72
+Win,[Clubs Ace] [Diamonds Six] [Clubs Three],[Spades Seven] [Hearts Three] [Diamonds Six] [Hearts Eight],20,24,0,False,False,65
+Lose,[Clubs Ten] [Diamonds Five] [Hearts King],[Diamonds King] [Spades Ace],25,21,0,False,False,60
+Win,[Spades King] [Hearts King],[Spades Three] [Spades Jack] [Diamonds Jack],20,23,0,False,False,55
+Lose,[Spades Five] [Spades Eight] [Clubs Jack],[Spades King] [Diamonds Seven],23,17,0,False,False,50
+Win,[Hearts Nine] [Diamonds Ten],[Spades Queen] [Spades Six] [Clubs Nine],19,25,0,False,False,45
+Lose,[Clubs Five] [Hearts King],[Clubs Five] [Spades Six] [Spades Eight],15,19,0,False,False,40
+Push,[Clubs King] [Clubs Ten],[Hearts Ace] [Hearts Nine],20,20,0,False,False,36
+Blackjack,[Hearts Seven] [Hearts Four] [Spades King],[Spades Three] [Spades Nine] [Spades Ace] [Spades Four],21,17,0,True,True,27
+Push,[Clubs Seven] [Hearts King],[Spades Three] [Spades Nine] [Spades Ace] [Spades Four],17,17,0,True,True,27
+Blackjack,[Clubs Queen] [Hearts Ace],[Diamonds Ten] [Diamonds Eight],21,18,0,False,False,23
+Win,[Hearts Ten] [Spades Ten],[Diamonds Eight] [Clubs Jack],20,18,0,False,False,19
+Lose,[Spades Ace] [Hearts Four] [Spades Five],[Diamonds Seven] [Diamonds Four] [Hearts Queen],20,21,0,False,False,13
+Lose,[Clubs Two] [Clubs Ace] [Diamonds Ten],[Diamonds Two] [Hearts Eight] [Clubs Queen],13,20,0,False,False,306
+Blackjack,[Diamonds Ace] [Diamonds Queen],[Clubs Five] [Spades Seven] [Hearts Seven],21,19,0,False,False,301
+Win,[Diamonds Eight] [Diamonds Queen],[Diamonds Three] [Clubs King] [Hearts Ace] [Clubs Jack],18,24,0,False,False,295
+Win,[Hearts Five] [Hearts Six] [Hearts Seven],[Clubs Four] [Diamonds Four] [Clubs Two] [Diamonds Two] [Clubs Ten],18,22,0,True,False,287
+Lose,[Spades Nine] [Clubs Nine],[Clubs Eight] [Clubs Three] [Diamonds Ten],18,21,0,False,True,279
+Lose,[Spades Nine] [Diamonds Seven] [Spades Ace],[Clubs Eight] [Clubs Three] [Diamonds Ten],17,21,0,False,True,279
+Win,[Clubs Jack] [Hearts Three] [Diamonds Seven],[Hearts Ten] [Spades Seven],20,17,0,False,False,274
+Lose,[Diamonds Ace] [Diamonds Eight],[Diamonds King] [Spades Jack],19,20,0,False,True,268
+Push,[Spades Ace] [Hearts Nine],[Diamonds King] [Spades Jack],20,20,0,False,True,268
+Win,[Hearts Seven] [Diamonds King],[Hearts Queen] [Diamonds Five] [Clubs King],17,25,0,False,False,263
+Lose,[Hearts Three] [Clubs Nine],[Diamonds Six] [Hearts Queen] [Hearts Four],12,20,0,False,False,258
+Push,[Clubs King] [Clubs Nine],[Spades Seven] [Diamonds Six] [Spades Two] [Clubs Four],19,19,0,False,False,252
+Lose,[Diamonds Nine] [Clubs Six],[Diamonds Two] [Spades Six] [Diamonds Nine],15,17,0,False,False,247
+Lose,[Diamonds Jack] [Hearts Nine],[Hearts Ace] [Hearts King],19,21,0,False,False,243
+Win,[Hearts Jack] [Hearts Eight],[Diamonds Three] [Diamonds Four] [Spades Four] [Hearts Six],18,17,0,False,False,237
+Lose,[Spades Seven] [Diamonds Nine] [Diamonds Six],[Diamonds Seven] [Spades Three] [Hearts Queen],22,20,0,False,True,229
+Lose,[Spades Seven] [Spades Queen],[Diamonds Seven] [Spades Three] [Hearts Queen],17,20,0,False,True,229
+Push,[Diamonds King] [Spades King],[Spades Ten] [Hearts Two] [Hearts Ace] [Hearts Seven],20,20,0,False,False,223
+Win,[Spades Queen] [Hearts Queen],[Hearts Ace] [Spades Four] [Spades Three],20,18,0,False,False,218
+Win,[Clubs Jack] [Spades King],[Clubs Queen] [Diamonds Four] [Spades Eight],20,22,0,False,False,213
+Lose,[Hearts Four] [Spades Ace] [Diamonds Ten],[Spades Two] [Clubs King] [Diamonds Five],15,17,0,False,False,207
+Lose,[Hearts Four] [Hearts Two] [Spades Ten] [Hearts Nine],[Spades Eight] [Clubs Six] [Clubs Queen],25,24,0,False,False,200
+Lose,[Clubs Nine] [Spades Five],[Spades Five] [Spades Eight] [Hearts Seven],14,20,0,False,False,195
+Win,[Spades Jack] [Hearts Jack],[Spades Ten] [Spades Six] [Clubs Eight],20,24,0,False,False,190
+Lose,[Diamonds Six] [Spades Six] [Clubs King],[Diamonds Ten] [Clubs Seven],22,17,0,False,False,185
+Push,[Clubs Seven] [Hearts King],[Diamonds Queen] [Clubs Seven],17,17,0,False,False,181
+Win,[Spades Eight] [Spades Nine],[Spades Two] [Hearts Queen] [Diamonds Queen],17,22,0,False,False,176
+Lose,[Hearts Two] [Hearts Jack] [Hearts Two],[Diamonds Two] [Hearts Five] [Spades Six] [Spades Four],14,17,0,False,False,169
+Lose,[Clubs Six] [Hearts Four] [Hearts Nine],[Spades Ace] [Clubs Queen],19,21,0,False,False,164
+Push,[Hearts Eight] [Clubs Nine],[Spades Five] [Spades Three] [Clubs Four] [Hearts Five],17,17,0,False,False,158
+Lose,[Diamonds Ten] [Diamonds Two],[Diamonds Six] [Diamonds Five] [Diamonds Eight],12,19,0,False,False,153
+Lose,[Diamonds Jack] [Clubs Five],[Spades Five] [Diamonds Ace] [Clubs Three],15,19,0,False,False,148
+Lose,[Hearts Four] [Clubs Jack] [Hearts Nine],[Diamonds Seven] [Spades Two] [Hearts Five] [Clubs Ace] [Diamonds Jack],23,25,0,False,False,140
+Lose,[Diamonds Jack] [Spades Three] [Clubs Three] [Spades Queen],[Spades Nine] [Clubs Eight],26,17,0,False,False,134
+Lose,[Clubs Five] [Diamonds Five] [Clubs Five],[Diamonds Nine] [Spades Seven] [Hearts Three],15,19,0,True,False,128
+Win,[Clubs Three] [Spades Five] [Diamonds Five],[Hearts Three] [Clubs Ten] [Spades Ten],13,23,0,False,False,122
+Push,[Clubs Three] [Spades King] [Spades Five],[Clubs Ten] [Diamonds Eight],18,18,0,False,False,117
+Lose,[Hearts King] [Hearts Six] [Clubs Ten],[Clubs Seven] [Clubs Eight] [Spades Eight],26,23,0,False,False,111
+Win,[Spades Ten] [Diamonds Queen],[Spades Nine] [Hearts Six] [Spades Two],20,17,0,False,False,106
+Lose,[Diamonds King] [Hearts Two],[Spades Six] [Clubs Six] [Diamonds Five],12,17,0,False,False,101
+Lose,[Diamonds Three] [Hearts Five] [Spades Three],[Hearts Jack] [Hearts Ten],11,20,0,False,False,96
+Win,[Hearts Seven] [Diamonds Ace] [Clubs Eight],[Diamonds Three] [Spades Three] [Clubs Queen] [Hearts King],16,26,0,True,False,89
+Lose,[Hearts Queen] [Hearts Ten],[Spades Jack] [Clubs Ace],20,21,0,False,False,85
+Lose,[Hearts King] [Diamonds Four] [Diamonds Four],[Clubs Ten] [Hearts Jack],18,20,0,False,False,80
+Lose,[Clubs Five] [Spades Eight] [Hearts Ace] [Hearts Ten],[Clubs Ten] [Clubs Two] [Hearts Eight],24,20,0,False,False,73
+Win,[Clubs Ace] [Diamonds Nine],[Hearts Four] [Clubs Three] [Spades Four] [Diamonds Ace] [Hearts Ace] [Spades Ten],20,23,0,False,False,65
+Lose,[Diamonds Jack] [Spades Four],[Clubs Six] [Spades Ace],14,17,0,False,False,61
+Lose,[Hearts Six] [Diamonds Ten],[Clubs Two] [Clubs Jack] [Diamonds Three] [Diamonds Six],16,21,0,False,False,55
+Win,[Spades Six] [Diamonds King] [Diamonds Four],[Hearts Nine] [Hearts Jack],20,19,0,False,False,50
+Win,[Hearts Ten] [Clubs Queen],[Clubs Four] [Spades Queen] [Diamonds Queen],20,24,0,False,False,45
+Lose,[Clubs King] [Spades Nine],[Hearts Three] [Hearts Eight] [Clubs Jack],19,21,0,False,False,40
+Win,[Clubs Nine] [Diamonds Three] [Diamonds Seven],[Clubs Ace] [Spades Four] [Diamonds Seven] [Clubs Two] [Spades Ace] [Clubs Seven],19,22,0,False,False,31
+Win,[Clubs Two] [Clubs Eight] [Spades Jack],[Clubs Seven] [Spades King],20,17,0,True,False,26
+Win,[Spades King] [Clubs Four] [Hearts Six],[Hearts Eight] [Clubs Ace],20,19,0,False,False,21
+Lose,[Clubs Five] [Spades Queen] [Spades King],[Spades Jack] [Hearts Ten],25,20,0,False,False,16
+Blackjack,[Diamonds Ace] [Diamonds Jack],[Spades Jack] [Diamonds Two] [Diamonds King],21,22,0,False,False,11
+Win,[Hearts Three] [Diamonds Ace] [Hearts Queen] [Hearts Four],[Clubs Ten] [Spades Seven],18,17,0,False,False,306
+Lose,[Spades Five] [Hearts Three] [Diamonds Two],[Spades Six] [Spades Nine] [Hearts Five],10,20,0,False,False,300
+Win,[Diamonds Ace] [Spades Five] [Hearts King] [Spades Four],[Spades Jack] [Diamonds Eight],20,18,0,False,False,294
+Push,[Spades Jack] [Hearts Eight],[Clubs Eight] [Diamonds Queen],18,18,0,False,False,290
+Lose,[Diamonds Four] [Diamonds Three] [Hearts Ace],[Diamonds Nine] [Clubs Ace],18,20,0,False,False,285
+Lose,[Hearts Seven] [Hearts Ten],[Diamonds Queen] [Hearts Jack],17,20,0,False,False,281
+Win,[Diamonds Queen] [Diamonds King],[Hearts Jack] [Spades Three] [Diamonds Nine],20,22,0,False,False,276
+Lose,[Spades Three] [Spades Eight] [Clubs Three],[Diamonds Five] [Hearts Five] [Spades Three] [Hearts Four],14,17,0,True,False,269
+Lose,[Diamonds Six] [Clubs King],[Diamonds Six] [Spades Ten] [Diamonds Three],16,19,0,False,False,264
+Lose,[Hearts Seven] [Spades Ten],[Spades Seven] [Hearts Five] [Hearts Nine],17,21,0,False,False,259
+Lose,[Spades Six] [Clubs Six] [Hearts King],[Clubs Seven] [Clubs Eight] [Hearts Seven],22,22,0,False,False,253
+Win,[Clubs Queen] [Clubs King],[Hearts Eight] [Clubs Five] [Hearts King],20,23,0,False,False,248
+Push,[Diamonds Eight] [Diamonds Nine],[Diamonds Eight] [Hearts Nine],17,17,0,False,False,244
+Lose,[Diamonds Ace] [Clubs Seven] [Diamonds Seven] [Hearts Jack],[Spades Nine] [Clubs Five] [Spades King],25,24,0,False,False,237
+Lose,[Spades Two] [Spades Ace] [Spades Three] [Spades Three],[Clubs Queen] [Clubs Ten],19,20,0,False,False,231
+Lose,[Clubs Two] [Clubs Nine] [Hearts Two],[Diamonds Three] [Clubs Five] [Diamonds King],13,18,0,True,False,225
+Lose,[Spades Ten] [Diamonds Six] [Spades Two],[Clubs Nine] [Clubs Two] [Diamonds Jack],18,21,0,False,False,219
+Win,[Hearts Seven] [Spades Two] [Diamonds King],[Diamonds Five] [Hearts Five] [Spades Four] [Diamonds Three],19,17,0,True,False,212
+Win,[Clubs Three] [Clubs King],[Hearts Six] [Diamonds Jack] [Spades Eight],13,24,0,False,False,207
+Win,[Diamonds Five] [Diamonds King],[Hearts Two] [Clubs Five] [Clubs Two] [Clubs Seven] [Spades King],15,26,0,False,False,200
+Win,[Hearts Jack] [Clubs Queen],[Diamonds Five] [Diamonds Jack] [Hearts Seven],20,22,0,False,False,195
+Win,[Clubs Nine] [Spades Queen],[Spades Queen] [Clubs Two] [Diamonds Six],19,18,0,False,False,190
+Push,[Spades King] [Diamonds Queen],[Clubs Ten] [Hearts Queen],20,20,0,False,False,186
+Lose,[Spades Seven] [Spades Five],[Clubs Six] [Clubs Four] [Diamonds Two] [Spades Nine],12,21,0,False,True,178
+Lose,[Clubs Seven] [Hearts Five],[Clubs Six] [Clubs Four] [Diamonds Two] [Spades Nine],12,21,0,False,True,178
+Lose,[Spades Nine] [Diamonds Ten],[Spades Ten] [Clubs Queen],19,20,0,False,False,174
+Push,[Spades King] [Diamonds Jack],[Hearts King] [Diamonds Queen],20,20,0,False,False,170
+Blackjack,[Hearts Ace] [Diamonds Jack],[Hearts Four] [Diamonds Five] [Clubs Ace],21,20,0,False,False,165
+Win,[Clubs Six] [Spades Ace] [Hearts Five],[Spades Four] [Diamonds Two] [Clubs Jack] [Spades Ten],12,26,0,True,False,158
+Lose,[Spades Ace] [Diamonds Seven] [Clubs Five] [Spades Jack],[Clubs Queen] [Diamonds Ten],23,20,0,False,True,148
+Lose,[Clubs Ace] [Diamonds Two] [Spades Ten] [Spades Nine],[Clubs Queen] [Diamonds Ten],22,20,0,False,True,148
+Push,[Spades Six] [Clubs Four] [Spades Seven],[Diamonds Ten] [Clubs Three] [Spades Ace] [Spades Three],17,17,0,False,False,141
+Push,[Spades Four] [Clubs Two] [Clubs Six] [Diamonds Five],[Diamonds Seven] [Hearts Six] [Clubs Four],17,17,0,False,False,134
+Win,[Diamonds Eight] [Hearts Queen],[Spades Two] [Diamonds Ace] [Hearts Ace] [Clubs Three],18,17,0,False,False,128
+Win,[Diamonds Six] [Clubs Nine],[Diamonds Four] [Diamonds Nine] [Hearts Ace] [Diamonds Jack],15,24,0,False,False,122
+Win,[Clubs Ace] [Diamonds Three] [Hearts Six],[Diamonds Four] [Clubs Seven] [Hearts Ace] [Clubs Six],20,18,0,False,False,115
+Lose,[Spades King] [Clubs Four],[Clubs Three] [Hearts Three] [Spades Jack] [Hearts Two],14,18,0,False,False,109
+Lose,[Spades Queen] [Hearts Three] [Spades King],[Hearts Queen] [Diamonds Ten],23,20,0,False,False,104
+Win,[Spades Six] [Hearts King],[Hearts Six] [Hearts Nine] [Clubs Nine],16,24,0,False,False,99
+Lose,[Spades Five] [Clubs Ace] [Clubs Jack],[Clubs Two] [Hearts Six] [Hearts Three] [Hearts Eight],16,19,0,False,False,92
+Lose,[Clubs Four] [Hearts Two] [Clubs Ten] [Hearts Ten],[Spades Eight] [Spades Nine],26,17,0,False,False,86
+Lose,[Hearts Jack] [Hearts Four] [Clubs Four],[Clubs King] [Clubs Nine],18,19,0,False,False,81
+Push,[Hearts Ten] [Hearts Ten],[Spades Seven] [Clubs Eight] [Spades Five],20,20,0,False,False,76
+Lose,[Diamonds Seven] [Hearts Nine],[Clubs Five] [Clubs Three] [Clubs Jack],16,18,0,False,True,69
+Lose,[Clubs Seven] [Clubs Queen],[Clubs Five] [Clubs Three] [Clubs Jack],17,18,0,False,True,69
+Win,[Diamonds Eight] [Clubs Jack],[Hearts Eight] [Diamonds Eight] [Clubs Eight],18,24,0,False,False,64
+Lose,[Diamonds Ten] [Spades Six] [Spades Six],[Hearts Jack] [Spades Jack],22,20,0,False,False,59
+Win,[Spades Two] [Clubs Ten],[Spades Four] [Spades Queen] [Clubs Eight],12,22,0,False,False,54
+Push,[Hearts Queen] [Clubs King],[Hearts Nine] [Spades Ace],20,20,0,False,False,50
+Win,[Spades Eight] [Hearts King],[Clubs King] [Hearts Three] [Diamonds Nine],18,22,0,False,False,45
+Push,[Diamonds Seven] [Spades Five] [Diamonds Seven],[Diamonds Nine] [Hearts Queen],19,19,0,False,False,40
+Blackjack,[Spades Queen] [Spades Ace],[Diamonds Ace] [Hearts Two] [Hearts Four],21,17,0,False,False,35
+Win,[Diamonds Six] [Hearts Six] [Diamonds Four] [Diamonds Ace],[Spades Jack] [Diamonds Four] [Diamonds Two] [Clubs Eight],17,24,0,False,False,27
+Blackjack,[Clubs Ace] [Clubs Ten],[Spades Two] [Spades Seven] [Hearts Ten],21,19,0,False,False,22
+Win,[Diamonds King] [Clubs Jack],[Hearts Two] [Hearts Nine] [Hearts Eight],20,19,0,False,False,17
+Win,[Diamonds King] [Spades Four] [Diamonds Four],[Hearts Eight] [Diamonds Two] [Hearts Four] [Diamonds Queen],18,24,0,False,False,10
+Lose,[Clubs Three] [Spades Ace] [Spades Two],[Spades Two] [Clubs King] [Hearts Eight],16,20,0,False,False,306
+Blackjack,[Spades Jack] [Diamonds Two] [Hearts Nine],[Diamonds Ace] [Clubs Nine],21,20,0,False,False,301
+Win,[Hearts Five] [Spades King] [Spades Four],[Diamonds Queen] [Clubs Three] [Hearts Two] [Hearts Jack],19,25,0,False,False,294
+Lose,[Spades King] [Diamonds Seven],[Clubs Two] [Diamonds King] [Clubs Three] [Diamonds Four],17,19,0,False,False,288
+Lose,[Diamonds Five] [Hearts Eight] [Spades Six],[Clubs King] [Hearts Three] [Hearts Seven],19,20,0,False,False,282
+Win,[Spades Three] [Spades Queen] [Clubs Seven],[Spades Jack] [Diamonds Three] [Hearts Ace] [Hearts Four],20,18,0,False,False,275
+Lose,[Diamonds Four] [Hearts Three] [Diamonds Ten],[Diamonds Nine] [Diamonds Three] [Hearts Six],17,18,0,False,False,269
+Win,[Diamonds Six] [Diamonds Five] [Spades Ace],[Spades Six] [Hearts Seven] [Hearts Queen],12,23,0,True,False,263
+Lose,[Spades Two] [Spades Jack],[Diamonds Six] [Spades Four] [Clubs King],12,20,0,False,True,255
+Lose,[Hearts Two] [Diamonds Two] [Spades Six],[Diamonds Six] [Spades Four] [Clubs King],10,20,0,False,True,255
+Win,[Hearts Ten] [Spades Nine],[Hearts Queen] [Spades Five] [Clubs Jack],19,25,0,False,False,250
+Lose,[Diamonds Two] [Clubs Five] [Diamonds Jack],[Spades Seven] [Hearts Six] [Hearts Eight],17,21,0,False,False,244
+Lose,[Hearts Nine] [Hearts Seven] [Clubs Seven],[Diamonds Ten] [Clubs Ace],23,21,0,False,False,239
+Lose,[Clubs Two] [Spades Five] [Hearts Ace],[Hearts King] [Diamonds Ten],18,20,0,False,False,234
+Lose,[Spades Queen] [Hearts Six],[Hearts Four] [Clubs Nine] [Hearts Five],16,18,0,False,False,229
+Lose,[Clubs Eight] [Spades Queen],[Diamonds Queen] [Clubs Ace],18,21,0,False,False,225
+Win,[Diamonds Seven] [Spades Eight],[Clubs Six] [Diamonds Ten] [Clubs King],15,26,0,False,False,220
+Win,[Hearts Jack] [Clubs Ten],[Diamonds King] [Diamonds Nine],20,19,0,False,False,216
+Lose,[Spades Two] [Spades Five] [Spades Seven] [Clubs Ten],[Hearts Jack] [Hearts Ten],24,20,0,False,False,210
+Win,[Spades Eight] [Hearts King],[Clubs Nine] [Diamonds Eight],18,17,0,False,False,206
+Lose,[Hearts King] [Spades Four] [Diamonds Nine],[Spades Queen] [Hearts Seven],23,17,0,False,False,201
+Lose,[Spades Ten] [Hearts Two] [Spades King],[Spades Ten] [Diamonds Four] [Spades King],22,24,0,False,False,195
+Lose,[Diamonds Six] [Diamonds Nine] [Spades Three],[Spades Jack] [Spades Two] [Hearts Three] [Clubs Six],18,21,0,False,False,188
+Lose,[Clubs Five] [Spades Six] [Clubs Four],[Diamonds Ace] [Clubs Six],15,17,0,True,False,183
+Lose,[Diamonds Queen] [Hearts Two] [Clubs Jack],[Hearts Queen] [Diamonds Seven],22,17,0,False,False,178
+Win,[Diamonds Ace] [Spades Eight],[Spades Nine] [Spades Seven] [Spades King],19,26,0,False,False,173
+Push,[Hearts Four] [Spades Ten] [Diamonds Three],[Diamonds Eight] [Clubs Four] [Clubs Five],17,17,0,False,False,167
+Lose,[Diamonds Two] [Clubs Queen] [Clubs Ten],[Diamonds Seven] [Clubs Queen],22,17,0,False,False,162
+Win,[Diamonds Three] [Diamonds Nine] [Diamonds Eight],[Spades Three] [Spades Three] [Clubs Jack] [Hearts Queen],20,26,0,False,False,155
+Win,[Clubs Four] [Hearts Ten],[Spades Six] [Clubs Eight] [Diamonds King],14,24,0,False,False,150
+Win,[Diamonds Three] [Diamonds Eight] [Hearts Two],[Clubs Four] [Spades Seven] [Hearts Three] [Diamonds King],13,24,0,True,False,143
+Lose,[Clubs Five] [Spades Eight],[Spades Four] [Diamonds Five] [Spades Ace],13,20,0,False,False,138
+Lose,[Hearts Five] [Hearts Ten] [Clubs Queen],[Hearts Eight] [Hearts Three] [Diamonds Queen],25,21,0,False,False,132
+Lose,[Hearts Three] [Clubs Six] [Diamonds Two],[Hearts Eight] [Hearts Nine],11,17,0,False,False,127
+Blackjack,[Clubs Queen] [Hearts Four] [Hearts Seven],[Spades Nine] [Clubs Two] [Spades Ten],21,21,0,False,False,121
+Blackjack,[Clubs Jack] [Clubs Ace],[Diamonds Queen] [Clubs Three] [Diamonds Six],21,19,0,False,False,116
+Lose,[Clubs Three] [Hearts Ace] [Spades Nine] [Clubs Two] [Clubs Nine],[Clubs Jack] [Spades Jack],24,20,0,False,False,109
+Lose,[Clubs Five] [Clubs Ten],[Diamonds Three] [Diamonds Ace] [Diamonds Jack] [Diamonds Five],15,19,0,False,False,103
+Lose,[Clubs Eight] [Clubs Jack],[Hearts Four] [Spades Ace] [Clubs Queen] [Diamonds Four],18,19,0,False,False,97
+Blackjack,[Spades Queen] [Clubs Ace],[Clubs Eight] [Diamonds Six] [Clubs Ten],21,24,0,False,False,92
+Lose,[Hearts Jack] [Spades Seven],[Diamonds Jack] [Clubs Queen],17,20,0,False,False,88
+Win,[Diamonds Queen] [Spades Three],[Spades Five] [Hearts Six] [Spades Five] [Diamonds Seven],13,23,0,False,False,82
+Win,[Clubs King] [Hearts Two] [Spades Eight],[Diamonds King] [Diamonds Eight],20,18,0,False,False,77
+Lose,[Hearts Jack] [Clubs Two] [Hearts Ace] [Hearts Queen],[Hearts Ace] [Diamonds Ace] [Spades Six],23,18,0,False,False,70
+Win,[Diamonds Six] [Hearts Jack] [Diamonds Four],[Clubs Nine] [Spades Seven] [Spades Ace],20,17,0,False,False,64
+Win,[Spades Ace] [Spades Nine],[Hearts Ace] [Spades Four] [Clubs Three],20,18,0,False,False,59
+Win,[Spades Jack] [Spades King],[Diamonds Nine] [Spades Nine],20,18,0,False,False,55
+Win,[Diamonds Ten] [Clubs Nine],[Clubs Two] [Diamonds Jack] [Hearts Five],19,17,0,False,False,50
+Win,[Hearts Six] [Clubs Ace] [Diamonds Jack],[Clubs Four] [Diamonds Ace] [Hearts Nine] [Hearts King],17,24,0,True,False,43
+Push,[Spades Ten] [Clubs King],[Clubs Ten] [Diamonds Jack],20,20,0,False,False,39
+Push,[Hearts Ten] [Clubs Seven],[Spades Four] [Clubs Eight] [Hearts Five],17,17,0,False,False,34
+Lose,[Diamonds Five] [Hearts Queen] [Diamonds Ten],[Spades Eight] [Hearts Five] [Clubs Four],25,17,0,False,False,28
+Win,[Hearts King] [Spades Ten],[Spades Two] [Hearts Four] [Hearts Eight] [Hearts King],20,24,0,False,False,22
+Win,[Clubs Seven] [Diamonds Two] [Hearts Ten],[Clubs Six] [Diamonds Eight] [Hearts Nine],19,23,0,True,False,16
+Win,[Clubs Five] [Clubs Ace] [Clubs Seven] [Diamonds Seven],[Hearts Nine] [Clubs Six] [Clubs Seven],20,22,0,False,False,9
+Lose,[Diamonds Four] [Clubs Three] [Spades Eight] [Clubs Queen],[Clubs King] [Diamonds Three] [Spades Two] [Hearts Ace] [Diamonds Four],25,20,0,False,False,303
+Lose,[Clubs Ten] [Spades Five] [Hearts King],[Hearts Queen] [Clubs Seven],25,17,0,False,False,298
+Lose,[Hearts Ten] [Diamonds Three] [Clubs Three] [Spades Queen],[Diamonds Ten] [Diamonds Eight],26,18,0,False,False,292
+Lose,[Diamonds Ten] [Spades Six],[Diamonds Five] [Diamonds Eight] [Hearts Six],16,19,0,False,False,287
+Win,[Hearts Queen] [Clubs Ten],[Clubs Ten] [Diamonds Two] [Diamonds Five],20,17,0,False,False,282
+Blackjack,[Clubs Jack] [Clubs Ace],[Diamonds Jack] [Diamonds Five] [Clubs Four],21,19,0,False,False,277
+Lose,[Spades Ace] [Clubs Eight],[Spades Five] [Clubs Ten] [Clubs Ace] [Spades Four],19,20,0,False,False,271
+Win,[Spades Three] [Clubs Queen],[Hearts Five] [Hearts Queen] [Diamonds Eight],13,23,0,False,False,266
+Lose,[Hearts Jack] [Hearts Four],[Clubs Five] [Clubs Ace] [Clubs Ace],14,17,0,False,False,261
+Win,[Hearts Ace] [Clubs Three] [Spades Six],[Diamonds Ace] [Spades Three] [Spades Ace] [Spades Jack] [Spades Three],20,18,0,False,False,253
+Push,[Hearts Queen] [Diamonds Queen],[Diamonds Two] [Diamonds Four] [Spades Four] [Clubs Queen],20,20,0,False,False,247
+Lose,[Spades Jack] [Diamonds Three] [Clubs Four],[Clubs King] [Clubs Eight],17,18,0,False,False,242
+Win,[Clubs Six] [Clubs Jack],[Clubs Four] [Spades Ten] [Hearts Ace] [Spades Nine],16,24,0,False,False,236
+Win,[Spades Six] [Hearts Eight],[Spades Two] [Clubs Eight] [Hearts Three] [Hearts Ten],14,23,0,False,False,230
+Lose,[Clubs Queen] [Spades Seven],[Hearts Ten] [Diamonds Queen],17,20,0,False,False,226
+Lose,[Clubs Jack] [Clubs Seven],[Hearts Jack] [Hearts Nine],17,19,0,False,False,222
+Push,[Hearts Two] [Spades Queen] [Diamonds Six],[Diamonds Nine] [Hearts Nine],18,18,0,False,False,217
+Lose,[Hearts Five] [Diamonds Two] [Diamonds Eight],[Clubs Two] [Diamonds Eight] [Diamonds Eight],15,18,0,False,False,211
+Lose,[Diamonds Five] [Hearts Four] [Spades Two],[Hearts Four] [Hearts Jack] [Clubs Seven],11,21,0,True,False,205
+Lose,[Spades Nine] [Diamonds Seven] [Hearts Two],[Diamonds Ace] [Diamonds King],18,21,0,False,False,200
+Blackjack,[Diamonds King] [Spades Ace],[Spades King] [Clubs Eight],21,18,0,False,False,196
+Lose,[Spades Four] [Clubs Ace] [Hearts Eight] [Hearts Seven],[Hearts King] [Diamonds Three] [Clubs Eight],20,21,0,False,False,189
+Win,[Clubs Nine] [Diamonds Three],[Spades Four] [Spades Two] [Spades Eight] [Clubs Nine],12,23,0,False,False,183
+Lose,[Hearts Eight] [Hearts Three] [Diamonds Four],[Clubs Jack] [Clubs Four] [Clubs Six],15,20,0,True,False,177
+Blackjack,[Diamonds Three] [Spades Eight] [Diamonds Queen],[Clubs Five] [Hearts Ten] [Clubs Eight],21,23,0,True,False,171
+Lose,[Diamonds Ace] [Spades Two] [Clubs Six],[Clubs King] [Hearts King],19,20,0,False,False,166
+Win,[Hearts Queen] [Diamonds King],[Spades Eight] [Diamonds Ace],20,19,0,False,False,162
+Win,[Spades Jack] [Spades Eight],[Spades Queen] [Clubs Two] [Clubs Ten],18,22,0,False,False,157
+Win,[Hearts Five] [Clubs Nine],[Spades Five] [Diamonds Ten] [Hearts Ten],14,25,0,False,False,152
+Lose,[Hearts Seven] [Diamonds Nine] [Clubs Seven],[Hearts Nine] [Diamonds King],23,19,0,False,False,147
+Lose,[Diamonds Six] [Hearts Seven] [Hearts Four],[Clubs Seven] [Spades Five] [Clubs Ace] [Hearts Seven],17,20,0,False,False,140
+Lose,[Clubs Three] [Clubs Six] [Spades Four],[Spades Two] [Diamonds Six] [Hearts Two] [Spades Queen],13,20,0,False,False,133
+Lose,[Clubs Two] [Clubs Jack] [Spades King],[Clubs Two] [Clubs Three] [Clubs Five] [Spades Three] [Spades Ten],22,23,0,False,False,125
+Lose,[Hearts Six] [Clubs King] [Diamonds Queen],[Spades Nine] [Hearts Six] [Spades King],26,25,0,False,False,119
+Win,[Diamonds Two] [Diamonds Nine] [Hearts Five],[Spades Three] [Spades Seven] [Spades Four] [Hearts Nine],16,23,0,True,False,112
+Win,[Clubs Four] [Hearts Five] [Spades Ace],[Hearts King] [Clubs Five] [Hearts Jack],20,25,0,False,False,106
+Lose,[Diamonds Six] [Hearts Three] [Spades Five] [Diamonds Queen],[Clubs King] [Spades Seven],24,17,0,False,False,100
+Lose,[Clubs Six] [Hearts Three] [Spades Eight],[Diamonds Ten] [Spades Jack],17,20,0,False,False,95
+Win,[Clubs Nine] [Spades Ten],[Diamonds Four] [Spades King] [Clubs Ten],19,24,0,False,True,88
+Win,[Spades Nine] [Diamonds Ace],[Diamonds Four] [Spades King] [Clubs Ten],20,24,0,False,True,88
+Lose,[Clubs Five] [Diamonds Jack],[Diamonds Two] [Clubs Queen] [Spades Seven],15,19,0,False,False,83
+Win,[Spades Ten] [Spades Three],[Diamonds Five] [Diamonds Ace] [Hearts Jack] [Diamonds Jack],13,26,0,False,False,77
+Lose,[Spades King] [Diamonds Seven],[Spades Seven] [Hearts Two] [Spades Ten],17,19,0,False,False,72
+Win,[Spades Jack] [Diamonds Jack],[Spades Ten] [Spades Five] [Hearts Two],20,17,0,False,False,67
+Lose,[Diamonds King] [Hearts Six] [Diamonds Jack],[Spades Queen] [Spades Nine],26,19,0,False,False,62
+Win,[Diamonds Jack] [Clubs Nine],[Hearts Nine] [Diamonds Six] [Clubs King],19,25,0,False,False,57
+Win,[Hearts Six] [Hearts Four] [Hearts King],[Spades Six] [Hearts Queen] [Hearts Nine],20,25,0,True,False,51
+Lose,[Hearts Seven] [Spades Ace] [Diamonds Seven] [Clubs Nine],[Spades Jack] [Clubs Queen],24,20,0,False,False,45
+Lose,[Hearts Five] [Hearts Four] [Clubs Two],[Diamonds Ten] [Diamonds Two] [Spades Six],11,18,0,False,False,39
+Blackjack,[Spades Seven] [Clubs Five] [Spades Nine],[Hearts King] [Diamonds Seven],21,17,0,False,False,34
+Lose,[Hearts Ace] [Clubs Six] [Diamonds Seven],[Clubs Three] [Diamonds Nine] [Diamonds Seven],14,19,0,True,False,28
+Win,[Hearts Six] [Clubs Seven],[Diamonds Four] [Hearts Eight] [Spades Ace] [Diamonds Nine],13,22,0,False,False,22
+Lose,[Hearts Three] [Hearts Jack] [Hearts Ace] [Clubs Jack],[Hearts Seven] [Hearts Three] [Hearts Ace],24,21,0,False,False,15
+Win,[Diamonds Six] [Diamonds Seven] [Hearts Six],[Spades Seven] [Clubs Queen],19,17,0,False,False,307
+Lose,[Hearts Seven] [Diamonds King],[Clubs Seven] [Spades Eight] [Spades Three],17,18,0,False,False,302
+Lose,[Hearts King] [Diamonds Six] [Hearts Seven],[Clubs Eight] [Spades Ace],23,19,0,False,False,297
+Lose,[Spades Four] [Clubs Three] [Clubs Queen],[Hearts Two] [Hearts Nine] [Clubs Two] [Clubs Five],17,18,0,False,False,290
+Lose,[Diamonds Five] [Spades Eight],[Spades Two] [Clubs King] [Diamonds Eight],13,20,0,False,False,285
+Win,[Hearts Nine] [Spades Five],[Spades Three] [Diamonds Nine] [Diamonds Two] [Clubs King],14,24,0,False,False,279
+Lose,[Clubs Eight] [Hearts Ace],[Spades Ten] [Clubs Ten],19,20,0,False,False,275
+Win,[Spades Nine] [Spades Queen],[Hearts Nine] [Hearts Eight],19,17,0,False,False,271
+Blackjack,[Clubs Ace] [Spades Jack],[Diamonds Ace] [Diamonds Queen],21,21,0,False,False,267
+Blackjack,[Hearts Four] [Spades Seven] [Diamonds Jack],[Spades Three] [Diamonds Eight] [Clubs Four] [Hearts King],21,25,0,True,False,260
+Win,[Spades Jack] [Hearts Four],[Spades Three] [Hearts Nine] [Hearts Three] [Clubs King],14,25,0,False,False,254
+Lose,[Hearts Four] [Hearts Jack] [Hearts Nine],[Hearts Ace] [Hearts Ten],23,21,0,False,False,249
+Lose,[Diamonds Five] [Hearts Jack] [Clubs Seven],[Clubs Nine] [Diamonds Three] [Clubs Seven],22,19,0,False,False,243
+Lose,[Hearts Five] [Hearts Queen],[Clubs Five] [Hearts Ace] [Hearts Queen] [Hearts Two],15,18,0,False,False,237
+Win,[Spades Two] [Clubs King],[Hearts Six] [Spades Queen] [Diamonds Eight],12,24,0,False,False,232
+Lose,[Spades Two] [Spades King] [Hearts Jack],[Spades Ten] [Clubs Jack],22,20,0,False,False,227
+Blackjack,[Hearts Jack] [Hearts Ace],[Diamonds Two] [Clubs Three] [Spades Nine] [Clubs Queen],21,24,0,False,False,221
+Win,[Hearts Six] [Spades Seven],[Clubs Five] [Clubs King] [Clubs Eight],13,23,0,False,False,216
+Win,[Diamonds Four] [Hearts Three] [Clubs Four],[Clubs Nine] [Diamonds Three] [Diamonds Four] [Spades Jack],11,26,0,False,False,209
+Push,[Hearts Ace] [Diamonds Seven],[Diamonds Eight] [Hearts King],18,18,0,False,False,205
+Lose,[Hearts Ten] [Spades Ten],[Clubs Ace] [Clubs Jack],20,21,0,False,False,201
+Win,[Hearts Queen] [Spades Eight],[Spades Eight] [Hearts Eight] [Diamonds Seven],18,23,0,False,False,196
+Win,[Hearts Nine] [Spades Ace],[Diamonds Nine] [Hearts King],20,19,0,False,False,192
+Win,[Spades King] [Diamonds Ten],[Clubs Two] [Spades Nine] [Hearts Five] [Hearts Seven],20,23,0,False,False,186
+Push,[Hearts Four] [Spades Six] [Clubs Seven],[Diamonds Seven] [Clubs Ten],17,17,0,True,False,181
+Lose,[Hearts Four] [Spades King],[Hearts Two] [Clubs Three] [Spades Five] [Hearts Six] [Spades Two],14,18,0,False,False,174
+Lose,[Spades King] [Hearts Seven],[Spades Five] [Spades Ten] [Clubs Six],17,21,0,False,False,169
+Lose,[Clubs Four] [Spades Queen] [Hearts Jack],[Hearts Queen] [Diamonds Three] [Diamonds Five],24,18,0,False,False,163
+Lose,[Diamonds Seven] [Clubs Five] [Hearts Queen],[Spades Queen] [Clubs Jack],22,20,0,False,False,158
+Lose,[Clubs Two] [Diamonds Three] [Clubs Ten] [Diamonds Ace] [Clubs Nine],[Diamonds Ten] [Diamonds Eight],25,18,0,False,False,151
+Win,[Hearts Ten] [Clubs Ten],[Spades Eight] [Clubs Nine],20,17,0,False,False,147
+Lose,[Diamonds Two] [Hearts King] [Clubs Seven],[Diamonds Queen] [Clubs Ace],19,21,0,False,False,142
+Win,[Hearts Ace] [Spades Nine],[Diamonds Four] [Diamonds Four] [Spades Seven] [Spades Seven],20,22,0,False,False,136
+Lose,[Clubs Six] [Clubs Six] [Diamonds Ten],[Spades Ten] [Clubs King],22,20,0,False,False,131
+Lose,[Spades Seven] [Spades Six] [Hearts Queen],[Spades King] [Clubs Three] [Diamonds Ten],23,23,0,False,False,125
+Win,[Diamonds Six] [Diamonds Three] [Spades Four] [Spades Five],[Diamonds Jack] [Hearts Two] [Spades Ten],18,22,0,False,False,118
+Lose,[Diamonds Six] [Hearts Eight] [Clubs Eight],[Hearts Seven] [Clubs Ace],22,18,0,False,False,113
+Blackjack,[Hearts King] [Clubs Five] [Diamonds Six],[Diamonds Ace] [Clubs Seven],21,18,0,False,False,108
+Lose,[Spades Ace] [Hearts Five] [Hearts Ten],[Hearts Four] [Spades Two] [Diamonds Jack] [Clubs Five],16,21,0,True,False,101
+Win,[Hearts Ten] [Clubs Nine],[Hearts Eight] [Spades Jack],19,18,0,False,False,97
+Lose,[Clubs Jack] [Clubs Two] [Hearts Eight],[Diamonds King] [Spades Five] [Spades Six],20,21,0,False,False,91
+Push,[Diamonds Nine] [Diamonds Jack],[Diamonds King] [Diamonds Nine],19,19,0,False,False,87
+Lose,[Clubs Queen] [Diamonds Two] [Clubs Jack],[Diamonds Queen] [Diamonds Five] [Hearts Six],22,21,0,False,False,81
+Win,[Spades Three] [Clubs Jack],[Spades Three] [Hearts Five] [Clubs Six] [Spades Jack],13,24,0,False,False,75
+Lose,[Diamonds Ace] [Diamonds Two] [Spades Nine] [Clubs Ace],[Hearts Three] [Hearts Ten] [Diamonds Eight],13,21,0,False,False,68
+Lose,[Spades Jack] [Clubs Two] [Diamonds Three] [Diamonds Jack],[Diamonds Ten] [Clubs Four] [Clubs Ten],25,24,0,False,False,61
+Lose,[Clubs Six] [Clubs Three] [Hearts Two],[Spades Four] [Diamonds Seven] [Clubs Queen],11,21,0,True,False,55
+Win,[Spades Queen] [Hearts Six] [Hearts Two],[Spades Nine] [Diamonds Four] [Diamonds Four],18,17,0,False,False,49
+Push,[Diamonds Queen] [Spades Two] [Hearts Eight],[Diamonds Queen] [Hearts Jack],20,20,0,False,False,44
+Push,[Diamonds Six] [Diamonds Ace] [Spades Ace],[Clubs Six] [Hearts Three] [Diamonds Nine],18,18,0,True,False,38
+Win,[Clubs Queen] [Spades Six] [Clubs Four],[Diamonds King] [Spades Four] [Spades Ace] [Diamonds King],20,25,0,False,False,31
+Lose,[Spades Six] [Spades King],[Diamonds Two] [Spades Six] [Clubs Eight] [Diamonds Ace],16,17,0,False,False,25
+Lose,[Spades Ace] [Diamonds Five] [Spades Four],[Spades Five] [Clubs Ace] [Hearts Five],20,21,0,True,False,19
+Push,[Diamonds Nine] [Spades Queen],[Clubs Nine] [Diamonds Queen],19,19,0,False,False,15
+Lose,[Spades Six] [Hearts Three] [Spades Seven] [Clubs Ten],[Clubs Ace] [Hearts Four] [Diamonds Four],26,19,0,False,False,305
+Push,[Hearts Three] [Diamonds Ace] [Hearts Four],[Hearts Eight] [Clubs Six] [Spades Four],18,18,0,False,False,299
+Lose,[Spades Ten] [Clubs Four],[Diamonds Three] [Clubs Two] [Hearts Nine] [Clubs Four],14,18,0,False,False,293
+Push,[Spades Seven] [Diamonds Ace],[Hearts Eight] [Spades King],18,18,0,False,False,289
+Lose,[Diamonds Four] [Hearts Six] [Clubs Eight],[Diamonds Six] [Clubs Four] [Clubs Ace],18,21,0,True,False,283
+Lose,[Hearts Seven] [Diamonds Nine],[Diamonds Four] [Hearts Eight] [Spades Six],16,18,0,False,False,278
+Win,[Hearts Queen] [Clubs King],[Clubs Ten] [Spades Four] [Spades Ace] [Clubs Nine],20,24,0,False,False,272
+Lose,[Spades Queen] [Spades Seven],[Clubs Five] [Hearts Five] [Hearts Two] [Hearts Ace] [Clubs Eight],17,21,0,False,False,265
+Lose,[Clubs Nine] [Hearts Five],[Hearts Two] [Clubs Three] [Hearts King] [Hearts Six],14,21,0,False,False,259
+Push,[Spades Eight] [Clubs Two] [Hearts Seven],[Diamonds Ace] [Diamonds Four] [Spades Two],17,17,0,False,False,253
+Lose,[Spades Nine] [Clubs Seven] [Clubs King],[Diamonds Eight] [Spades Ace],26,19,0,False,False,248
+Lose,[Hearts Two] [Diamonds Jack] [Spades Two] [Hearts Nine],[Diamonds Ace] [Hearts Ten],23,21,0,False,False,242
+Win,[Clubs Ace] [Diamonds Nine],[Diamonds Seven] [Diamonds King],20,17,0,False,False,238
+Win,[Diamonds Eight] [Hearts Ace],[Clubs Ace] [Spades Six],19,17,0,False,False,234
+Push,[Hearts Queen] [Spades Jack],[Hearts Nine] [Spades Ace],20,20,0,False,False,230
+Win,[Diamonds Queen] [Clubs Jack],[Spades Ace] [Diamonds Ace] [Clubs Six],20,18,0,False,False,225
+Win,[Diamonds Three] [Spades Three] [Hearts Eight],[Spades Six] [Hearts Queen] [Diamonds Jack],14,26,0,False,True,217
+Win,[Clubs Three] [Diamonds King],[Spades Six] [Hearts Queen] [Diamonds Jack],13,26,0,False,True,217
+Blackjack,[Clubs Six] [Diamonds Five] [Spades King],[Diamonds Three] [Clubs Jack] [Clubs Queen],21,23,0,True,False,211
+Lose,[Diamonds Eight] [Clubs Two] [Spades Eight],[Clubs Three] [Spades Jack] [Spades Six],18,19,0,True,False,205
+Lose,[Hearts Queen] [Diamonds Four],[Clubs Three] [Spades Four] [Clubs Nine] [Spades Five],14,21,0,False,False,199
+Lose,[Spades Queen] [Spades Six],[Clubs Three] [Clubs Jack] [Hearts Six],16,19,0,False,False,194
+Lose,[Hearts Ten] [Clubs Eight],[Spades Three] [Spades Five] [Diamonds Three] [Clubs Jack],18,21,0,False,False,188
+Lose,[Clubs King] [Spades Three] [Hearts Ten],[Clubs Ace] [Clubs Queen],23,21,0,False,False,183
+Win,[Clubs Two] [Diamonds Queen] [Hearts Four],[Diamonds Three] [Hearts King] [Spades Nine],16,22,0,False,False,177
+Lose,[Diamonds Three] [Hearts Three] [Hearts Five],[Clubs King] [Diamonds Ten],11,20,0,False,False,172
+Lose,[Clubs Seven] [Diamonds Jack],[Hearts Six] [Spades Eight] [Hearts Seven],17,21,0,False,False,167
+Win,[Spades Seven] [Clubs Ten],[Hearts Six] [Diamonds Ten] [Clubs Ten],17,26,0,False,True,160
+Win,[Diamonds Seven] [Hearts King],[Hearts Six] [Diamonds Ten] [Clubs Ten],17,26,0,False,True,160
+Lose,[Diamonds Five] [Diamonds Six] [Diamonds Five],[Hearts King] [Hearts Ace],16,21,0,True,False,155
+Win,[Spades Queen] [Spades King],[Clubs Eight] [Diamonds Ten],20,18,0,False,False,151
+Lose,[Clubs Seven] [Diamonds Jack],[Hearts Two] [Spades Two] [Clubs Four] [Spades Queen],17,18,0,False,False,145
+Win,[Hearts Ten] [Spades King],[Clubs Five] [Clubs King] [Hearts Jack],20,25,0,False,False,140
+Lose,[Clubs Six] [Hearts Five] [Clubs Five],[Diamonds Five] [Spades Ten] [Spades Five],16,20,0,True,False,134
+Win,[Clubs Nine] [Diamonds Eight],[Hearts Four] [Diamonds Two] [Spades Queen] [Clubs Queen],17,26,0,False,True,126
+Win,[Clubs Nine] [Clubs Eight],[Hearts Four] [Diamonds Two] [Spades Queen] [Clubs Queen],17,26,0,False,True,126
+Push,[Diamonds Two] [Clubs Seven] [Hearts Jack],[Spades Nine] [Spades Ten],19,19,0,False,False,121
+Lose,[Clubs Five] [Spades Jack],[Hearts Six] [Clubs Four] [Diamonds Queen],15,20,0,False,False,116
+Lose,[Spades Nine] [Diamonds King],[Spades Two] [Clubs Ace] [Diamonds Eight],19,21,0,False,False,111
+Win,[Diamonds Two] [Spades Five] [Clubs Queen],[Diamonds Six] [Spades Ten] [Diamonds King],17,26,0,False,False,105
+Win,[Hearts Two] [Hearts Queen] [Clubs Eight],[Hearts Ace] [Clubs Four] [Hearts Ace] [Hearts Nine] [Hearts Ten],20,25,0,False,False,97
+Win,[Diamonds Five] [Diamonds Seven] [Diamonds Eight],[Spades Three] [Hearts Three] [Spades Seven] [Diamonds Queen],20,23,0,False,False,90
+Blackjack,[Spades Ace] [Diamonds Jack],[Spades Four] [Clubs Six] [Diamonds Ace],21,21,0,False,False,85
+Lose,[Hearts Jack] [Hearts Five],[Diamonds Six] [Clubs Three] [Spades Queen],15,19,0,False,False,80
+Lose,[Clubs Two] [Clubs Jack] [Diamonds Five],[Diamonds Ten] [Diamonds Queen],17,20,0,False,False,75
+Lose,[Diamonds Seven] [Hearts Jack],[Clubs Ten] [Diamonds Ten],17,20,0,False,False,71
+Win,[Hearts King] [Spades Ten],[Hearts Nine] [Hearts Five] [Clubs Queen],20,24,0,False,False,66
+Lose,[Spades Eight] [Diamonds Jack],[Hearts Seven] [Diamonds Seven] [Hearts Seven],18,21,0,False,False,61
+Lose,[Hearts Eight] [Clubs Five] [Spades Two] [Clubs King],[Clubs Ten] [Clubs Seven],25,17,0,False,False,55
+Win,[Hearts Three] [Spades Ten],[Hearts Four] [Hearts Eight] [Hearts Two] [Diamonds Queen],13,24,0,False,False,49
+Lose,[Diamonds Seven] [Diamonds Two] [Spades Eight],[Hearts Nine] [Hearts Ten],17,19,0,False,False,44
+Win,[Spades Five] [Hearts Jack] [Spades Four],[Spades Ace] [Spades Four] [Hearts Three],19,18,0,False,False,38
+Lose,[Diamonds Six] [Spades Three] [Spades Three] [Spades Jack],[Spades Nine] [Hearts Seven] [Spades Two],22,18,0,False,False,31
+Lose,[Clubs Jack] [Clubs Queen],[Spades Eight] [Diamonds Four] [Diamonds Nine],20,21,0,False,False,26
+Win,[Spades Jack] [Spades Nine],[Clubs Five] [Diamonds Two] [Hearts King],19,17,0,False,False,21
+Lose,[Clubs Six] [Diamonds Six] [Hearts Four] [Spades King],[Diamonds Nine] [Diamonds King],26,19,0,False,False,15
+Win,[Hearts Nine] [Hearts Ten],[Diamonds Ten] [Diamonds Three] [Clubs King],19,23,0,False,False,307
+Lose,[Hearts Queen] [Hearts Seven],[Diamonds Ace] [Diamonds Queen],17,21,0,False,False,303
+Blackjack,[Clubs King] [Hearts Five] [Diamonds Six],[Hearts Seven] [Hearts Six] [Hearts Eight],21,21,0,False,False,297
+Lose,[Diamonds Ace] [Clubs Seven] [Clubs Eight] [Hearts King],[Hearts Queen] [Clubs Queen],26,20,0,False,False,291
+Win,[Diamonds Seven] [Hearts Queen],[Clubs Four] [Spades Jack] [Spades King],17,24,0,False,False,286
+Lose,[Clubs Three] [Spades Ace] [Spades Five],[Diamonds Jack] [Spades Ten],19,20,0,False,False,281
+Win,[Diamonds Six] [Diamonds King] [Diamonds Ace],[Spades Eight] [Spades Eight] [Spades Six],17,22,0,False,False,275
+Blackjack,[Spades King] [Hearts Ace],[Clubs Queen] [Diamonds Five] [Spades Ten],21,25,0,False,False,270
+Win,[Clubs Jack] [Spades Queen],[Diamonds Ten] [Clubs Seven],20,17,0,False,False,266
+Lose,[Hearts Eight] [Spades Five] [Clubs Ten],[Diamonds Nine] [Hearts Jack],23,19,0,False,False,261
+Lose,[Diamonds Three] [Diamonds Two] [Hearts Ten],[Spades Two] [Clubs Ten] [Spades Five],15,17,0,False,False,255
+Lose,[Diamonds Queen] [Diamonds Two] [Clubs Jack],[Diamonds Seven] [Clubs Eight] [Hearts Ten],22,25,0,False,False,249
+Win,[Spades King] [Hearts Four],[Clubs Three] [Spades Five] [Clubs Six] [Diamonds Ten],14,24,0,False,False,243
+Win,[Clubs Ace] [Spades Eight],[Spades Nine] [Diamonds Six] [Spades Seven],19,22,0,False,False,238
+Lose,[Clubs Two] [Hearts Nine] [Spades Seven],[Diamonds King] [Diamonds Jack],18,20,0,True,False,233
+Lose,[Diamonds Three] [Spades Nine] [Diamonds Four],[Clubs Three] [Spades Ace] [Spades Nine] [Diamonds Five],16,18,0,False,False,226
+Lose,[Hearts Five] [Hearts Eight],[Diamonds Six] [Diamonds Five] [Diamonds Seven],13,18,0,False,False,221
+Push,[Diamonds Eight] [Hearts Queen],[Hearts Ace] [Hearts Three] [Clubs Two] [Diamonds Two],18,18,0,False,False,215
+Lose,[Spades Six] [Hearts Seven] [Clubs Three] [Diamonds Eight],[Clubs Ten] [Spades Six] [Hearts Nine],24,25,0,False,False,208
+Lose,[Hearts Eight] [Clubs Two] [Spades Five] [Diamonds Nine],[Clubs Queen] [Diamonds Seven],24,17,0,False,False,202
+Lose,[Hearts Four] [Spades Six] [Spades Seven],[Clubs Ace] [Spades Ace] [Diamonds Ace] [Diamonds Seven],17,20,0,False,False,195
+Lose,[Diamonds Five] [Spades Queen] [Hearts Queen],[Clubs King] [Spades King],25,20,0,False,False,190
+Lose,[Hearts Seven] [Clubs Seven] [Clubs Eight],[Diamonds King] [Diamonds Nine],22,19,0,False,False,185
+Blackjack,[Clubs Jack] [Clubs Five] [Clubs Six],[Clubs Nine] [Diamonds Six] [Spades Ace] [Diamonds Two],21,18,0,False,False,178
+Win,[Diamonds Eight] [Clubs Four] [Clubs Ace],[Spades Three] [Diamonds Eight] [Diamonds Four] [Diamonds Nine],13,24,0,False,False,171
+Lose,[Hearts Six] [Clubs Jack],[Spades Four] [Hearts Eight] [Hearts Ace] [Spades Two] [Clubs Six],16,21,0,False,False,164
+Lose,[Diamonds Queen] [Hearts Five] [Diamonds Four],[Hearts Ace] [Clubs Jack],19,21,0,False,False,159
+Lose,[Hearts Seven] [Spades Two] [Clubs Five] [Diamonds Jack],[Diamonds Ten] [Hearts Nine],24,19,0,False,False,153
+Win,[Hearts Ten] [Clubs Nine],[Hearts Three] [Diamonds Ace] [Hearts Two] [Clubs Ace],19,17,0,False,False,147
+Lose,[Hearts Six] [Hearts Jack],[Spades Two] [Clubs Five] [Clubs Nine] [Spades Three],16,19,0,False,False,141
+Win,[Diamonds King] [Diamonds King],[Spades Seven] [Hearts Eight] [Spades Ace] [Diamonds King],20,26,0,False,False,135
+Win,[Diamonds Queen] [Spades Ten],[Spades Four] [Hearts Five] [Diamonds Nine],20,18,0,False,False,130
+Win,[Spades Three] [Clubs Eight] [Hearts Two],[Diamonds Three] [Hearts Jack] [Hearts King],13,23,0,True,False,124
+Lose,[Clubs Four] [Hearts Ten],[Hearts Three] [Hearts Nine] [Clubs Two] [Diamonds Five],14,19,0,False,False,118
+Blackjack,[Spades Three] [Spades Eight] [Hearts Jack],[Spades Ten] [Hearts Two] [Spades Queen],21,22,0,True,False,112
+Lose,[Hearts Four] [Diamonds Ace] [Diamonds Jack],[Spades Six] [Hearts Ace],15,17,0,True,False,107
+Lose,[Diamonds Nine] [Diamonds Eight],[Clubs Queen] [Diamonds Eight],17,18,0,False,False,103
+Push,[Hearts Jack] [Clubs Seven],[Diamonds Four] [Clubs Six] [Spades Four] [Spades Three],17,17,0,False,False,97
+Win,[Clubs King] [Hearts Queen],[Spades Queen] [Clubs Eight],20,18,0,False,False,93
+Win,[Clubs King] [Spades Ten],[Spades Two] [Spades Four] [Clubs Five] [Spades Four] [Clubs Four],20,19,0,False,False,86
+Blackjack,[Clubs Four] [Diamonds Five] [Clubs Six] [Spades Six],[Clubs Nine] [Diamonds Queen],21,19,0,False,False,80
+Lose,[Clubs Three] [Spades Eight] [Hearts Seven],[Hearts Ace] [Diamonds Two] [Hearts Two] [Clubs Queen] [Spades Five],18,20,0,True,False,72
+Lose,[Diamonds Two] [Spades Ten] [Spades Jack],[Clubs Nine] [Diamonds Four] [Clubs Ten],22,23,0,False,False,66
+Blackjack,[Hearts King] [Clubs Ace],[Hearts Three] [Clubs Ten] [Spades Ace] [Hearts King],21,24,0,False,False,60
+Win,[Spades King] [Spades Queen],[Clubs Ace] [Diamonds Seven],20,18,0,False,False,56
+Lose,[Diamonds Six] [Clubs Seven],[Clubs Five] [Hearts Four] [Hearts Six] [Hearts Six],13,21,0,False,False,50
+Win,[Spades Nine] [Diamonds Ten],[Clubs Eight] [Spades Jack],19,18,0,False,False,46
+Win,[Clubs Queen] [Spades Nine],[Spades Seven] [Hearts King],19,17,0,False,False,42
+Blackjack,[Hearts Two] [Diamonds Queen] [Spades Nine],[Diamonds Jack] [Hearts Five] [Spades Three],21,18,0,False,False,36
+Lose,[Spades Two] [Clubs Jack] [Spades King],[Diamonds Three] [Diamonds Jack] [Clubs Six],22,19,0,False,False,30
+Blackjack,[Clubs Four] [Clubs Seven] [Spades Jack],[Hearts Six] [Spades Jack] [Clubs Two],21,18,0,True,False,24
+Lose,[Hearts Three] [Hearts Nine] [Hearts Three] [Clubs King],[Clubs Nine] [Diamonds Three] [Clubs Ten],25,22,0,False,False,17
+Win,[Hearts Ten] [Diamonds Ten],[Hearts Jack] [Hearts Five] [Hearts Four],20,19,0,False,False,12
+Lose,[Diamonds Two] [Diamonds King] [Hearts Ace] [Spades Queen],[Diamonds Jack] [Hearts Jack],23,20,0,False,False,306
+Win,[Clubs Four] [Spades Jack],[Hearts Four] [Spades Eight] [Spades Two] [Spades Nine],14,23,0,False,False,300
+Win,[Spades Six] [Diamonds Seven] [Clubs Six],[Hearts Nine] [Clubs Five] [Diamonds Two] [Clubs Two],19,18,0,False,False,293
+Lose,[Diamonds Seven] [Diamonds Nine],[Spades Two] [Spades Nine] [Spades Ace] [Spades Eight],16,20,0,False,False,287
+Blackjack,[Clubs Ace] [Spades Queen],[Diamonds King] [Hearts Six] [Hearts King],21,26,0,False,False,282
+Lose,[Diamonds Two] [Diamonds Eight] [Hearts Five],[Diamonds Seven] [Spades Jack],15,17,0,True,False,277
+Lose,[Diamonds Three] [Clubs Two] [Clubs Seven] [Diamonds Ten],[Hearts Nine] [Hearts Queen],22,19,0,False,False,271
+Push,[Clubs Four] [Spades Five] [Diamonds Ace],[Diamonds King] [Hearts Ten],20,20,0,False,False,266
+Blackjack,[Spades Five] [Clubs Six] [Hearts Ten],[Hearts Four] [Hearts Jack] [Clubs Ten],21,24,0,True,False,260
+Lose,[Hearts Nine] [Diamonds Five] [Hearts Four],[Spades Ten] [Diamonds Two] [Spades Ace] [Spades Eight],18,21,0,False,False,253
+Lose,[Diamonds Ten] [Spades Seven],[Clubs Ten] [Diamonds Jack],17,20,0,False,False,249
+Lose,[Clubs Nine] [Spades Five],[Hearts Two] [Clubs Ten] [Spades Seven],14,19,0,False,False,244
+Push,[Hearts Five] [Clubs King] [Clubs Four],[Spades Ten] [Spades Six] [Clubs Three],19,19,0,False,False,238
+Win,[Spades Two] [Diamonds Four] [Spades Two] [Spades Ace],[Hearts Nine] [Hearts Six] [Hearts Ace] [Hearts King],19,26,0,False,False,230
+Win,[Spades King] [Clubs King],[Clubs Five] [Hearts Seven] [Diamonds Queen],20,22,0,False,False,225
+Lose,[Spades Seven] [Clubs King],[Hearts Six] [Spades Ten] [Clubs Four],17,20,0,False,False,220
+Lose,[Spades Four] [Diamonds Ten],[Diamonds Six] [Hearts King] [Diamonds Three],14,19,0,False,False,215
+Win,[Diamonds Five] [Clubs Two] [Spades King],[Clubs Ten] [Clubs Six] [Hearts Ten],17,26,0,False,False,209
+Win,[Diamonds Jack] [Hearts Five] [Hearts Three],[Spades Nine] [Spades Four] [Spades Ten],18,23,0,False,False,203
+Lose,[Hearts Five] [Hearts Eight] [Clubs Nine],[Spades Eight] [Hearts Queen],22,18,0,False,False,198
+Lose,[Hearts Nine] [Hearts Jack],[Clubs Queen] [Clubs Jack],19,20,0,False,False,194
+Win,[Hearts Queen] [Spades King],[Clubs Six] [Diamonds Five] [Clubs Ace] [Spades Two] [Hearts King],20,24,0,False,False,187
+Win,[Clubs Three] [Spades Four] [Spades Queen],[Diamonds Queen] [Diamonds Four] [Spades King],17,24,0,False,False,181
+Lose,[Spades Five] [Clubs Jack] [Diamonds Ten],[Clubs King] [Clubs Eight],25,18,0,False,False,176
+Lose,[Diamonds Jack] [Clubs Seven],[Spades Ten] [Clubs Jack],17,20,0,False,False,172
+Win,[Clubs Four] [Diamonds King],[Diamonds Six] [Clubs Queen] [Diamonds Eight],14,24,0,False,False,167
+Lose,[Spades Two] [Clubs Eight] [Spades Four] [Clubs Two] [Hearts Seven],[Hearts King] [Clubs Eight],23,18,0,False,False,160
+Blackjack,[Hearts Queen] [Hearts Ace],[Clubs Seven] [Hearts Three] [Hearts Eight],21,18,0,False,False,155
+Lose,[Clubs Eight] [Spades Three] [Clubs Ace],[Spades Eight] [Diamonds Six] [Spades Six],12,20,0,True,False,149
+Lose,[Clubs Ace] [Spades Seven] [Hearts Seven] [Hearts Ten],[Spades Ace] [Diamonds Six],25,17,0,False,False,143
+Lose,[Hearts Two] [Hearts Six] [Hearts Four],[Clubs Five] [Hearts Five] [Diamonds Jack],12,20,0,False,True,134
+Lose,[Diamonds Two] [Spades Three] [Spades Five],[Clubs Five] [Hearts Five] [Diamonds Jack],10,20,0,False,True,134
+Lose,[Clubs Eight] [Diamonds Queen],[Spades Queen] [Diamonds Queen],18,20,0,False,False,130
+Lose,[Hearts Jack] [Hearts Seven],[Clubs Ten] [Diamonds King],17,20,0,False,False,126
+Win,[Spades Queen] [Hearts Queen],[Spades Ace] [Clubs Six],20,17,0,False,False,122
+Win,[Clubs Nine] [Clubs King],[Hearts Three] [Diamonds Four] [Diamonds Seven] [Clubs Eight],19,22,0,False,False,116
+Win,[Hearts Queen] [Clubs Nine],[Diamonds Queen] [Clubs Five] [Diamonds Eight],19,23,0,False,False,111
+Lose,[Diamonds Seven] [Diamonds Eight],[Hearts Six] [Clubs Nine] [Spades Five],15,20,0,False,False,106
+Lose,[Clubs Three] [Hearts Ace] [Hearts Three],[Hearts Three] [Diamonds Ace] [Diamonds Four],17,18,0,False,False,100
+Win,[Clubs Two] [Diamonds Three] [Hearts Two] [Diamonds Four],[Hearts Four] [Clubs Queen] [Clubs Queen],11,24,0,False,False,93
+Blackjack,[Spades King] [Diamonds Ace],[Clubs Nine] [Clubs Six] [Clubs Seven],21,22,0,False,False,88
+Lose,[Spades Nine] [Hearts Two] [Hearts Six],[Clubs Jack] [Diamonds Nine],17,19,0,True,True,80
+Lose,[Diamonds Nine] [Hearts Seven] [Diamonds Nine],[Clubs Jack] [Diamonds Nine],25,19,0,True,True,80
+Push,[Spades Ten] [Hearts Eight],[Spades Seven] [Spades Three] [Diamonds Eight],18,18,0,False,False,75
+Push,[Spades Four] [Hearts Three] [Hearts King],[Diamonds Queen] [Hearts Seven],17,17,0,False,False,70
+Lose,[Clubs Seven] [Clubs Three] [Hearts Eight],[Clubs Jack] [Hearts Ace],18,21,0,False,False,65
+Win,[Clubs Seven] [Spades Ace] [Diamonds Jack],[Clubs Three] [Hearts Five] [Diamonds Nine],18,17,0,True,False,59
+Blackjack,[Diamonds Three] [Spades Three] [Hearts Eight] [Diamonds Seven],[Diamonds Nine] [Diamonds Ten],21,19,0,False,False,53
+Lose,[Clubs Two] [Clubs Jack],[Spades Four] [Hearts Ten] [Diamonds Six],12,20,0,False,False,48
+Push,[Diamonds Ten] [Diamonds Five] [Hearts Four],[Hearts Nine] [Spades Jack],19,19,0,False,False,43
+Lose,[Diamonds Ace] [Spades Six] [Diamonds Six] [Spades Three] [Hearts Jack],[Hearts Ten] [Spades Jack],26,20,0,False,False,36
+Lose,[Clubs Three] [Hearts Jack],[Diamonds Four] [Spades King] [Diamonds Five],13,19,0,False,False,31
+Lose,[Spades Eight] [Hearts Ace],[Diamonds Ace] [Spades Jack],19,21,0,False,False,27
+Win,[Diamonds Ace] [Hearts Eight],[Clubs King] [Diamonds Five] [Diamonds Three],19,18,0,False,False,22
+Win,[Spades Three] [Spades Seven] [Diamonds Two],[Hearts Two] [Clubs Ace] [Spades Nine] [Clubs Queen],12,22,0,True,False,15
+Push,[Hearts Eight] [Hearts Ten],[Clubs Two] [Diamonds Two] [Clubs Three] [Hearts Ace],18,18,0,False,False,306
+Push,[Diamonds Five] [Diamonds Ten] [Hearts Two],[Diamonds Seven] [Clubs Seven] [Clubs Three],17,17,0,False,False,300
+Win,[Diamonds Jack] [Hearts Seven],[Clubs Ten] [Clubs Three] [Spades Queen],17,23,0,False,False,295
+Win,[Hearts Six] [Diamonds Three] [Diamonds Six] [Hearts Three],[Diamonds Seven] [Hearts King],18,17,0,False,False,289
+Lose,[Hearts Four] [Diamonds King],[Spades Four] [Hearts Six] [Hearts Four] [Hearts Four],14,18,0,False,False,283
+Push,[Spades Queen] [Clubs Eight],[Clubs Four] [Hearts Seven] [Hearts Seven],18,18,0,False,False,278
+Lose,[Clubs Five] [Clubs Nine] [Diamonds Ace] [Hearts Eight],[Clubs Nine] [Spades Jack],23,19,0,False,False,272
+Win,[Clubs Two] [Hearts Eight] [Spades Ten],[Clubs Seven] [Diamonds Seven] [Clubs Nine],20,23,0,True,False,266
+Lose,[Hearts Nine] [Spades Six] [Spades Nine],[Hearts Nine] [Spades Jack],24,19,0,False,False,261
+Push,[Diamonds Four] [Spades King] [Spades Three],[Clubs Seven] [Diamonds Ten],17,17,0,False,False,256
+Push,[Hearts Two] [Spades Queen] [Clubs Five],[Hearts Nine] [Hearts Four] [Diamonds Four],17,17,0,False,False,250
+Lose,[Diamonds Nine] [Clubs Three] [Diamonds King],[Diamonds Three] [Hearts Jack] [Clubs King],22,23,0,False,False,244
+Win,[Diamonds Seven] [Clubs Nine],[Diamonds Five] [Clubs Queen] [Spades Eight],16,23,0,False,False,239
+Lose,[Spades Three] [Diamonds Seven] [Diamonds Four],[Spades Five] [Clubs King] [Hearts Five],14,20,0,True,False,233
+Push,[Hearts King] [Clubs Queen],[Clubs King] [Hearts Ten],20,20,0,False,False,229
+Win,[Hearts Queen] [Diamonds Queen],[Clubs Queen] [Clubs Four] [Spades Eight],20,22,0,False,False,224
+Win,[Hearts Ace] [Hearts Three] [Diamonds Queen] [Diamonds Six],[Hearts Eight] [Hearts Jack],20,18,0,False,False,218
+Win,[Clubs Queen] [Diamonds Nine],[Diamonds Four] [Hearts Seven] [Spades Seven],19,18,0,False,False,213
+Lose,[Diamonds Jack] [Hearts Jack],[Hearts Four] [Spades King] [Clubs Seven],20,21,0,False,False,208
+Lose,[Clubs Six] [Spades King] [Hearts Queen],[Diamonds Queen] [Hearts Three] [Clubs Ace] [Diamonds Three],26,17,0,False,False,201
+Lose,[Hearts Two] [Clubs Eight] [Diamonds Four] [Hearts Jack],[Spades Queen] [Spades Two] [Diamonds Eight],24,20,0,False,False,194
+Lose,[Hearts Queen] [Clubs Four] [Diamonds Six],[Diamonds Ace] [Hearts Queen],20,21,0,False,False,189
+Lose,[Spades Eight] [Clubs Seven] [Clubs Ace] [Diamonds Eight],[Diamonds Eight] [Spades Three] [Spades Four] [Hearts Nine],24,24,0,False,False,181
+Lose,[Hearts Nine] [Clubs Four],[Hearts Five] [Hearts Nine] [Spades Two] [Hearts Ace],13,17,0,False,False,175
+Push,[Spades Five] [Clubs Four] [Hearts Ace],[Clubs Two] [Spades Queen] [Clubs Eight],20,20,0,False,False,169
+Lose,[Clubs Four] [Diamonds King] [Spades Ten],[Diamonds Seven] [Diamonds Three] [Hearts Six] [Diamonds Four],24,20,0,False,False,162
+Lose,[Diamonds Eight] [Hearts Queen],[Spades King] [Diamonds Two] [Spades Three] [Hearts Four],18,19,0,False,False,156
+Win,[Spades Five] [Spades Four] [Diamonds Six] [Clubs Five],[Clubs Jack] [Clubs Three] [Diamonds King],20,23,0,False,False,149
+Lose,[Hearts Six] [Hearts Seven] [Diamonds Ten],[Spades King] [Clubs King],23,20,0,False,False,144
+Blackjack,[Hearts Two] [Spades Jack] [Diamonds Nine],[Clubs Eight] [Spades Seven] [Clubs Eight],21,23,0,False,False,138
+Lose,[Spades Seven] [Spades Nine],[Spades Four] [Diamonds Five] [Diamonds Nine],16,18,0,False,False,133
+Win,[Diamonds Six] [Diamonds Five] [Spades Nine],[Spades Four] [Spades Jack] [Diamonds Jack],20,24,0,True,False,127
+Lose,[Clubs Two] [Diamonds Queen] [Clubs Ten],[Diamonds Three] [Spades Six] [Clubs Three] [Diamonds Two] [Diamonds Two] [Clubs Six],22,22,0,False,False,118
+Lose,[Spades Six] [Spades Nine],[Clubs Two] [Hearts Ten] [Spades Ace] [Hearts Three] [Spades Five],15,21,0,False,False,111
+Lose,[Spades Seven] [Diamonds Five] [Clubs King],[Clubs Ace] [Clubs Six],22,17,0,False,False,106
+Win,[Hearts Eight] [Diamonds King],[Clubs Nine] [Clubs Seven] [Spades Eight],18,24,0,False,False,101
+Lose,[Spades Four] [Clubs Five] [Hearts Eight],[Spades Jack] [Clubs Jack],17,20,0,False,False,96
+Blackjack,[Spades Ace] [Spades Ten],[Diamonds Ten] [Clubs Nine],21,19,0,False,False,92
+Win,[Diamonds King] [Clubs Ten],[Hearts King] [Hearts Three] [Clubs Jack],20,23,0,False,False,87
+Lose,[Hearts Ten] [Diamonds Two] [Hearts Ten],[Diamonds Ace] [Hearts Ace] [Clubs Ten],22,22,0,False,False,81
+Lose,[Clubs Five] [Hearts King] [Spades Jack],[Spades Ace] [Hearts Five] [Hearts Seven] [Clubs Jack],25,23,0,False,False,74
+Lose,[Clubs Six] [Diamonds Ace] [Diamonds Nine],[Spades Two] [Spades Nine] [Hearts King],16,21,0,False,False,68
+Win,[Diamonds Queen] [Hearts Jack],[Diamonds Eight] [Clubs Eight] [Spades King],20,26,0,False,False,63
+Blackjack,[Diamonds Three] [Hearts King] [Spades Eight],[Diamonds Jack] [Diamonds Five] [Diamonds Two],21,17,0,False,False,57
+Win,[Spades Ten] [Spades Two],[Clubs Six] [Hearts Queen] [Spades Ten],12,26,0,False,False,52
+Lose,[Hearts Two] [Spades Five] [Spades Three],[Diamonds Ace] [Spades Six],10,17,0,False,False,47
+Lose,[Hearts Six] [Clubs Queen] [Clubs Six],[Spades Eight] [Hearts Six] [Clubs Ace] [Spades Five],22,20,0,False,False,40
+Lose,[Clubs Ace] [Hearts Two] [Hearts Three] [Clubs Two],[Hearts Ace] [Clubs Five] [Hearts Five],18,21,0,False,True,31
+Blackjack,[Clubs Ace] [Hearts Jack],[Hearts Ace] [Clubs Five] [Hearts Five],21,21,0,False,True,31
+Win,[Diamonds Ten] [Diamonds Queen],[Spades Six] [Diamonds Ace],20,17,0,False,False,27
+Lose,[Spades Two] [Spades Ace] [Spades Six],[Diamonds Jack] [Hearts Ten],19,20,0,False,False,22
+Push,[Spades Queen] [Clubs Ten],[Spades Ace] [Spades Three] [Diamonds Six],20,20,0,False,False,17
+Push,[Spades Nine] [Spades Ace],[Clubs Jack] [Clubs King],20,20,0,False,False,13
+Win,[Clubs Ten] [Hearts Jack],[Spades King] [Clubs Seven],20,17,0,False,False,308
+Push,[Hearts Nine] [Clubs King],[Diamonds Ten] [Diamonds Nine],19,19,0,False,False,304
+Win,[Spades Six] [Spades Nine] [Spades Four],[Hearts Seven] [Clubs Five] [Hearts King],19,22,0,False,False,298
+Lose,[Hearts Eight] [Spades Nine],[Spades King] [Clubs Queen],17,20,0,False,False,294
+Win,[Clubs Four] [Clubs Two] [Clubs Two] [Hearts Ace],[Clubs Two] [Hearts Ten] [Clubs Queen],19,22,0,False,False,287
+Lose,[Spades King] [Spades Queen],[Hearts Four] [Hearts Four] [Clubs Eight] [Hearts Five],20,21,0,False,False,281
+Lose,[Spades Three] [Spades Jack] [Diamonds Three] [Spades Jack],[Hearts Ace] [Hearts Nine],26,20,0,False,False,275
+Win,[Spades Queen] [Spades Eight],[Spades Ace] [Hearts Four] [Spades Eight] [Clubs Four],18,17,0,False,False,269
+Lose,[Spades Ace] [Diamonds Four] [Clubs Nine] [Hearts Queen],[Hearts Ten] [Diamonds Five] [Diamonds Three],24,18,0,False,False,262
+Lose,[Hearts Three] [Diamonds Six] [Diamonds Four] [Diamonds Ace] [Clubs Jack],[Diamonds Jack] [Clubs Ten],24,20,0,False,False,255
+Win,[Hearts Nine] [Spades Jack],[Clubs Ten] [Clubs Six] [Spades Queen],19,26,0,False,False,250
+Lose,[Spades Seven] [Clubs Six],[Clubs Six] [Diamonds King] [Spades Two],13,18,0,False,False,245
+Win,[Clubs Three] [Spades Five] [Hearts Ace],[Clubs Eight] [Spades Queen],19,18,0,False,False,240
+Lose,[Hearts Eight] [Spades Four] [Hearts Four],[Diamonds Three] [Hearts Ace] [Diamonds Queen] [Clubs Seven],16,21,0,False,False,233
+Win,[Spades King] [Hearts Queen],[Hearts Three] [Hearts Five] [Hearts Seven] [Clubs Seven],20,22,0,False,False,227
+Lose,[Clubs Seven] [Spades Eight],[Hearts Three] [Diamonds Four] [Diamonds King],15,17,0,False,False,222
+Lose,[Spades Eight] [Clubs Jack],[Diamonds Four] [Hearts Four] [Clubs Eight] [Hearts Four],18,20,0,False,False,216
+Win,[Hearts Ten] [Hearts Queen],[Clubs Queen] [Spades Two] [Clubs Six],20,18,0,False,False,211
+Lose,[Spades King] [Spades Ten],[Spades Four] [Hearts Two] [Diamonds Queen] [Spades Five],20,21,0,False,False,205
+Win,[Diamonds Eight] [Clubs King],[Diamonds Five] [Hearts Ten] [Spades Seven],18,22,0,False,False,200
+Lose,[Clubs King] [Diamonds Queen],[Diamonds Ten] [Clubs Ace],20,21,0,False,False,196
+Push,[Clubs Six] [Diamonds Two] [Diamonds Queen],[Spades Five] [Clubs King] [Hearts Three],18,18,0,False,True,188
+Lose,[Spades Six] [Clubs Nine],[Spades Five] [Clubs King] [Hearts Three],15,18,0,False,True,188
+Win,[Diamonds King] [Clubs Jack],[Hearts Six] [Clubs Ten] [Spades Nine],20,25,0,False,False,183
+Lose,[Hearts Nine] [Spades Ace],[Clubs Five] [Diamonds Seven] [Diamonds Nine],20,21,0,False,False,178
+Lose,[Clubs Nine] [Diamonds Seven] [Diamonds Ten],[Clubs Ten] [Spades Queen],26,20,0,False,False,173
+Lose,[Clubs Two] [Hearts Six] [Diamonds Six],[Clubs Three] [Diamonds Three] [Diamonds Five] [Clubs Ace] [Spades Two] [Hearts Two] [Hearts Two],14,18,0,False,False,163
+Push,[Hearts Seven] [Diamonds Jack],[Hearts Seven] [Hearts King],17,17,0,False,False,159
+Lose,[Spades Three] [Clubs Three] [Spades King] [Hearts Six],[Hearts Queen] [Spades Ten],22,20,0,False,False,153
+Lose,[Clubs Four] [Clubs Queen] [Hearts Six],[Clubs Ace] [Hearts Jack],20,21,0,False,False,148
+Lose,[Diamonds Jack] [Spades Six] [Diamonds Ace],[Diamonds Eight] [Clubs Three] [Hearts Queen],17,21,0,False,False,142
+Lose,[Diamonds Seven] [Clubs Nine] [Hearts Jack],[Diamonds Ace] [Hearts Eight],26,19,0,False,False,137
+Win,[Spades Four] [Clubs Two] [Clubs Ace],[Hearts Two] [Hearts Ten] [Spades Ten],17,22,0,False,False,131
+Lose,[Hearts King] [Clubs Four] [Diamonds Queen],[Clubs Eight] [Hearts Seven] [Hearts King],24,25,0,False,False,125
+Win,[Clubs Eight] [Spades Ten],[Diamonds Jack] [Spades Seven],18,17,0,False,False,121
+Win,[Diamonds Queen] [Hearts Three] [Hearts Seven],[Diamonds Ten] [Diamonds Nine],20,19,0,False,False,116
+Lose,[Diamonds King] [Diamonds Two] [Clubs Jack],[Spades Jack] [Clubs Queen],22,20,0,False,False,111
+Lose,[Clubs Five] [Diamonds Three] [Diamonds Eight] [Spades Nine],[Diamonds Ace] [Diamonds Seven],25,18,0,False,False,105
+Win,[Hearts Eight] [Hearts Nine],[Diamonds Two] [Clubs Jack] [Clubs King],17,22,0,False,False,100
+Win,[Clubs Queen] [Diamonds Eight],[Hearts King] [Hearts Five] [Diamonds Seven],18,22,0,False,False,95
+Lose,[Spades Five] [Clubs Ten] [Clubs Three],[Diamonds Ten] [Spades Nine],18,19,0,False,False,90
+Blackjack,[Diamonds Three] [Spades Eight] [Clubs King],[Clubs Seven] [Spades Five] [Hearts Five],21,17,0,True,False,84
+Lose,[Spades Ace] [Diamonds Eight],[Clubs Ace] [Hearts Two] [Spades Queen] [Diamonds Seven],19,20,0,False,False,78
+Win,[Clubs Nine] [Spades Six],[Spades Four] [Hearts King] [Hearts Jack],15,24,0,False,False,73
+Lose,[Clubs Nine] [Spades Two] [Spades Six],[Spades Two] [Hearts Nine] [Hearts Jack],17,21,0,True,False,67
+Win,[Hearts Ten] [Diamonds Nine],[Clubs Jack] [Spades Seven],19,17,0,False,False,63
+Win,[Diamonds Six] [Hearts Ace] [Clubs Three],[Diamonds Two] [Clubs Five] [Diamonds Nine] [Spades Jack],20,26,0,False,False,56
+Blackjack,[Spades Three] [Diamonds Jack] [Hearts Eight],[Spades Eight] [Spades Seven] [Diamonds King],21,25,0,False,False,50
+Win,[Clubs Five] [Diamonds Four] [Diamonds Six] [Clubs Four],[Spades Nine] [Diamonds Five] [Spades Jack],19,24,0,False,False,43
+Push,[Spades Ten] [Hearts Jack],[Diamonds Ten] [Diamonds Two] [Hearts Eight],20,20,0,False,False,38
+Win,[Clubs Ace] [Diamonds Six] [Diamonds Two],[Diamonds Ace] [Clubs Seven],19,18,0,False,False,33
+Lose,[Spades Ten] [Diamonds Nine],[Clubs Four] [Diamonds Six] [Hearts Six] [Hearts Five],19,21,0,False,False,27
+Blackjack,[Spades Ace] [Hearts Queen],[Clubs Two] [Diamonds Jack] [Diamonds Five],21,17,0,False,False,22
+Lose,[Diamonds Four] [Diamonds Ace] [Hearts Ace],[Spades Two] [Spades Seven] [Spades Six] [Spades Five],16,20,0,False,False,15
+Win,[Spades King] [Diamonds Five],[Diamonds Six] [Hearts Queen] [Spades Jack],15,26,0,False,False,307
+Win,[Spades Queen] [Diamonds King],[Spades Three] [Hearts Queen] [Spades Ten],20,23,0,False,False,302
+Win,[Clubs Jack] [Spades Six] [Diamonds Two],[Diamonds Eight] [Diamonds Nine],18,17,0,False,False,297
+Lose,[Diamonds Nine] [Hearts Two] [Clubs Six],[Spades Eight] [Clubs Ten],17,18,0,True,True,289
+Win,[Spades Nine] [Hearts Two] [Diamonds Eight],[Spades Eight] [Clubs Ten],19,18,0,True,True,289
+Lose,[Clubs Five] [Spades Queen] [Hearts Nine],[Spades Jack] [Diamonds Four] [Spades Two] [Hearts King],24,26,0,False,False,282
+Win,[Hearts Jack] [Spades King],[Diamonds Six] [Clubs Five] [Clubs Six],20,17,0,False,False,277
+Push,[Hearts Ace] [Clubs Six] [Spades Queen],[Spades Seven] [Clubs Jack],17,17,0,False,False,272
+Lose,[Diamonds King] [Spades Three],[Hearts Three] [Hearts Five] [Hearts Queen],13,18,0,False,False,267
+Win,[Diamonds Four] [Clubs Ace] [Clubs Seven],[Diamonds Six] [Diamonds Seven] [Diamonds Nine],12,22,0,True,False,261
+Lose,[Clubs Eight] [Hearts Four] [Spades Eight],[Diamonds Three] [Hearts Nine] [Hearts Nine],20,21,0,False,False,255
+Lose,[Clubs Queen] [Hearts Three] [Clubs King],[Spades Ace] [Diamonds Ten],23,21,0,False,False,250
+Blackjack,[Hearts Two] [Spades Ten] [Hearts Nine],[Diamonds Eight] [Hearts Four] [Diamonds Two] [Clubs Seven],21,21,0,False,False,243
+Lose,[Diamonds Three] [Hearts Ten] [Clubs Four],[Clubs Jack] [Hearts King],17,20,0,False,False,238
+Win,[Diamonds Queen] [Diamonds Five],[Diamonds Four] [Clubs Jack] [Clubs Nine],15,23,0,False,False,233
+Push,[Spades Six] [Spades Jack] [Hearts Three],[Spades King] [Clubs Two] [Spades Seven],19,19,0,False,False,227
+Lose,[Spades Eight] [Spades Four] [Spades Four] [Clubs Two],[Hearts Seven] [Clubs Four] [Hearts Eight],18,19,0,False,False,220
+Lose,[Clubs Queen] [Hearts Nine],[Diamonds Ace] [Spades King],19,21,0,False,False,216
+Lose,[Hearts Six] [Diamonds Two] [Spades Two],[Hearts Two] [Clubs Three] [Spades Two] [Diamonds King],10,17,0,False,False,209
+Lose,[Clubs Eight] [Hearts Four] [Clubs Ten],[Hearts Queen] [Spades Four] [Hearts Eight],22,22,0,False,False,203
+Win,[Hearts King] [Clubs Eight],[Hearts Seven] [Clubs Nine] [Clubs King],18,26,0,False,False,198
+Push,[Clubs Nine] [Clubs Nine],[Clubs King] [Diamonds Eight],18,18,0,False,True,192
+Lose,[Clubs Nine] [Hearts Eight],[Clubs King] [Diamonds Eight],17,18,0,False,True,192
+Win,[Clubs Ten] [Clubs Jack],[Clubs Two] [Diamonds Five] [Clubs Seven] [Hearts Queen],20,24,0,False,False,186
+Lose,[Hearts Ace] [Diamonds Seven] [Diamonds Four],[Spades Two] [Clubs Three] [Diamonds Ace] [Hearts Five],12,21,0,True,False,179
+Lose,[Clubs Nine] [Clubs Six] [Clubs Ace] [Diamonds Six],[Hearts Ten] [Hearts Jack],22,20,0,False,True,170
+Lose,[Diamonds Nine] [Clubs Five] [Spades Five],[Hearts Ten] [Hearts Jack],19,20,0,False,True,170
+Lose,[Hearts Eight] [Clubs Four] [Hearts King],[Diamonds Three] [Spades Nine] [Hearts Seven],22,19,0,False,False,164
+Push,[Diamonds Queen] [Hearts Six] [Hearts Three],[Spades Queen] [Hearts Nine],19,19,0,False,False,159
+Lose,[Spades Eight] [Clubs Queen],[Clubs Queen] [Spades Queen],18,20,0,False,False,155
+Win,[Diamonds Six] [Diamonds Ace] [Diamonds Ace],[Spades Six] [Spades Ace],18,17,0,True,False,150
+Lose,[Clubs Jack] [Spades Eight],[Spades Queen] [Clubs Ace],18,21,0,False,False,146
+Win,[Hearts Eight] [Hearts Ace] [Clubs Ten],[Hearts Six] [Spades Ace],19,17,0,True,False,141
+Lose,[Spades Four] [Diamonds Jack],[Hearts Six] [Hearts Eight] [Hearts Five],14,19,0,False,False,136
+Win,[Diamonds Seven] [Hearts Ace] [Clubs Ten],[Clubs Four] [Diamonds King] [Spades Three],18,17,0,True,False,130
+Lose,[Spades Nine] [Spades Three] [Diamonds Two] [Diamonds Three],[Spades Ace] [Diamonds Ten],17,21,0,False,False,124
+Lose,[Clubs Two] [Spades Seven] [Clubs Two],[Clubs Six] [Hearts King] [Clubs Three],11,19,0,True,False,118
+Blackjack,[Spades Ace] [Diamonds Seven] [Clubs Eight] [Spades Five],[Spades Ten] [Clubs Four] [Spades King],21,24,0,False,False,111
+Lose,[Hearts Ten] [Diamonds Three] [Hearts Six],[Clubs Seven] [Diamonds Four] [Hearts Ten],19,21,0,False,False,105
+Lose,[Spades Eight] [Clubs Seven] [Clubs Queen],[Diamonds Nine] [Hearts Ace],25,20,0,False,False,100
+Lose,[Clubs Three] [Clubs Two] [Hearts Seven] [Diamonds Jack],[Spades Ace] [Diamonds Queen],22,21,0,False,False,94
+Lose,[Diamonds Ten] [Spades Three],[Clubs Six] [Diamonds Jack] [Hearts Two],13,18,0,False,False,89
+Win,[Spades Ten] [Diamonds Four],[Clubs Five] [Diamonds Queen] [Hearts Seven],14,22,0,False,False,84
+Lose,[Clubs Five] [Clubs Eight],[Spades Three] [Spades Jack] [Clubs Seven],13,20,0,False,False,79
+Lose,[Diamonds Ten] [Diamonds Five] [Diamonds Eight],[Diamonds King] [Diamonds Seven],23,17,0,False,False,74
+Blackjack,[Hearts King] [Hearts Ace],[Spades Six] [Spades Two] [Diamonds Ten],21,18,0,False,False,69
+Win,[Clubs Five] [Spades Five] [Diamonds Nine],[Hearts Seven] [Spades Jack],19,17,0,True,False,64
+Win,[Clubs Three] [Spades King],[Spades Two] [Diamonds Ace] [Spades Ten] [Spades Nine],13,22,0,False,False,58
+Lose,[Clubs Ace] [Hearts Five] [Diamonds Jack],[Hearts Four] [Spades Seven] [Diamonds Queen],16,21,0,True,False,52
+Lose,[Hearts Three] [Diamonds Queen] [Diamonds Three] [Clubs Ten],[Hearts Jack] [Spades Seven],26,17,0,False,False,46
+Lose,[Diamonds Five] [Spades Seven] [Clubs Ace],[Diamonds Two] [Clubs King] [Hearts Six],13,18,0,False,False,40
+Lose,[Clubs Four] [Diamonds Eight] [Diamonds King],[Clubs King] [Clubs Eight],22,18,0,False,False,35
+Lose,[Diamonds Six] [Hearts Five] [Diamonds Two],[Diamonds Seven] [Hearts Five] [Spades Five],13,17,0,True,False,29
+Lose,[Hearts Queen] [Diamonds Jack],[Hearts Ten] [Clubs Ace],20,21,0,False,False,25
+Push,[Hearts Ten] [Hearts Jack],[Hearts Jack] [Clubs King],20,20,0,False,False,21
+Win,[Hearts Two] [Hearts Four] [Hearts Jack],[Spades Five] [Spades Four] [Spades Four] [Diamonds Ace] [Spades Nine],16,23,0,False,False,13
+Lose,[Diamonds Seven] [Clubs Eight] [Spades Jack],[Spades Seven] [Clubs Jack],25,17,0,False,False,307
+Win,[Hearts King] [Hearts Ten],[Spades Queen] [Hearts Seven],20,17,0,False,False,303
+Lose,[Spades King] [Spades Eight],[Spades Ace] [Spades Jack],18,21,0,False,False,299
+Lose,[Diamonds Eight] [Clubs Jack],[Hearts Six] [Spades Eight] [Clubs Seven],18,21,0,False,False,294
+Win,[Clubs Ten] [Diamonds Seven],[Clubs Six] [Hearts Eight] [Clubs King],17,24,0,False,False,289
+Lose,[Spades Six] [Diamonds Three] [Spades Ten],[Spades Five] [Clubs Six] [Diamonds Jack],19,21,0,True,False,283
+Win,[Hearts Ten] [Hearts Queen],[Hearts Two] [Hearts Two] [Clubs Five] [Diamonds Nine],20,18,0,False,False,277
+Lose,[Spades Four] [Diamonds Ace] [Diamonds Queen] [Hearts Two],[Hearts Queen] [Clubs Nine],17,19,0,False,False,271
+Lose,[Diamonds Jack] [Diamonds Five] [Hearts Four],[Diamonds Ten] [Diamonds Ten],19,20,0,False,False,266
+Lose,[Hearts Six] [Diamonds King] [Hearts Four],[Spades Jack] [Clubs Ace],20,21,0,False,False,261
+Lose,[Spades Eight] [Clubs Four] [Hearts Four] [Hearts Six],[Hearts Jack] [Clubs Six] [Spades Two],22,18,0,False,False,254
+Lose,[Spades Two] [Diamonds Two] [Spades Three] [Spades Two],[Hearts Ace] [Clubs King],9,21,0,False,False,248
+Lose,[Spades Queen] [Clubs Seven],[Spades Six] [Clubs Jack] [Hearts Five],17,21,0,False,False,243
+Win,[Hearts Three] [Diamonds Ace] [Clubs Three],[Diamonds Two] [Clubs Ten] [Clubs Four] [Hearts Eight],17,24,0,False,False,236
+Win,[Clubs Nine] [Diamonds Three],[Hearts Four] [Diamonds Seven] [Clubs Three] [Clubs Nine],12,23,0,False,False,230
+Lose,[Hearts Ace] [Hearts Four] [Spades Seven],[Clubs Four] [Spades Ace] [Clubs Five],12,20,0,True,False,224
+Win,[Diamonds Two] [Clubs Seven] [Clubs Queen],[Diamonds Five] [Spades Nine] [Spades Jack],19,24,0,True,False,218
+Push,[Diamonds Queen] [Hearts Jack],[Hearts King] [Clubs Jack],20,20,0,False,False,214
+Lose,[Clubs Eight] [Hearts Five] [Diamonds King],[Diamonds Ten] [Hearts Seven],23,17,0,False,False,209
+Win,[Spades Three] [Spades Six] [Diamonds Six],[Clubs Two] [Hearts Eight] [Diamonds Four] [Clubs Ten],15,24,0,False,False,202
+Win,[Diamonds Six] [Clubs Ace] [Clubs Queen],[Spades Four] [Spades Seven] [Clubs Two] [Hearts Nine],17,22,0,True,False,195
+Lose,[Diamonds Queen] [Clubs Two],[Spades Six] [Spades Five] [Diamonds Eight],12,19,0,False,False,190
+Blackjack,[Spades Eight] [Diamonds Three] [Diamonds Jack],[Diamonds Ten] [Clubs Three] [Diamonds Jack],21,23,0,True,False,184
+Win,[Hearts Ten] [Diamonds Three],[Diamonds Five] [Hearts Jack] [Clubs King],13,25,0,False,False,179
+Lose,[Diamonds Ace] [Diamonds Four] [Clubs Queen],[Diamonds Five] [Diamonds Ace] [Hearts Three],15,19,0,True,False,173
+Blackjack,[Spades King] [Hearts Ace],[Spades Nine] [Diamonds Four] [Spades Queen],21,23,0,False,False,168
+Win,[Spades Two] [Clubs Eight] [Hearts Nine],[Diamonds Jack] [Clubs Five] [Hearts Ten],19,25,0,False,False,162
+Lose,[Hearts Seven] [Diamonds Queen],[Hearts Five] [Spades Ace] [Diamonds Six] [Clubs Seven],17,19,0,False,False,156
+Push,[Spades Ten] [Diamonds Ten],[Diamonds Ten] [Spades King],20,20,0,False,False,152
+Lose,[Hearts Six] [Spades Eight] [Clubs Queen],[Diamonds Ace] [Diamonds Queen],24,21,0,False,False,147
+Lose,[Spades Ten] [Spades Five] [Diamonds Eight],[Clubs King] [Spades Ten],23,20,0,False,False,142
+Lose,[Clubs Five] [Diamonds Five] [Diamonds Seven],[Clubs Nine] [Diamonds Two] [Spades Five] [Spades Three],17,19,0,True,False,135
+Win,[Spades Six] [Spades Ace] [Diamonds Nine],[Diamonds Three] [Diamonds Nine] [Clubs Queen],16,22,0,True,False,129
+Lose,[Clubs King] [Hearts Four],[Diamonds Four] [Spades Ace] [Hearts Three],14,18,0,False,False,124
+Lose,[Diamonds Ace] [Clubs Four] [Diamonds Nine] [Spades Queen],[Spades Seven] [Hearts Eight] [Clubs Four],24,19,0,False,False,117
+Lose,[Hearts Three] [Clubs Two] [Spades Three] [Spades Four] [Hearts King],[Hearts Queen] [Spades Six] [Clubs Ace],22,17,0,False,False,109
+Lose,[Hearts Nine] [Hearts Six] [Clubs Seven],[Hearts Ten] [Clubs King],22,20,0,False,True,102
+Lose,[Spades Nine] [Clubs Eight],[Hearts Ten] [Clubs King],17,20,0,False,True,102
+Push,[Spades Seven] [Hearts Jack],[Hearts Seven] [Clubs Ten],17,17,0,False,False,98
+Lose,[Clubs Five] [Clubs Four] [Clubs Seven],[Clubs Three] [Clubs Eight] [Clubs Ace] [Hearts Eight],16,20,0,True,False,91
+Win,[Hearts Ten] [Diamonds King],[Clubs Three] [Spades Four] [Diamonds Eight] [Spades Three],20,18,0,False,False,85
+Push,[Diamonds Nine] [Clubs Jack],[Diamonds Five] [Spades Four] [Hearts Jack],19,19,0,False,False,80
+Lose,[Spades Four] [Diamonds Queen] [Diamonds King],[Spades Jack] [Clubs Jack],24,20,0,False,False,75
+Lose,[Hearts Two] [Diamonds Two] [Diamonds King] [Spades Queen],[Clubs Nine] [Spades Nine],24,18,0,False,False,69
+Lose,[Hearts Five] [Spades Two] [Clubs Six] [Hearts King],[Hearts King] [Diamonds Six] [Diamonds Three],23,19,0,False,False,62
+Blackjack,[Clubs Two] [Hearts Five] [Diamonds Eight] [Diamonds Six],[Spades Eight] [Hearts Nine],21,17,0,False,False,56
+Win,[Spades King] [Hearts King],[Hearts Queen] [Clubs Six] [Hearts Seven],20,23,0,False,False,51
+Win,[Clubs Two] [Diamonds Seven] [Clubs Ace],[Spades Queen] [Clubs Eight],20,18,0,False,False,46
+Lose,[Hearts Nine] [Diamonds Jack],[Hearts Five] [Clubs Five] [Spades Ten],19,20,0,False,True,39
+Lose,[Spades Nine] [Clubs Three],[Hearts Five] [Clubs Five] [Spades Ten],12,20,0,False,True,39
+Lose,[Hearts Two] [Spades Nine] [Spades Ace],[Clubs Ten] [Diamonds King],12,20,0,True,False,34
+Push,[Hearts Seven] [Hearts Queen],[Diamonds Six] [Hearts Ace],17,17,0,False,False,30
+Lose,[Diamonds Seven] [Clubs Ten],[Hearts Nine] [Clubs Nine],17,18,0,False,False,26
+Blackjack,[Hearts Ace] [Hearts Two] [Hearts Three] [Spades King] [Spades Five],[Diamonds Nine] [Hearts Ace],21,20,0,False,False,19
+Lose,[Hearts Six] [Hearts Queen],[Clubs Six] [Diamonds Two] [Hearts Three] [Spades Ten],16,21,0,False,False,13
+Win,[Spades Four] [Clubs Eight],[Spades Six] [Spades Three] [Clubs Three] [Diamonds Queen],12,22,0,False,True,304
+Win,[Hearts Four] [Clubs Eight],[Spades Six] [Spades Three] [Clubs Three] [Diamonds Queen],12,22,0,False,True,304
+Win,[Spades Eight] [Clubs Nine],[Clubs Four] [Hearts Seven] [Diamonds Ace] [Clubs Jack],17,22,0,False,False,298
+Push,[Hearts Queen] [Clubs Ten],[Spades King] [Diamonds Four] [Spades Six],20,20,0,False,False,293
+Blackjack,[Clubs Nine] [Hearts Two] [Clubs King],[Clubs Jack] [Diamonds Three] [Spades Nine],21,22,0,True,False,287
+Lose,[Hearts Six] [Diamonds Six] [Hearts Eight],[Diamonds Queen] [Clubs Ace],20,21,0,False,False,282
+Win,[Diamonds Seven] [Clubs Nine] [Clubs Four],[Spades Ace] [Diamonds Five] [Spades Seven] [Diamonds Five],20,18,0,False,False,275
+Win,[Spades Jack] [Diamonds Eight],[Hearts Three] [Clubs Two] [Clubs King] [Spades Queen],18,25,0,False,False,269
+Win,[Clubs Nine] [Spades Five] [Hearts Six],[Hearts King] [Diamonds Nine],20,19,0,False,False,264
+Win,[Clubs Six] [Hearts Jack] [Clubs Four],[Diamonds King] [Hearts Four] [Hearts Nine],20,23,0,False,False,258
+Win,[Diamonds Four] [Hearts Nine] [Spades Seven],[Hearts Ace] [Spades Seven],20,18,0,False,False,253
+Lose,[Clubs Queen] [Spades Two] [Spades Queen],[Clubs Ten] [Hearts Ten],22,20,0,False,False,248
+Lose,[Spades Four] [Diamonds Queen] [Hearts King],[Diamonds Ace] [Spades Ten],24,21,0,False,False,243
+Win,[Diamonds Jack] [Diamonds Ten],[Diamonds Nine] [Diamonds Five] [Diamonds Ace] [Diamonds Jack],20,25,0,False,False,237
+Win,[Spades Jack] [Clubs King],[Hearts Five] [Spades Queen] [Spades Three],20,18,0,False,False,232
+Lose,[Clubs Four] [Spades Ten],[Clubs Five] [Spades Seven] [Diamonds Eight],14,20,0,False,False,227
+Win,[Hearts Queen] [Clubs Ten],[Clubs Two] [Diamonds Two] [Diamonds Four] [Spades Six] [Spades Eight],20,22,0,False,False,220
+Lose,[Diamonds Queen] [Spades Two] [Hearts Ace] [Spades Two] [Spades Seven],[Diamonds Ten] [Hearts Four] [Hearts Four],22,18,0,False,False,212
+Blackjack,[Clubs Ace] [Diamonds Ten],[Spades King] [Clubs Queen],21,20,0,False,False,208
+Lose,[Spades Jack] [Clubs Three] [Hearts Queen],[Spades Queen] [Spades Ten],23,20,0,False,False,203
+Lose,[Diamonds King] [Clubs Five],[Diamonds Two] [Clubs Six] [Spades Ten],15,18,0,False,False,198
+Blackjack,[Hearts Five] [Clubs Ace] [Diamonds Ten] [Clubs Five],[Clubs Ten] [Hearts Seven],21,17,0,False,False,192
+Lose,[Spades Five] [Hearts Seven] [Hearts Jack],[Hearts Ten] [Spades Nine],22,19,0,False,False,187
+Win,[Diamonds Queen] [Hearts Queen],[Diamonds Three] [Diamonds Five] [Diamonds Ace],20,19,0,False,False,182
+Win,[Clubs Queen] [Diamonds Two] [Hearts Eight],[Hearts Nine] [Hearts Three] [Spades Jack],20,22,0,False,False,176
+Blackjack,[Spades Ace] [Clubs King],[Spades Three] [Clubs Eight] [Hearts Two] [Hearts Three] [Hearts Eight],21,24,0,False,False,169
+Lose,[Spades Six] [Spades Three] [Spades Four],[Spades Five] [Diamonds Seven] [Diamonds Six],13,18,0,True,False,163
+Lose,[Hearts Nine] [Hearts Six],[Diamonds Four] [Hearts Two] [Clubs Two] [Clubs Two] [Hearts Seven],15,17,0,False,False,156
+Win,[Spades Nine] [Hearts Jack],[Hearts King] [Diamonds Two] [Clubs Queen],19,22,0,False,False,151
+Win,[Hearts Eight] [Clubs Five],[Clubs Three] [Diamonds Eight] [Spades Four] [Spades Ace] [Clubs Seven],13,23,0,False,False,144
+Win,[Spades King] [Diamonds King],[Hearts Seven] [Clubs King],20,17,0,False,False,140
+Win,[Clubs Ace] [Hearts Two] [Clubs Ten],[Diamonds Three] [Spades Eight] [Spades Two] [Diamonds Ten],13,23,0,False,False,133
+Win,[Diamonds King] [Hearts Ten],[Spades Four] [Diamonds Six] [Spades Eight],20,18,0,False,False,128
+Lose,[Clubs Six] [Clubs Queen] [Hearts King],[Diamonds Ten] [Clubs Five] [Spades Ace] [Spades Nine],26,25,0,False,False,121
+Win,[Clubs Jack] [Spades Ten],[Diamonds Nine] [Hearts Six] [Hearts Ten],20,25,0,False,False,116
+Lose,[Spades King] [Clubs Three],[Hearts Six] [Spades Five] [Clubs Five] [Diamonds Three],13,19,0,False,False,110
+Lose,[Spades King] [Spades Seven],[Clubs Three] [Spades Nine] [Clubs Seven],17,19,0,False,False,105
+Lose,[Hearts Jack] [Clubs Two] [Clubs Six],[Spades Ace] [Clubs Eight],18,19,0,False,False,100
+Blackjack,[Diamonds Nine] [Hearts Five] [Hearts Ace] [Hearts Six],[Clubs Jack] [Diamonds Eight],21,18,0,False,False,94
+Blackjack,[Clubs Seven] [Spades Eight] [Diamonds Six],[Hearts Seven] [Hearts Queen],21,17,0,False,False,89
+Win,[Clubs Six] [Hearts Ace] [Diamonds Three],[Clubs Three] [Hearts Jack] [Hearts Jack],20,23,0,True,False,83
+Win,[Hearts King] [Spades Queen],[Spades Six] [Clubs Two] [Spades Jack],20,18,0,False,False,78
+Blackjack,[Spades Eight] [Hearts Three] [Spades Jack],[Diamonds Nine] [Hearts Four] [Diamonds Jack],21,23,0,True,False,72
+Push,[Hearts Four] [Hearts Ace] [Hearts King] [Spades Five],[Spades Ten] [Clubs Jack],20,20,0,False,False,66
+Win,[Hearts Two] [Clubs Six] [Spades Ace],[Spades Two] [Clubs Four] [Spades Nine] [Clubs King],19,25,0,False,False,59
+Lose,[Clubs Seven] [Diamonds Jack],[Diamonds Ace] [Clubs Nine],17,20,0,False,False,55
+Win,[Diamonds Six] [Diamonds Jack],[Hearts Three] [Diamonds King] [Hearts Nine],16,22,0,False,False,50

@@ -1,145 +1,136 @@
-﻿using BlackjackStrategies.Application.BetService;
-using BlackjackStrategies.Application.Strategies;
+﻿using BlackjackStrategies.Application.ActionService;
+using BlackjackStrategies.Application.BetService;
 using BlackjackStrategies.Domain;
 
-namespace BlackjackStrategies.Application
+namespace BlackjackStrategies.Application;
+
+public interface IGameSimulator
 {
-    public interface IGameSimulator
+    IEnumerable<GameOutcome> Simulate(GameSettings settings);
+}
+
+public class GameSimulator(
+    IPlayerService playerService,
+    IBetServiceFactory betServiceFactory,
+    IGameSettingValidator gameSettingValidator) : IGameSimulator
+{
+    private readonly Hand _dealerHand = new();
+    private Deck _deck = new();
+
+    public IEnumerable<GameOutcome> Simulate(GameSettings settings)
     {
-        IEnumerable<GameOutcome> Simulate(
-            int numberOfDecks,
-            int numberOfGames,
-            decimal startingAmount,
-            decimal bettingSize,
-            StrategyType strategy,
-            bool automaticShuffler = false
-        );
+        gameSettingValidator.ValidateGameSettings(settings);
+        
+        var betService =
+            betServiceFactory.GetBetService(settings.StrategyType, settings.StartingAmount, settings.BettingSize);
+        var gameOutcomes = new List<GameOutcome>();
+        _deck = new Deck(settings.NumberOfDecks);
+        _deck.Shuffle();
+
+        for (var _ = 0; _ < settings.NumberOfGames; _++)
+        {
+            playerService.ResetState();
+            _dealerHand.Clear();
+
+            if (settings.AutomaticShuffler || _deck.Count < 16)
+            {
+                _deck.ResetDeck();
+                _deck.Shuffle();
+            }
+
+            DrawCard(playerService.Hand, 2);
+            DrawCard(_dealerHand, 2);
+
+            HandlePlayerTurn();
+            HandleDealerTurn();
+
+            LogGameOutcome(betService, gameOutcomes);
+        }
+
+        return gameOutcomes;
     }
 
-    public class GameSimulator(IPlayerService playerService, IBetServiceFactory betServiceFactory) : IGameSimulator
+    private void HandlePlayerTurn()
     {
-        private readonly Hand DealerHand = new();
-        private Deck Deck = new();
+        var dealerUpCard = _dealerHand.Cards.First();
+        var playerAction = playerService.GetAction(dealerUpCard);
 
-        public IEnumerable<GameOutcome> Simulate(
-            int numberOfDecks,
-            int numberOfGames,
-            decimal startingAmount,
-            decimal bettingSize,
-            StrategyType strategy,
-            bool automaticShuffler = false
-        )
+        while (playerService.Hand.GetValue() < Constants.Blackjack && playerAction != HandAction.Stay)
         {
-            var betService = betServiceFactory.GetBetSerivce(strategy, startingAmount, bettingSize);
-            var gameOutcomes = new List<GameOutcome>();
-            Deck = new Deck(numberOfDecks);
-            Deck.Shuffle();
-
-            for (int _ = 0; _ < numberOfGames; _++)
+            if (playerAction == HandAction.Hit)
             {
-                playerService.ResetState();
-                DealerHand.Clear();
+                DrawCard(playerService.Hand);
+                playerAction = playerService.GetAction(dealerUpCard);
+            }
+            else if (playerAction == HandAction.Double)
+            {
+                DrawCard(playerService.Hand);
+                playerService.Doubled = true;
+                playerAction = HandAction.Stay;
+            }
+            else if (playerService.SplitHands == null && playerAction == HandAction.Split)
+            {
+                var firstHand = new Hand(playerService.Hand.Cards.First());
+                var secondHand = new Hand(playerService.Hand.Cards.Last());
+                playerService.SplitHands = [firstHand, secondHand];
 
-                if (automaticShuffler || Deck.Count < 16)
-                {
-                    Deck.ResetDeck();
-                    Deck.Shuffle();
-                }
-
-                DrawCard(playerService.Hand, 2);
-                DrawCard(DealerHand, 2);
-
+                DrawCard(firstHand);
+                playerService.Hand = firstHand;
                 HandlePlayerTurn();
-                HandleDealerTurn();
 
-                LogGameOutcome(betService, gameOutcomes);
-            }
+                DrawCard(secondHand);
+                playerService.Hand = secondHand;
+                HandlePlayerTurn();
 
-            return gameOutcomes;
-        }
-
-        private void HandlePlayerTurn()
-        {
-            var dealerUpCard = DealerHand.Cards.First();
-            var playerAction = playerService.GetAction(dealerUpCard);
-
-            while (playerService.Hand.GetValue() < Constants.Blackjack && playerAction != HandAction.Stay)
-            {
-                if (playerAction == HandAction.Hit)
-                {
-                    DrawCard(playerService.Hand);
-                    playerAction = playerService.GetAction(dealerUpCard);
-                }
-                else if (playerAction == HandAction.Double)
-                {
-                    DrawCard(playerService.Hand);
-                    playerService.Doubled = true;
-                    playerAction = HandAction.Stay;
-                }
-                else if (playerService.SplitHands == null && playerAction == HandAction.Split)
-                {
-                    var firstHand = new Hand(playerService.Hand.Cards.First());
-                    var secondHand = new Hand(playerService.Hand.Cards.Last());
-                    playerService.SplitHands = [firstHand, secondHand];
-
-                    DrawCard(firstHand);
-                    playerService.Hand = firstHand;
-                    HandlePlayerTurn();
-
-                    DrawCard(secondHand);
-                    playerService.Hand = secondHand;
-                    HandlePlayerTurn();
-
-                    playerAction = HandAction.Stay;
-                }
+                playerAction = HandAction.Stay;
             }
         }
+    }
 
-        private void HandleDealerTurn()
+    private void HandleDealerTurn()
+    {
+        while (_dealerHand.GetValue() < Constants.DealerStayThreshold)
         {
-            while (DealerHand.GetValue() < Constants.DealerStayThreshold)
-            {
-                DrawCard(DealerHand, 1);
-            }
+            DrawCard(_dealerHand);
         }
+    }
 
-        private void DrawCard(Hand hand, int numberOfCards=1)
+    private void DrawCard(Hand hand, int numberOfCards = 1)
+    {
+        for (var i = 0; i < numberOfCards; i++)
         {
-            for (int i = 0; i < numberOfCards; i++)
-            {
-                hand.AddCard(Deck.Draw());
-            }
+            hand.AddCard(_deck.Draw());
         }
+    }
 
-        private void LogGameOutcome(IBetSerivce betService, List<GameOutcome> gameOutcomes)
+    private void LogGameOutcome(IBetSerivce betService, List<GameOutcome> gameOutcomes)
+    {
+        if (playerService.SplitHands == null)
         {
-            if (playerService.SplitHands == null)
+            var gameOutcome = GetGameOutcome(playerService.Hand);
+            betService.MakeBet(gameOutcome);
+            gameOutcomes.Add(gameOutcome);
+        }
+        else
+        {
+            foreach (var gameOutcome in playerService.SplitHands.Select(GetGameOutcome))
             {
-                var gameOutcome = GetGameOutcome(playerService.Hand);
                 betService.MakeBet(gameOutcome);
                 gameOutcomes.Add(gameOutcome);
             }
-            else
-            {
-                foreach (var gameOutcome in playerService.SplitHands.Select(GetGameOutcome))
-                {
-                    betService.MakeBet(gameOutcome);
-                    gameOutcomes.Add(gameOutcome);
-                }
-            }
         }
+    }
 
-        private GameOutcome GetGameOutcome(Hand hand)
+    private GameOutcome GetGameOutcome(Hand hand)
+    {
+        return new GameOutcome
         {
-            return new GameOutcome
-            {
-                GameResult = hand.GetGameResult(DealerHand),
-                PlayerHand = new Hand([.. hand.Cards]),
-                DealerHand = new Hand([.. DealerHand.Cards]),
-                Doubled = playerService.Doubled,
-                Split = playerService.SplitHands != null,
-                CardsRemaining = Deck.Count,
-            };
-        }
+            GameResult = hand.GetGameResult(_dealerHand),
+            PlayerHand = new Hand([.. hand.Cards]),
+            DealerHand = new Hand([.. _dealerHand.Cards]),
+            Doubled = playerService.Doubled,
+            Split = playerService.SplitHands != null,
+            CardsRemaining = _deck.Count,
+        };
     }
 }

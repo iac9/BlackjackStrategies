@@ -16,4 +16,12 @@
     <ProjectReference Include="..\BlackjackStrategies.Infrastructure\BlackjackStrategies.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\BlackjackStrategies.API.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\BlackjackStrategies.API.runtimeconfig.json" />
+  </ItemGroup>
+
 </Project>

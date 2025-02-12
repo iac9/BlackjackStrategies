@@ -1,26 +1,21 @@
-﻿namespace BlackjackStrategies.Application.BetService
+﻿using BlackjackStrategies.Domain;
+
+namespace BlackjackStrategies.Application.BetService;
+
+public interface IBetServiceFactory
 {
-    public interface IBetServiceFactory
-    {
-        IBetSerivce GetBetSerivce(StrategyType strategyType, decimal startingAmount, decimal bettingSize);
-    }
+    IBetSerivce GetBetService(StrategyType strategyType, decimal startingAmount, decimal bettingSize);
+}
 
-    public enum StrategyType
+public class BetServiceFactory : IBetServiceFactory
+{
+    public IBetSerivce GetBetService(StrategyType strategyType, decimal startingAmount, decimal bettingSize)
     {
-        Martingale,
-        HiLo
-    }
-
-    public class BetServiceFactory : IBetServiceFactory
-    {
-        public IBetSerivce GetBetSerivce(StrategyType strategyType, decimal startingAmount, decimal bettingSize)
+        return strategyType switch
         {
-            return strategyType switch
-            {
-                StrategyType.Martingale => new MartingaleBetService { Amount = startingAmount, SingleBetSize = bettingSize },
-                StrategyType.HiLo => new HiLoBetService { Amount = startingAmount, SingleBetSize = bettingSize },
-                _ => throw new KeyNotFoundException($"Bet service with strategy '{strategyType}' not found."),
-            };
-        }
+            StrategyType.Martingale => new MartingaleBetService { Amount = startingAmount, SingleBetSize = bettingSize },
+            StrategyType.HiLo => new HiLoBetService { Amount = startingAmount, SingleBetSize = bettingSize },
+            _ => throw new KeyNotFoundException($"Bet service with strategy '{strategyType}' not found."),
+        };
     }
 }

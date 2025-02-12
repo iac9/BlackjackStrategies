@@ -1,54 +1,53 @@
 using BlackjackStrategies.Domain;
 
-namespace BlackjackStrategies.Application.BetService
+namespace BlackjackStrategies.Application.BetService;
+
+public class HiLoBetService : BaseBetService
 {
-    public class HiLoBetService : BaseBetService
+    private int _runningCount = 0;
+    private GameOutcome? _lastGameOutcome = null;
+
+    public override void MakeBet(GameOutcome gameOutcome)
     {
-        private int runningCount = 0;
-        private GameOutcome? lastGameOutcome = null;
+        if (_lastGameOutcome?.Money == 0)
+            return;
 
-        public override void MakeBet(GameOutcome gameOutcome)
+        var trueCount = GetTrueCount();
+        var bet = Math.Min(Amount, SingleBetSize * (gameOutcome.Doubled ? 2 : 1) * trueCount);
+
+        UpdateAmount(gameOutcome, bet);
+
+        UpdateRunningCount(gameOutcome);
+
+        _lastGameOutcome = gameOutcome;
+    }
+
+    private int GetTrueCount()  
+    {
+        var trueCount = _lastGameOutcome == null ? 
+            _runningCount : 
+            (int)Math.Round(_runningCount / ((decimal)_lastGameOutcome.CardsRemaining / Constants.StandardDeckSize));
+
+        return Math.Max(trueCount, 1);
+    }
+
+    private void UpdateRunningCount(GameOutcome gameOutcome)
+    {
+        if (_lastGameOutcome?.CardsRemaining < gameOutcome.CardsRemaining)
         {
-            if (lastGameOutcome?.Money == 0)
-                return;
-
-            var trueCount = GetTrueCount();
-            var bet = Math.Min(Amount, SingleBetSize * (gameOutcome.Doubled ? 2 : 1) * trueCount);
-
-            UpdateAmount(gameOutcome, bet);
-
-            UpdateRunningCount(gameOutcome);
-
-            lastGameOutcome = gameOutcome;
+            _runningCount = 0;
         }
 
-        private int GetTrueCount()  
+        var cards = gameOutcome.PlayerHand.Cards.Concat(gameOutcome.DealerHand.Cards);
+
+        foreach (var card in cards)
         {
-            var trueCount = lastGameOutcome == null ? 
-                runningCount : 
-                (int)Math.Round(runningCount / ((decimal)lastGameOutcome.CardsRemaining / Constants.StandardDeckSize));
-
-            return Math.Max(trueCount, 1);
-        }
-
-        private void UpdateRunningCount(GameOutcome gameOutcome)
-        {
-            if (lastGameOutcome?.CardsRemaining < gameOutcome.CardsRemaining)
+            _runningCount += card.Value switch
             {
-                runningCount = 0;
-            }
-
-            var cards = gameOutcome.PlayerHand.Cards.Concat(gameOutcome.DealerHand.Cards);
-
-            foreach (var card in cards)
-            {
-                runningCount += card.Value switch
-                {
-                    CardValue.Two or CardValue.Three or CardValue.Four or CardValue.Five or CardValue.Six => 1,
-                    CardValue.Ten or CardValue.Jack or CardValue.Queen or CardValue.King or CardValue.Ace => -1,
-                    _ => 0,
-                };
-            }
+                CardValue.Two or CardValue.Three or CardValue.Four or CardValue.Five or CardValue.Six => 1,
+                CardValue.Ten or CardValue.Jack or CardValue.Queen or CardValue.King or CardValue.Ace => -1,
+                _ => 0,
+            };
         }
     }
 }
