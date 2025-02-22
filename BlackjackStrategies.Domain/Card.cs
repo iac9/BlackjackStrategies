@@ -34,7 +34,7 @@ public enum CardValue
 
 public static class CardValueExtensions
 {
-    public static bool InRange(CardValue start, CardValue end, CardValue card)
+    public static bool IsBetween(this CardValue card, CardValue start, CardValue end)
     {
         if (start > end)
             throw new ArgumentException("Start card value must be less than or equal to end card value.");

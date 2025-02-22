@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddSingleton<IGameAnalyser, GameAnalyser>();
 builder.Services.AddSingleton<IGameSimulator, GameSimulator>();
-builder.Services.AddSingleton<IPlayerService, BasicStrategyPlayerService>();
+builder.Services.AddSingleton<BasePlayer, BasicStrategyPlayerService>();
 builder.Services.AddSingleton<IBetServiceFactory, BetServiceFactory>();
 
 builder.Services.AddControllers();

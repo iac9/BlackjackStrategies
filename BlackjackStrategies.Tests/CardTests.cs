@@ -7,9 +7,9 @@ namespace BlackjackStrategies.Tests;
 public class CardTests
 {
     [Fact]
-    public void InRange_ThrowsArgumentException_GivenEndIsGreaterThanStart()
+    public void IsBetween_ThrowsArgumentException_GivenEndIsGreaterThanStart()
     {
-        Action action = () => CardValueExtensions.InRange(CardValue.Four, CardValue.Three, It.IsAny<CardValue>());
+        Action action = () =>  It.IsAny<CardValue>().IsBetween(CardValue.Four, CardValue.Three);
 
         action.Should().Throw<ArgumentException>();
     }
@@ -17,9 +17,9 @@ public class CardTests
     [Theory]
     [InlineData(CardValue.Two, CardValue.Two, CardValue.Two)]
     [InlineData(CardValue.Two, CardValue.Six, CardValue.Four)]
-    public void InRange_ReturnsTrue_IfCardInRange(CardValue start, CardValue end, CardValue card)
+    public void IsBetween_ReturnsTrue_IfCardInRange(CardValue start, CardValue end, CardValue card)
     {
-        var actual = CardValueExtensions.InRange(start, end, card);
+        var actual = card.IsBetween(start, end);
 
         actual.Should().BeTrue();
     }

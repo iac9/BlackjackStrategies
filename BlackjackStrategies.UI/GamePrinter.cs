@@ -28,7 +28,7 @@ public class GamePrinter(IGameAnalyser gameAnalyser) : IGamePrinter
             Console.WriteLine($"Cards: {outcome.CardsRemaining}/{numberOfDecks * 52}");
             Console.WriteLine($"Player's Hand ({outcome.PlayerHand.GetValue()}): {outcome.PlayerHand}");
             Console.WriteLine($"Dealer's Hand ({outcome.DealerHand.GetValue()}): {outcome.DealerHand}");
-            Console.WriteLine($"Profit/Loss: ${outcome.Money - startingAmount}");
+            Console.WriteLine($"Current/Starting: ${outcome.Money}/{startingAmount}");
             Console.WriteLine("");
         }
 

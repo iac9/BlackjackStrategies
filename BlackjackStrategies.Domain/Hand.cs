@@ -9,7 +9,16 @@ public class Hand {
     public List<Card> Cards { get; } 
     public void AddCard(Card card) => Cards.Add(card);
     public void Clear() => Cards.Clear();
-    public bool Has2Cards => Cards.Count == 2;
+
+    public Card Pop()
+    {
+        var lastCardIndex = Cards.Count - 1;
+        var lastCard = Cards[lastCardIndex];
+        Cards.RemoveAt(lastCardIndex);
+        
+        return lastCard;
+    }
+    public bool HasTwoCards => Cards.Count == 2;
     public int GetValue()
     {
         var total = 0;

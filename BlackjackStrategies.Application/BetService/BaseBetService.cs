@@ -2,7 +2,7 @@
 
 namespace BlackjackStrategies.Application.BetService;
 
-public abstract class BaseBetService : IBetSerivce
+public abstract class BaseBetService : IBetService
 {
     public decimal Amount { get; set; }
     public decimal SingleBetSize { get; set; }

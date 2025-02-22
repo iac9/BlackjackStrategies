@@ -18,8 +18,7 @@ var gameSettings = new GameSettings
 var gameAnalyser = new GameAnalyser();
 var gamePrinter = new GamePrinter(gameAnalyser);
 var betServiceFactory = new BetServiceFactory();
-var gameSettingsValidator = new GameSettingValidator();
-var gameSimulator = new GameSimulator(new BasicStrategyPlayerService(), betServiceFactory, gameSettingsValidator);
+var gameSimulator = new GameSimulator(new BasicStrategyPlayerService(), betServiceFactory);
 var csvWriter = new CsvWriter();
 
 var gameOutcomes = gameSimulator.Simulate(gameSettings).ToArray();

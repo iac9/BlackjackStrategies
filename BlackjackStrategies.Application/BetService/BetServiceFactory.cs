@@ -4,12 +4,12 @@ namespace BlackjackStrategies.Application.BetService;
 
 public interface IBetServiceFactory
 {
-    IBetSerivce GetBetService(StrategyType strategyType, decimal startingAmount, decimal bettingSize);
+    IBetService GetBetService(StrategyType strategyType, decimal startingAmount, decimal bettingSize);
 }
 
 public class BetServiceFactory : IBetServiceFactory
 {
-    public IBetSerivce GetBetService(StrategyType strategyType, decimal startingAmount, decimal bettingSize)
+    public IBetService GetBetService(StrategyType strategyType, decimal startingAmount, decimal bettingSize)
     {
         return strategyType switch
         {
