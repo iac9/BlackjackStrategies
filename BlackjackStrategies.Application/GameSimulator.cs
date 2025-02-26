@@ -6,17 +6,18 @@ namespace BlackjackStrategies.Application;
 
 public interface IGameSimulator
 {
-    IEnumerable<GameOutcome> Simulate(GameSettings settings);
+    IEnumerable<GameOutcome> Simulate(int numberOfGames);
 }
 
 public class GameSimulator(
     BasePlayer player,
-    IBetServiceFactory betServiceFactory) : IGameSimulator
+    IBetServiceFactory betServiceFactory,
+    GameSettings settings) : IGameSimulator
 {
     private readonly Hand _dealerHand = new();
     private Deck _deck = new();
 
-    public IEnumerable<GameOutcome> Simulate(GameSettings settings)
+    public IEnumerable<GameOutcome> Simulate(int numberOfGames)
     {
         var betService =
             betServiceFactory.GetBetService(settings.StrategyType, settings.StartingAmount, settings.BettingSize);
@@ -24,7 +25,7 @@ public class GameSimulator(
         _deck = new Deck(settings.NumberOfDecks);
         _deck.Shuffle();
 
-        for (var _ = 0; _ < settings.NumberOfGames; _++)
+        for (var _ = 0; _ < numberOfGames; _++)
         {
             player.ResetState();
             _dealerHand.Clear();
@@ -69,11 +70,14 @@ public class GameSimulator(
             }
             else if (playerAction == HandAction.Split)
             {
-                var splitCard = player.CurrentHand.Pop();
+                var splitCard = player.CurrentHand.PopLastCard();
                 player.Hands.Add(new Hand(splitCard));
                 DrawCard(player.CurrentHand);
                 HandlePlayerTurn();
-                playerAction = player.NextHand() ? player.GetAction(dealerUpCard) : HandAction.Stay;
+                
+                player.NextHand();
+                DrawCard(player.CurrentHand);
+                playerAction = player.GetAction(dealerUpCard);
             }
         }
     }

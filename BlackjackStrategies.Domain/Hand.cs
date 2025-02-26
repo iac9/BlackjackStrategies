@@ -10,7 +10,7 @@ public class Hand {
     public void AddCard(Card card) => Cards.Add(card);
     public void Clear() => Cards.Clear();
 
-    public Card Pop()
+    public Card PopLastCard()
     {
         var lastCardIndex = Cards.Count - 1;
         var lastCard = Cards[lastCardIndex];

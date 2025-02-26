@@ -2,7 +2,7 @@
 
 namespace BlackjackStrategies.Application.ActionService;
 
-public class BasicStrategyPlayerService : BasePlayer
+public class BasicStrategyPlayer : BasePlayer
 {
     public override HandAction GetAction(Card dealerUpCard)
     {

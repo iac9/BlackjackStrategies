@@ -10,11 +10,11 @@ namespace BlackjackStrategies.API.Controllers;
 public class BlackjackController(IGameSimulator simulator, IGameAnalyser analyser) : ControllerBase
 {
     [HttpPost("simulate")]
-    public ActionResult<GameReportResponse> SimulateGame([FromBody] GameSettings settings)
+    public ActionResult<GameReportResponse> SimulateGame([FromBody] int numberOfGames)
     {
         try
         {
-            var gameOutcomes = simulator.Simulate(settings).ToArray();
+            var gameOutcomes = simulator.Simulate(numberOfGames).ToArray();
             var gameStatistics = analyser.GetGameStatistics(gameOutcomes);
 
             var gameReport = new GameReportResponse

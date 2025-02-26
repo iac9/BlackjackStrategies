@@ -9,7 +9,6 @@ public enum StrategyType
 public class GameSettings
 {
     private readonly int _numberOfDecks;
-    private readonly int _numberOfGames;
     private readonly decimal _startingAmount;
     private readonly decimal _bettingSize;
 
@@ -19,14 +18,7 @@ public class GameSettings
         init => _numberOfDecks =
             value > 0 ? value : throw new ArgumentException("Number of games must be greater than 0.");
     }
-
-    public int NumberOfGames
-    {
-        get => _numberOfGames;
-        init => _numberOfGames = 
-            value > 0 ? value : throw new ArgumentException("Number of decks must be greater than 0.");
-    }
-
+    
     public decimal StartingAmount
     {
         get => _startingAmount;

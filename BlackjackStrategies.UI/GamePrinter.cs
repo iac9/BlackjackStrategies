@@ -5,31 +5,23 @@ namespace BlackjackStrategies.UI;
 
 public interface IGamePrinter
 {
-    void Print(GameOutcome[] gameOutcomes, int numberOfDecks, decimal startingAmount);
+    void Print(GameOutcome[] gameOutcomes);
 }
 
-public class GamePrinter(IGameAnalyser gameAnalyser) : IGamePrinter
+public class GamePrinter(IGameAnalyser gameAnalyser, GameSettings gameSettings) : IGamePrinter
 {
-    public void Print(GameOutcome[] gameOutcomes, int numberOfDecks, decimal startingAmount)
+    public void Print(GameOutcome[] gameOutcomes)
     {
         var roundsUntilBankrupt = Array.IndexOf(gameOutcomes.Select(o => o.Money).ToArray(), 0);
 
-        for (var i = 0; i < gameOutcomes.Length; i++)
+        for (var gameNumber = 0; gameNumber < gameOutcomes.Length; gameNumber++)
         {
-            var outcome = gameOutcomes[i];
+            var outcome = gameOutcomes[gameNumber];
 
-            if (i == roundsUntilBankrupt)
+            if (gameNumber == roundsUntilBankrupt)
                 break;
-
-            Console.WriteLine($"Game: {i + 1}");
-            Console.WriteLine($"Game outcome: {outcome.GameResult}");
-            Console.WriteLine($"Doubled: {outcome.Doubled}");
-            Console.WriteLine($"Split: {outcome.Split}");
-            Console.WriteLine($"Cards: {outcome.CardsRemaining}/{numberOfDecks * 52}");
-            Console.WriteLine($"Player's Hand ({outcome.PlayerHand.GetValue()}): {outcome.PlayerHand}");
-            Console.WriteLine($"Dealer's Hand ({outcome.DealerHand.GetValue()}): {outcome.DealerHand}");
-            Console.WriteLine($"Current/Starting: ${outcome.Money}/{startingAmount}");
-            Console.WriteLine("");
+            
+            PrintGameOutcome(gameNumber, outcome);
         }
 
         var gameStatistics = gameAnalyser.GetGameStatistics(gameOutcomes);
@@ -45,7 +37,20 @@ public class GamePrinter(IGameAnalyser gameAnalyser) : IGamePrinter
 
         Console.WriteLine($"EV: {gameStatistics.ExpectedValue}");
         Console.WriteLine($"Rounds until bankrupt: {roundsUntilBankrupt}");
-        Console.WriteLine($"Highest winnings: ${gameOutcomes.Max(o => o.Money) - startingAmount}");
+        Console.WriteLine($"Highest winnings: ${gameOutcomes.Max(o => o.Money) - gameSettings.StartingAmount}");
+        Console.WriteLine("");
+    }
+
+    private void PrintGameOutcome(int gameNumber, GameOutcome outcome)
+    {
+        Console.WriteLine($"Game: {gameNumber + 1}");
+        Console.WriteLine($"Game outcome: {outcome.GameResult}");
+        Console.WriteLine($"Doubled: {outcome.Doubled}");
+        Console.WriteLine($"Split: {outcome.Split}");
+        Console.WriteLine($"Cards: {outcome.CardsRemaining}/{gameSettings.NumberOfDecks * 52}");
+        Console.WriteLine($"Player's Hand ({outcome.PlayerHand.GetValue()}): {outcome.PlayerHand}");
+        Console.WriteLine($"Dealer's Hand ({outcome.DealerHand.GetValue()}): {outcome.DealerHand}");
+        Console.WriteLine($"Current/Starting: ${outcome.Money}/{gameSettings.StartingAmount}");
         Console.WriteLine("");
     }
 };
