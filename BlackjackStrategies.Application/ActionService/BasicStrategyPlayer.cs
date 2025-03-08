@@ -17,7 +17,9 @@ public class BasicStrategyPlayer : BasePlayer
                 action = GetActionWhenInitialHandHasNoAceOrDuplicate(dealerUpCard);
         }
         else
+        {
             action = GetActionWhenHandHasNoAceOrDuplicate(dealerUpCard);
+        }
 
         return action;
     }
@@ -32,7 +34,7 @@ public class BasicStrategyPlayer : BasePlayer
             _ => GetActionWhenHandHasNoAceOrDuplicate(dealerUpCard)
         };
     }
-    
+
     private HandAction GetActionWhenHandHasNoAceOrDuplicate(Card dealerUpCard)
     {
         return CurrentHand.GetValue() switch
@@ -66,7 +68,7 @@ public class BasicStrategyPlayer : BasePlayer
             CardValue.Seven => dealerUpCard.Value.IsBetween(CardValue.Two, CardValue.Six) ? HandAction.Double :
                 dealerUpCard.Value.IsBetween(CardValue.Seven, CardValue.Eight) ? HandAction.Stay : HandAction.Hit,
             CardValue.Eight => dealerUpCard.Value == CardValue.Six ? HandAction.Double : HandAction.Stay,
-            _ => HandAction.Stay,
+            _ => HandAction.Stay
         };
     }
 
@@ -86,7 +88,7 @@ public class BasicStrategyPlayer : BasePlayer
             CardValue.Two or CardValue.Three or CardValue.Seven =>
                 dealerUpCard.Value.IsBetween(CardValue.Two, CardValue.Seven),
             CardValue.Six => dealerUpCard.Value.IsBetween(CardValue.Three, CardValue.Six),
-            _ => throw new InvalidOperationException(),
+            _ => throw new InvalidOperationException()
         };
     }
 }

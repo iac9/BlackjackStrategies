@@ -13,9 +13,10 @@ public class BetServiceFactory : IBetServiceFactory
     {
         return strategyType switch
         {
-            StrategyType.Martingale => new MartingaleBetService { Amount = startingAmount, SingleBetSize = bettingSize },
+            StrategyType.Martingale => new MartingaleBetService
+                { Amount = startingAmount, SingleBetSize = bettingSize },
             StrategyType.HiLo => new HiLoBetService { Amount = startingAmount, SingleBetSize = bettingSize },
-            _ => throw new KeyNotFoundException($"Bet service with strategy '{strategyType}' not found."),
+            _ => throw new KeyNotFoundException($"Bet service with strategy '{strategyType}' not found.")
         };
     }
 }

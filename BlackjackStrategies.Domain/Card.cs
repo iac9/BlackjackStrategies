@@ -4,7 +4,11 @@ public class Card
 {
     public CardSuit Suit { get; set; }
     public CardValue Value { get; set; }
-    public override string ToString() => $"[{Suit} {Value}]";
+
+    public override string ToString()
+    {
+        return $"[{Suit} {Value}]";
+    }
 }
 
 public enum CardSuit

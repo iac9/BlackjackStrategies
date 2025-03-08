@@ -1,27 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BlackjackStrategies.Application\BlackjackStrategies.Application.csproj" />
-    <ProjectReference Include="..\BlackjackStrategies.Domain\BlackjackStrategies.Domain.csproj" />
-    <ProjectReference Include="..\BlackjackStrategies.Infrastructure\BlackjackStrategies.Infrastructure.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\BlackjackStrategies.Application\BlackjackStrategies.Application.csproj"/>
+        <ProjectReference Include="..\BlackjackStrategies.Domain\BlackjackStrategies.Domain.csproj"/>
+        <ProjectReference Include="..\BlackjackStrategies.Infrastructure\BlackjackStrategies.Infrastructure.csproj"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="publish\web.config" />
-    <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
-    <_ContentIncludedByDefault Remove="publish\appsettings.json" />
-    <_ContentIncludedByDefault Remove="publish\BlackjackStrategies.API.deps.json" />
-    <_ContentIncludedByDefault Remove="publish\BlackjackStrategies.API.runtimeconfig.json" />
-  </ItemGroup>
+    <ItemGroup>
+        <_ContentIncludedByDefault Remove="publish\web.config"/>
+        <_ContentIncludedByDefault Remove="publish\appsettings.Development.json"/>
+        <_ContentIncludedByDefault Remove="publish\appsettings.json"/>
+        <_ContentIncludedByDefault Remove="publish\BlackjackStrategies.API.deps.json"/>
+        <_ContentIncludedByDefault Remove="publish\BlackjackStrategies.API.runtimeconfig.json"/>
+    </ItemGroup>
 
 </Project>

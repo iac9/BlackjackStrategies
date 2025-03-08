@@ -20,7 +20,7 @@ public class GamePrinter(IGameAnalyser gameAnalyser, GameSettings gameSettings) 
 
             if (gameNumber == roundsUntilBankrupt)
                 break;
-            
+
             PrintGameOutcome(gameNumber, outcome);
         }
 
@@ -53,4 +53,4 @@ public class GamePrinter(IGameAnalyser gameAnalyser, GameSettings gameSettings) 
         Console.WriteLine($"Current/Starting: ${outcome.Money}/{gameSettings.StartingAmount}");
         Console.WriteLine("");
     }
-};
+}

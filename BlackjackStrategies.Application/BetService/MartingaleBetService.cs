@@ -4,7 +4,7 @@ namespace BlackjackStrategies.Application.BetService;
 
 public class MartingaleBetService : BaseBetService
 {
-    private int _consecutiveLosses = 0;
+    private int _consecutiveLosses;
 
     public override void MakeBet(GameOutcome gameOutcome)
     {
@@ -17,7 +17,7 @@ public class MartingaleBetService : BaseBetService
         {
             GameResult.Win or GameResult.Blackjack => 0,
             GameResult.Lose => _consecutiveLosses + 1,
-            _ => _consecutiveLosses,
+            _ => _consecutiveLosses
         };
     }
 

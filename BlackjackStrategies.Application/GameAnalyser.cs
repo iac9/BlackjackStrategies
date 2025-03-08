@@ -42,13 +42,15 @@ public class GameAnalyser : IGameAnalyser
                 GameResult.Win => probability,
                 GameResult.Lose => -probability,
                 GameResult.Blackjack => 1.5M * probability,
-                _ => 0,
+                _ => 0
             };
         }
 
         return expectedValue;
     }
 
-    private static Dictionary<GameResult, int> GetGameResultCount(IEnumerable<GameOutcome> gameOutcomes) =>
-        gameOutcomes.GroupBy(o => o.GameResult).ToDictionary(g => g.Key, g => g.Count());
+    private static Dictionary<GameResult, int> GetGameResultCount(IEnumerable<GameOutcome> gameOutcomes)
+    {
+        return gameOutcomes.GroupBy(o => o.GameResult).ToDictionary(g => g.Key, g => g.Count());
+    }
 }

@@ -9,14 +9,14 @@ public abstract class BaseBetService : IBetService
 
     public abstract void MakeBet(GameOutcome gameOutcome);
 
-    protected void UpdateAmount(GameOutcome gameOutcome, decimal betAmount) 
+    protected void UpdateAmount(GameOutcome gameOutcome, decimal betAmount)
     {
         Amount += gameOutcome.GameResult switch
         {
             GameResult.Win => betAmount,
             GameResult.Lose => -betAmount,
             GameResult.Blackjack => betAmount * 1.5M,
-            _ => 0,
+            _ => 0
         };
 
         gameOutcome.Money = Amount;

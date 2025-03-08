@@ -9,7 +9,7 @@ public class CardTests
     [Fact]
     public void IsBetween_ThrowsArgumentException_GivenEndIsGreaterThanStart()
     {
-        Action action = () =>  It.IsAny<CardValue>().IsBetween(CardValue.Four, CardValue.Three);
+        Action action = () => It.IsAny<CardValue>().IsBetween(CardValue.Four, CardValue.Three);
 
         action.Should().Throw<ArgumentException>();
     }

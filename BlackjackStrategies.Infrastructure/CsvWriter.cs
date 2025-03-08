@@ -13,11 +13,11 @@ public class CsvWriter : ICsvWriter
     {
         using var writer = new StreamWriter(filePath);
         // Write the header
-        writer.WriteLine("GameResult,PlayerHand,DealerHand,PlayerHandValue,DealerHandValue,Money,Doubled,Split,CardsRemaining");
+        writer.WriteLine(
+            "GameResult,PlayerHand,DealerHand,PlayerHandValue,DealerHandValue,Money,Doubled,Split,CardsRemaining");
 
         // Write each game outcome
         foreach (var outcome in gameOutcomes)
-        {
             writer.WriteLine(
                 $"{outcome.GameResult}," +
                 $"{outcome.PlayerHand}," +
@@ -28,6 +28,5 @@ public class CsvWriter : ICsvWriter
                 $"{outcome.Doubled}," +
                 $"{outcome.Split}," +
                 $"{outcome.CardsRemaining}");
-        }
     }
 }

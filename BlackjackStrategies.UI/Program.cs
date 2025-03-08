@@ -2,6 +2,7 @@
 using BlackjackStrategies.Application.ActionService;
 using BlackjackStrategies.Application.BetService;
 using BlackjackStrategies.Domain;
+using BlackjackStrategies.Domain.Deck;
 using BlackjackStrategies.Infrastructure;
 using BlackjackStrategies.UI;
 
@@ -17,10 +18,13 @@ var gameSettings = new GameSettings
 var gameAnalyser = new GameAnalyser();
 var gamePrinter = new GamePrinter(gameAnalyser, gameSettings);
 var betServiceFactory = new BetServiceFactory();
-var gameSimulator = new GameSimulator(new BasicStrategyPlayer(), betServiceFactory, gameSettings);
+var deckFactory = new DeckFactory();
+var player = new BasicStrategyPlayer();
+var dealer = new Dealer();
+var gameSimulator = new GameSimulator(player, dealer, betServiceFactory, deckFactory);
 var csvWriter = new CsvWriter();
 
-var gameOutcomes = gameSimulator.Simulate(1000).ToArray();
+var gameOutcomes = gameSimulator.Simulate(gameSettings, 1000).ToArray();
 gamePrinter.Print(gameOutcomes.ToArray());
 
 csvWriter.WriteToCsv(gameOutcomes, "../../../gameOutcomes.csv");

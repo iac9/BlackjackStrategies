@@ -5,10 +5,11 @@ using BlackjackStrategies.Application.BetService;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddSingleton<IGameAnalyser, GameAnalyser>();
-builder.Services.AddSingleton<IGameSimulator, GameSimulator>();
-builder.Services.AddSingleton<BasePlayer, BasicStrategyPlayer>();
-builder.Services.AddSingleton<IBetServiceFactory, BetServiceFactory>();
+builder.Services.AddTransient<IGameAnalyser, GameAnalyser>();
+builder.Services.AddTransient<IGameSimulator, GameSimulator>();
+builder.Services.AddTransient<BasePlayer, BasicStrategyPlayer>();
+builder.Services.AddTransient<IBetServiceFactory, BetServiceFactory>();
+builder.Services.AddTransient<IDealer, Dealer>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

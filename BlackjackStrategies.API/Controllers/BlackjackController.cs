@@ -1,6 +1,5 @@
 using BlackjackStrategies.API.Models;
 using BlackjackStrategies.Application;
-using BlackjackStrategies.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlackjackStrategies.API.Controllers;
@@ -10,11 +9,12 @@ namespace BlackjackStrategies.API.Controllers;
 public class BlackjackController(IGameSimulator simulator, IGameAnalyser analyser) : ControllerBase
 {
     [HttpPost("simulate")]
-    public ActionResult<GameReportResponse> SimulateGame([FromBody] int numberOfGames)
+    public ActionResult<GameReportResponse> SimulateGame([FromBody] SimulateGameRequest simulateGameRequest)
     {
         try
         {
-            var gameOutcomes = simulator.Simulate(numberOfGames).ToArray();
+            var gameOutcomes = simulator.Simulate(simulateGameRequest.GameSettings, simulateGameRequest.NumberOfGames)
+                .ToArray();
             var gameStatistics = analyser.GetGameStatistics(gameOutcomes);
 
             var gameReport = new GameReportResponse

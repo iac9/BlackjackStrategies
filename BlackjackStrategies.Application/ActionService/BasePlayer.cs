@@ -17,12 +17,12 @@ public abstract class BasePlayer
     }
 
     public bool NextHand()
-    { 
+    {
         _currenHandIndex = Math.Min(_currenHandIndex + 1, Hands.Count - 1);
-        
+
         return _currenHandIndex < Hands.Count;
     }
-    
+
     public abstract HandAction GetAction(Card dealerUpCard);
 }
 
